@@ -3,7 +3,7 @@
     "view": {"continuousWidth": 400, "continuousHeight": 300},
     "axis": {"labelFontSize": 12, "titleFontSize": 14},
     "legend": {"labelFontSize": 12, "symbolSize": 100, "titleFontSize": 14},
-    "title": {"anchor": "start", "fontSize": 20}
+    "title": {"anchor": "start", "fontSize": 16}
   },
   "hconcat": [
     {
@@ -491,9 +491,7 @@
       "title": "Refined Charts: Word Count Analysis (Negative Sentiment)"
     }
   ],
-  "description": "\n\"This chart presents an analysis of the relationship between word count and stock returns over different time horizons, both for stocks with positive sentiment (first part) and negative sentiment (second part).\n\nThe charts visualize the distribution of data points showing the word count and corresponding 1-day, 2-day, 3-day, and 7-day stock returns. The overlaid regression lines provide insight into the general trend between word count and returns.\n\nBy comparing the two sets of charts, we can observe how the relationship between word count and returns differs for stocks with positive versus negative sentiment. This analysis could provide useful insights for investors or researchers interested in understanding the informational content of corporate disclosures and how it relates to short-term stock price movements.\"\n",
   "resolve": {"scale": {"color": "independent"}},
-  "title": "How does the word count of tweets relate to future stock returns?",
   "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json",
   "datasets": {
     "data-a5075e1bd0ffc2317c7b22337a3ce1b7": [

@@ -272,7 +272,10 @@
                                 <strong>Left Section</strong> visualizes the
                                 return trajectory across different sentiment
                                 quantiles, covers various periods: 1-day, 2-day,
-                                3-day, and 7-day returns
+                                3-day, and 7-day returns. Tweets sentiments are
+                                split into four quartiles, with -2/2 being the
+                                strong negative and positive sentiment, and -1/1
+                                representing moderate scores.
                             </li>
                             <br />
                             <li>
@@ -350,7 +353,7 @@
             ,
             class="container"
             ,
-            style="display: flex; justify-content: center; align-items: center; height: 100%; style='position: relative'"
+            style="display: flex; justify-content: center; align-items: center; height: 130%; style='position: relative'"
         ></div>
         <script type="text/javascript">
             const spec2 = "h2.json";
@@ -358,6 +361,7 @@
                 .then((result) => console.log(result))
                 .catch(console.warn);
         </script>
+
         <!-- Volume-Volatility-->
         <section class="bg-dark" id="tweet-volume">
             <div class="container">
@@ -368,19 +372,35 @@
                             volatility?
                         </h2>
                         <hr class="light my-4" />
-                        <p class="text-faded mb-4">
-                            visualization introduction.
-                        </p>
+                        <ul class="list-unstyled text-left">
+                            <li>
+                                The first two scatter plots illustrates the
+                                correlation of tweet volume with volatility(10 &
+                                30 days) by Stock. The x-axis represents stocks,
+                                while the y-axis shows the correlation between
+                                tweet volume and stock volatility.
+                            </li>
+                            <br />
+                            <li>
+                                The second two histograms analyze the
+                                distribution of stocks across correlation bins
+                            </li>
+                            <br />
+                            <li>
+                                The last two bar charts shows the top 10 stocks
+                                with highest volatility by 10 days and 30 days.
+                            </li>
+                            <br />
+                        </ul>
                         <hr class="light my-4" />
                     </div>
                 </div>
             </div>
         </section>
-
         <div
             id="h3"
             ,
-            style="display: flex; justify-content: center; align-items: center; height: 100%; style='position: relative'"
+            style="display: flex; justify-content: center; align-items: center; height: 150%; style='position: relative'"
         ></div>
 
         <script type="text/javascript">
