@@ -1,9 +1,12 @@
 {
   "config": {
-    "view": {"continuousWidth": 400, "continuousHeight": 300},
     "axis": {"labelFontSize": 12, "titleFontSize": 14},
     "legend": {"labelFontSize": 12, "symbolSize": 100, "titleFontSize": 14},
     "title": {"anchor": "start", "fontSize": 16}
+  },
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
   },
   "hconcat": [
     {
@@ -492,7 +495,7 @@
     }
   ],
   "resolve": {"scale": {"color": "independent"}},
-  "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
   "datasets": {
     "data-a5075e1bd0ffc2317c7b22337a3ce1b7": [
       {

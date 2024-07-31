@@ -1,5 +1,15 @@
 {
-  "config": {"view": {"continuousWidth": 400, "continuousHeight": 300}},
+  "config": {
+    "axis": {"labelFontSize": 12, "titleFontSize": 14},
+    "legend": {"labelFontSize": 12, "symbolSize": 100, "titleFontSize": 14},
+    "title": {"anchor": "start", "fontSize": 16}
+  },
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+    "width": "container",
+  "height": "container",
   "vconcat": [
     {
       "hconcat": [
@@ -84,7 +94,7 @@
                   "type": "quantitative"
                 }
               },
-              "height": 600,
+              "height": 400,
               "title": "Histogram of Correlations for Vol10d",
               "width": 400
             },
@@ -127,7 +137,7 @@
                   "type": "quantitative"
                 }
               },
-              "height": 600,
+              "height": 400,
               "title": "Histogram of Correlations for Vol30d",
               "width": 400
             },
@@ -188,7 +198,7 @@
       ]
     }
   ],
-  "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json",
+"$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
   "datasets": {
     "data-89019ba7586718a6240c2bb812c100ab": [
       {"STOCK": " Amazon", "Volatility": "Vol10d", "Correlation": null},
