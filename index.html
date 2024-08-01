@@ -42,38 +42,6 @@
 
     <!-- Custom styles for this template -->
     <link href="css/creative.min.css" rel="stylesheet" />
-
-    <style>
-        #h1 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 90%; /* Full height of the viewport */
-            width: 90%;
-        }
-        #h2 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 90%; /* Full height of the viewport */
-            width: 90%;
-        }
-        #h3 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 90%; /* Full height of the viewport */
-            width: 90%;
-        }
-
-        #h4 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 90%; /* Full height of the viewport */
-            width: 90%;
-        }
-    </style>
 </head>
 
 <body id="page-top">
@@ -354,7 +322,7 @@
 </section>
 
 <div
-        id="h1"
+        id="chartContainer1"
         ,
         style="display: flex; justify-content: center; align-items: center;"
 ></div>
@@ -369,18 +337,9 @@
 
 <script type="text/javascript">
     const spec1 = "h1.json";
-    vegaEmbed("#h1", spec1, { actions: false, renderer: "svg" })
+    vegaEmbed("#chartContainer1", spec1)
         .then((result) => {
-            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-            window.addEventListener("resize", () => {
-                result.view.width(
-                    document.getElementById("h1").clientWidth,
-                );
-                result.view.height(
-                    document.getElementById("h1").clientHeight,
-                );
-                result.view.runAsync();
-            });
+            console.log("resized");
         })
         .catch(console.warn);
 </script>
@@ -426,11 +385,9 @@
 </section>
 
 <div
-        id="h2"
+        id="chartContainer2"
         ,
-        class="container"
-        ,
-        style="display: flex; justify-content: center; align-items: center; height: 130%; style='position: relative'"
+        style="display: flex; justify-content: center; align-items: center;"
 ></div>
 <!--         <script type="text/javascript">
     const spec2 = "h2.json";
@@ -441,18 +398,9 @@
 
 <script type="text/javascript">
     const spec2 = "h2.json";
-    vegaEmbed("#h2", spec2, { actions: false, renderer: "svg" })
+    vegaEmbed("#chartContainer2", spec2)
         .then((result) => {
-            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-            window.addEventListener("resize", () => {
-                result.view.width(
-                    document.getElementById("h2").clientWidth,
-                );
-                result.view.height(
-                    document.getElementById("h2").clientHeight,
-                );
-                result.view.runAsync();
-            });
+            console.log("resized");
         })
         .catch(console.warn);
 </script>
@@ -493,9 +441,9 @@
     </div>
 </section>
 <div
-        id="h3"
+        id="chartContainer3"
         ,
-        style="display: flex; justify-content: center; align-items: center; height: 150%; style='position: relative'"
+        style="display: flex; justify-content: center; align-items: center;"
 ></div>
 <!--
 <script type="text/javascript">
@@ -507,18 +455,9 @@
 
 <script type="text/javascript">
     const spec3 = "h3.json";
-    vegaEmbed("#h3", spec3, { actions: false, renderer: "svg" })
+    vegaEmbed("#chartContainer3", spec3)
         .then((result) => {
-            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-            window.addEventListener("resize", () => {
-                result.view.width(
-                    document.getElementById("h3").clientWidth,
-                );
-                result.view.height(
-                    document.getElementById("h3").clientHeight,
-                );
-                result.view.runAsync();
-            });
+            Console.log("resized");
         })
         .catch(console.warn);
 </script>
@@ -585,9 +524,9 @@
 </section>
 
 <div
-        id="h4"
+        id="chartContainer4"
         ,
-        style="display: flex; justify-content: center; align-items: center; height: 110%; style='position: relative'"
+        style="display: flex; justify-content: center; align-items: center;"
 ></div>
 
 <!--         <script type="text/javascript">
@@ -599,18 +538,9 @@
 
 <script type="text/javascript">
     const spec4 = "h4.json";
-    vegaEmbed("#h4", spec4, { actions: false, renderer: "svg" })
+    vegaEmbed("#chartContainer4", spec4, { actions: false, renderer: "svg" })
         .then((result) => {
-            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-            window.addEventListener("resize", () => {
-                result.view.width(
-                    document.getElementById("h4").clientWidth,
-                );
-                result.view.height(
-                    document.getElementById("h4").clientHeight,
-                );
-                result.view.runAsync();
-            });
+            console.log("resized");
         })
         .catch(console.warn);
 </script>
