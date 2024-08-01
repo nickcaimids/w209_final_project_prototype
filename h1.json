@@ -1,1533 +1,2468 @@
 {
-  "config": {
-    "axis": {"labelFontSize": 12, "titleFontSize": 10},
-    "title": {"anchor": "start", "fontSize": 12}
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "background": "white",
+  "padding": 5,
+  "title": {
+    "anchor": "middle",
+    "text": ["Sentiment Analysis"],
+    "fontSize": 18,
+    "color": "black"
   },
-  "autosize": {
-    "type": "fit",
-    "contains": "padding"
-  },
-  "width": "container",
-  "height": "container",
-  "vconcat": [
+  "data": [
     {
-      "hconcat": [
+      "name": "data-82cc9c0513a2b6f12306cdccad4855f5",
+      "values": [
         {
-          "data": {"name": "data-82cc9c0513a2b6f12306cdccad4855f5"},
-          "mark": {"type": "bar"},
-          "encoding": {
-            "color": {
-              "field": "Return",
-              "scale": {
-                "domain": [-0.003461419077684595, 0.0009813839076222575],
-                "range": ["purple", "yellow", "green"]
-              },
-              "type": "quantitative"
-            },
-            "column": {
-              "field": "sentiment_label",
-              "sort": [
-                "very negative",
-                "slightly negative",
-                "slightly positive",
-                "very positive"
-              ],
-              "title": "Sentiment Level",
-              "type": "nominal"
-            },
-            "tooltip": [
-              {"field": "Period", "type": "nominal"},
-              {"field": "Return", "type": "quantitative"}
-            ],
-            "x": {
-              "field": "Period",
-              "sort": [
-                "1_DAY_RETURN",
-                "2_DAY_RETURN",
-                "3_DAY_RETURN",
-                "7_DAY_RETURN"
-              ],
-              "title": "Period",
-              "type": "nominal"
-            },
-            "y": {
-              "field": "Return",
-              "title": "Average Future Return",
-              "type": "quantitative"
-            }
-          },
-          "title": "Return Trajectory by Sentiment Level and Period",
-          "width": 100
+          "sentiment_label": "very negative",
+          "Period": "1_DAY_RETURN",
+          "Return": 0.0003391063580099373
         },
         {
-          "layer": [
-            {
-              "mark": {"type": "circle"},
-              "encoding": {
-                "size": {
-                  "field": "1_DAY_RETURN_Corr_Sentiment",
-                  "scale": {
-                    "domain": [-0.45499021015498364, 0.5812607448826022],
-                    "range": [5, 300]
-                  },
-                  "title": "sentiment.corr",
-                  "type": "quantitative"
-                },
-                "tooltip": [
-                  {"field": "STOCK", "type": "nominal"},
-                  {"field": "TEXTBLOB_POLARITY", "type": "quantitative"},
-                  {"field": "1_DAY_RETURN", "type": "quantitative"},
-                  {
-                    "field": "1_DAY_RETURN_Corr_Sentiment",
-                    "type": "quantitative"
-                  }
-                ],
-                "x": {
-                  "field": "TEXTBLOB_POLARITY",
-                  "scale": {
-                    "domain": [-0.19381564022961978, 0.10900413693281522]
-                  },
-                  "title": "Tweet Sentiment",
-                  "type": "quantitative"
-                },
-                "y": {
-                  "axis": {"format": ".2%"},
-                  "field": "1_DAY_RETURN",
-                  "title": "1-Day Future Return",
-                  "type": "quantitative"
-                }
-              }
-            },
-            {
-              "mark": {"type": "line", "color": "red"},
-              "encoding": {
-                "size": {
-                  "field": "1_DAY_RETURN_Corr_Sentiment",
-                  "scale": {
-                    "domain": [-0.45499021015498364, 0.5812607448826022],
-                    "range": [5, 300]
-                  },
-                  "title": "sentiment.corr",
-                  "type": "quantitative"
-                },
-                "tooltip": [
-                  {"field": "STOCK", "type": "nominal"},
-                  {"field": "TEXTBLOB_POLARITY", "type": "quantitative"},
-                  {"field": "1_DAY_RETURN", "type": "quantitative"},
-                  {
-                    "field": "1_DAY_RETURN_Corr_Sentiment",
-                    "type": "quantitative"
-                  }
-                ],
-                "x": {
-                  "field": "TEXTBLOB_POLARITY",
-                  "scale": {
-                    "domain": [-0.19381564022961978, 0.10900413693281522]
-                  },
-                  "title": "Tweet Sentiment",
-                  "type": "quantitative"
-                },
-                "y": {
-                  "axis": {"format": ".2%"},
-                  "field": "1_DAY_RETURN",
-                  "title": "1-Day Future Return",
-                  "type": "quantitative"
-                }
-              },
-              "transform": [
-                {"on": "TEXTBLOB_POLARITY", "regression": "1_DAY_RETURN"}
-              ]
-            }
-          ],
-          "data": {"name": "data-51f26b1d49622b2f32d60abddaf6f8c5"},
-          "title": "1-Day Future Return",
-          "width": 400
+          "sentiment_label": "slightly negative",
+          "Period": "1_DAY_RETURN",
+          "Return": 0
         },
         {
-          "layer": [
-            {
-              "mark": {"type": "circle"},
-              "encoding": {
-                "size": {
-                  "field": "2_DAY_RETURN_Corr_Sentiment",
-                  "scale": {
-                    "domain": [-0.5633991909584759, 0.5388972284908711],
-                    "range": [5, 300]
-                  },
-                  "title": "sentiment.corr",
-                  "type": "quantitative"
-                },
-                "tooltip": [
-                  {"field": "STOCK", "type": "nominal"},
-                  {"field": "TEXTBLOB_POLARITY", "type": "quantitative"},
-                  {"field": "2_DAY_RETURN", "type": "quantitative"},
-                  {
-                    "field": "2_DAY_RETURN_Corr_Sentiment",
-                    "type": "quantitative"
-                  }
-                ],
-                "x": {
-                  "field": "TEXTBLOB_POLARITY",
-                  "scale": {
-                    "domain": [-0.19381564022961978, 0.10900413693281522]
-                  },
-                  "title": "Tweet Sentiment",
-                  "type": "quantitative"
-                },
-                "y": {
-                  "axis": {"format": ".2%"},
-                  "field": "2_DAY_RETURN",
-                  "title": "2-Day Future Return",
-                  "type": "quantitative"
-                }
-              }
-            },
-            {
-              "mark": {"type": "line", "color": "red"},
-              "encoding": {
-                "size": {
-                  "field": "2_DAY_RETURN_Corr_Sentiment",
-                  "scale": {
-                    "domain": [-0.5633991909584759, 0.5388972284908711],
-                    "range": [5, 300]
-                  },
-                  "title": "sentiment.corr",
-                  "type": "quantitative"
-                },
-                "tooltip": [
-                  {"field": "STOCK", "type": "nominal"},
-                  {"field": "TEXTBLOB_POLARITY", "type": "quantitative"},
-                  {"field": "2_DAY_RETURN", "type": "quantitative"},
-                  {
-                    "field": "2_DAY_RETURN_Corr_Sentiment",
-                    "type": "quantitative"
-                  }
-                ],
-                "x": {
-                  "field": "TEXTBLOB_POLARITY",
-                  "scale": {
-                    "domain": [-0.19381564022961978, 0.10900413693281522]
-                  },
-                  "title": "Tweet Sentiment",
-                  "type": "quantitative"
-                },
-                "y": {
-                  "axis": {"format": ".2%"},
-                  "field": "2_DAY_RETURN",
-                  "title": "2-Day Future Return",
-                  "type": "quantitative"
-                }
-              },
-              "transform": [
-                {"on": "TEXTBLOB_POLARITY", "regression": "2_DAY_RETURN"}
-              ]
-            }
-          ],
-          "data": {"name": "data-51f26b1d49622b2f32d60abddaf6f8c5"},
-          "title": "2-Day Future Return",
-          "width": 400
+          "sentiment_label": "slightly positive",
+          "Period": "1_DAY_RETURN",
+          "Return": 0
+        },
+        {
+          "sentiment_label": "very positive",
+          "Period": "1_DAY_RETURN",
+          "Return": 0.00012428881500358303
+        },
+        {
+          "sentiment_label": "very negative",
+          "Period": "2_DAY_RETURN",
+          "Return": 0.00013205757516594752
+        },
+        {
+          "sentiment_label": "slightly negative",
+          "Period": "2_DAY_RETURN",
+          "Return": 0.0009813839076222575
+        },
+        {
+          "sentiment_label": "slightly positive",
+          "Period": "2_DAY_RETURN",
+          "Return": -0.0012159782365504974
+        },
+        {
+          "sentiment_label": "very positive",
+          "Period": "2_DAY_RETURN",
+          "Return": 0.00047422496556107454
+        },
+        {
+          "sentiment_label": "very negative",
+          "Period": "3_DAY_RETURN",
+          "Return": 0.00047422496556107454
+        },
+        {
+          "sentiment_label": "slightly negative",
+          "Period": "3_DAY_RETURN",
+          "Return": 0.0005209165443614628
+        },
+        {
+          "sentiment_label": "slightly positive",
+          "Period": "3_DAY_RETURN",
+          "Return": -0.0005338431907575027
+        },
+        {
+          "sentiment_label": "very positive",
+          "Period": "3_DAY_RETURN",
+          "Return": 0.0005624503721815587
+        },
+        {
+          "sentiment_label": "very negative",
+          "Period": "7_DAY_RETURN",
+          "Return": -0.0012177572323639188
+        },
+        {
+          "sentiment_label": "slightly negative",
+          "Period": "7_DAY_RETURN",
+          "Return": -0.0009308685860320105
+        },
+        {
+          "sentiment_label": "slightly positive",
+          "Period": "7_DAY_RETURN",
+          "Return": -0.003461419077684595
+        },
+        {
+          "sentiment_label": "very positive",
+          "Period": "7_DAY_RETURN",
+          "Return": 0.00013000895183460455
         }
       ]
     },
     {
-      "hconcat": [
+      "name": "data-51f26b1d49622b2f32d60abddaf6f8c5",
+      "format": {},
+      "values": [
         {
-          "data": {"name": "data-eb5b4802928e1c6230c021900863b599"},
-          "mark": {"type": "bar"},
-          "encoding": {
-            "color": {
-              "field": "Return",
-              "scale": {"scheme": "viridis"},
-              "title": "Return",
-              "type": "quantitative"
-            },
-            "column": {"field": "Period", "title": "Period", "type": "nominal"},
-            "tooltip": [
-              {"field": "sentiment_label", "type": "nominal"},
-              {"field": "Period", "type": "nominal"},
-              {"field": "Return", "format": ".2%", "type": "quantitative"}
-            ],
-            "x": {
-              "field": "sentiment_label",
-              "sort": [
-                "very negative",
-                "slightly negative",
-                "slightly positive",
-                "very positive"
-              ],
-              "title": "Sentiment Level",
-              "type": "nominal"
-            },
-            "y": {
-              "axis": {"format": ".2%"},
-              "field": "Return",
-              "title": "Average Future Return",
-              "type": "quantitative"
-            }
-          },
-          "title": "Return Trajectory by Sentiment Quantile and Period",
-          "width": 100
+          "STOCK": "21CF",
+          "1_DAY_RETURN": -0.002849574788463793,
+          "2_DAY_RETURN": -0.007404480419833003,
+          "3_DAY_RETURN": -0.002625228330706653,
+          "7_DAY_RETURN": -0.007846027052870675,
+          "TEXTBLOB_POLARITY": -0.024306960162666855,
+          "1_DAY_RETURN_Corr_Sentiment": 0.5812607448826022,
+          "2_DAY_RETURN_Corr_Sentiment": 0.5331679285134593,
+          "3_DAY_RETURN_Corr_Sentiment": 0.6092784905754072,
+          "7_DAY_RETURN_Corr_Sentiment": 0.4194600118566203
         },
         {
-          "layer": [
-            {
-              "mark": {"type": "circle"},
-              "encoding": {
-                "size": {
-                  "field": "3_DAY_RETURN_Corr_Sentiment",
-                  "scale": {
-                    "domain": [-0.49398837790519323, 0.6092784905754072],
-                    "range": [5, 300]
-                  },
-                  "title": "sentiment.corr",
-                  "type": "quantitative"
-                },
-                "tooltip": [
-                  {"field": "STOCK", "type": "nominal"},
-                  {"field": "TEXTBLOB_POLARITY", "type": "quantitative"},
-                  {"field": "3_DAY_RETURN", "type": "quantitative"},
-                  {
-                    "field": "3_DAY_RETURN_Corr_Sentiment",
-                    "type": "quantitative"
-                  }
-                ],
-                "x": {
-                  "field": "TEXTBLOB_POLARITY",
-                  "scale": {
-                    "domain": [-0.19381564022961978, 0.10900413693281522]
-                  },
-                  "title": "Tweet Sentiment",
-                  "type": "quantitative"
-                },
-                "y": {
-                  "axis": {"format": ".2%"},
-                  "field": "3_DAY_RETURN",
-                  "title": "3-Day Future Return",
-                  "type": "quantitative"
-                }
-              }
-            },
-            {
-              "mark": {"type": "line", "color": "red"},
-              "encoding": {
-                "size": {
-                  "field": "3_DAY_RETURN_Corr_Sentiment",
-                  "scale": {
-                    "domain": [-0.49398837790519323, 0.6092784905754072],
-                    "range": [5, 300]
-                  },
-                  "title": "sentiment.corr",
-                  "type": "quantitative"
-                },
-                "tooltip": [
-                  {"field": "STOCK", "type": "nominal"},
-                  {"field": "TEXTBLOB_POLARITY", "type": "quantitative"},
-                  {"field": "3_DAY_RETURN", "type": "quantitative"},
-                  {
-                    "field": "3_DAY_RETURN_Corr_Sentiment",
-                    "type": "quantitative"
-                  }
-                ],
-                "x": {
-                  "field": "TEXTBLOB_POLARITY",
-                  "scale": {
-                    "domain": [-0.19381564022961978, 0.10900413693281522]
-                  },
-                  "title": "Tweet Sentiment",
-                  "type": "quantitative"
-                },
-                "y": {
-                  "axis": {"format": ".2%"},
-                  "field": "3_DAY_RETURN",
-                  "title": "3-Day Future Return",
-                  "type": "quantitative"
-                }
-              },
-              "transform": [
-                {"on": "TEXTBLOB_POLARITY", "regression": "3_DAY_RETURN"}
-              ]
-            }
-          ],
-          "data": {"name": "data-51f26b1d49622b2f32d60abddaf6f8c5"},
-          "title": "3-Day Future Return",
-          "width": 400
+          "STOCK": "ASOS",
+          "1_DAY_RETURN": 0.00042432632329407667,
+          "2_DAY_RETURN": 0.0028569141555647125,
+          "3_DAY_RETURN": 0.009594582261555275,
+          "7_DAY_RETURN": -0.0042659975452949955,
+          "TEXTBLOB_POLARITY": -0.045971378679768866,
+          "1_DAY_RETURN_Corr_Sentiment": 0.1647368268431104,
+          "2_DAY_RETURN_Corr_Sentiment": -0.10097337074030018,
+          "3_DAY_RETURN_Corr_Sentiment": -0.05543424503490866,
+          "7_DAY_RETURN_Corr_Sentiment": -0.07430272879991455
         },
         {
-          "layer": [
-            {
-              "mark": {"type": "circle"},
-              "encoding": {
-                "size": {
-                  "field": "7_DAY_RETURN_Corr_Sentiment",
-                  "scale": {
-                    "domain": [-0.6880477009488887, 0.4789759791317928],
-                    "range": [5, 300]
-                  },
-                  "title": "sentiment.corr",
-                  "type": "quantitative"
-                },
-                "tooltip": [
-                  {"field": "STOCK", "type": "nominal"},
-                  {"field": "TEXTBLOB_POLARITY", "type": "quantitative"},
-                  {"field": "7_DAY_RETURN", "type": "quantitative"},
-                  {
-                    "field": "7_DAY_RETURN_Corr_Sentiment",
-                    "type": "quantitative"
-                  }
-                ],
-                "x": {
-                  "field": "TEXTBLOB_POLARITY",
-                  "scale": {
-                    "domain": [-0.19381564022961978, 0.10900413693281522]
-                  },
-                  "title": "Tweet Sentiment",
-                  "type": "quantitative"
-                },
-                "y": {
-                  "axis": {"format": ".2%"},
-                  "field": "7_DAY_RETURN",
-                  "title": "7-Day Future Return",
-                  "type": "quantitative"
-                }
-              }
-            },
-            {
-              "mark": {"type": "line", "color": "red"},
-              "encoding": {
-                "size": {
-                  "field": "7_DAY_RETURN_Corr_Sentiment",
-                  "scale": {
-                    "domain": [-0.6880477009488887, 0.4789759791317928],
-                    "range": [5, 300]
-                  },
-                  "title": "sentiment.corr",
-                  "type": "quantitative"
-                },
-                "tooltip": [
-                  {"field": "STOCK", "type": "nominal"},
-                  {"field": "TEXTBLOB_POLARITY", "type": "quantitative"},
-                  {"field": "7_DAY_RETURN", "type": "quantitative"},
-                  {
-                    "field": "7_DAY_RETURN_Corr_Sentiment",
-                    "type": "quantitative"
-                  }
-                ],
-                "x": {
-                  "field": "TEXTBLOB_POLARITY",
-                  "scale": {
-                    "domain": [-0.19381564022961978, 0.10900413693281522]
-                  },
-                  "title": "Tweet Sentiment",
-                  "type": "quantitative"
-                },
-                "y": {
-                  "axis": {"format": ".2%"},
-                  "field": "7_DAY_RETURN",
-                  "title": "7-Day Future Return",
-                  "type": "quantitative"
-                }
-              },
-              "transform": [
-                {"on": "TEXTBLOB_POLARITY", "regression": "7_DAY_RETURN"}
-              ]
-            }
-          ],
-          "data": {"name": "data-51f26b1d49622b2f32d60abddaf6f8c5"},
-          "title": "7-Day Future Return",
-          "width": 400
+          "STOCK": "AT&T",
+          "1_DAY_RETURN": -0.0001422146955942131,
+          "2_DAY_RETURN": -0.001917272721558393,
+          "3_DAY_RETURN": -0.002509123937657322,
+          "7_DAY_RETURN": -0.004532330604091919,
+          "TEXTBLOB_POLARITY": -0.10923946820466589,
+          "1_DAY_RETURN_Corr_Sentiment": -0.0028047390478625,
+          "2_DAY_RETURN_Corr_Sentiment": 0.021725456140391095,
+          "3_DAY_RETURN_Corr_Sentiment": -0.008714900046792616,
+          "7_DAY_RETURN_Corr_Sentiment": 0.04334236554375186
+        },
+        {
+          "STOCK": "Adobe",
+          "1_DAY_RETURN": -0.002831243242690845,
+          "2_DAY_RETURN": -0.001153966029366609,
+          "3_DAY_RETURN": -0.0011139376740816364,
+          "7_DAY_RETURN": 0.001387334374402758,
+          "TEXTBLOB_POLARITY": -0.007493852536023468,
+          "1_DAY_RETURN_Corr_Sentiment": 0.08111555875116737,
+          "2_DAY_RETURN_Corr_Sentiment": 0.3306553037512656,
+          "3_DAY_RETURN_Corr_Sentiment": 0.22399646073360915,
+          "7_DAY_RETURN_Corr_Sentiment": -0.04418305796911326
+        },
+        {
+          "STOCK": "Amazon",
+          "1_DAY_RETURN": 0.0015753298940483977,
+          "2_DAY_RETURN": 0.0006188944925241275,
+          "3_DAY_RETURN": -0.0020302288443673415,
+          "7_DAY_RETURN": -0.009525342633398817,
+          "TEXTBLOB_POLARITY": -0.03733508235534085,
+          "1_DAY_RETURN_Corr_Sentiment": -0.034033525693917814,
+          "2_DAY_RETURN_Corr_Sentiment": -0.0009740243279888701,
+          "3_DAY_RETURN_Corr_Sentiment": -0.01890546227168339,
+          "7_DAY_RETURN_Corr_Sentiment": -0.050526378025490794
+        },
+        {
+          "STOCK": "American Express",
+          "1_DAY_RETURN": 0.0012661004100921196,
+          "2_DAY_RETURN": -0.0016638268084930618,
+          "3_DAY_RETURN": -0.0025134872239116735,
+          "7_DAY_RETURN": -0.002957863108868095,
+          "TEXTBLOB_POLARITY": -0.06158916113674441,
+          "1_DAY_RETURN_Corr_Sentiment": -0.16619354621205798,
+          "2_DAY_RETURN_Corr_Sentiment": -0.3183687452279275,
+          "3_DAY_RETURN_Corr_Sentiment": -0.3156726780560685,
+          "7_DAY_RETURN_Corr_Sentiment": -0.21570913693936447
+        },
+        {
+          "STOCK": "Apple",
+          "1_DAY_RETURN": -0.0023597387021260913,
+          "2_DAY_RETURN": -0.0033076706090505157,
+          "3_DAY_RETURN": -0.0033007283795122837,
+          "7_DAY_RETURN": -0.0029783439691785634,
+          "TEXTBLOB_POLARITY": -0.05365024875113604,
+          "1_DAY_RETURN_Corr_Sentiment": -0.013121239694884018,
+          "2_DAY_RETURN_Corr_Sentiment": 0.03532207952461294,
+          "3_DAY_RETURN_Corr_Sentiment": 0.02076233684273021,
+          "7_DAY_RETURN_Corr_Sentiment": 0.02611852681447695
+        },
+        {
+          "STOCK": "Audi",
+          "1_DAY_RETURN": -0.0005955521227092968,
+          "2_DAY_RETURN": -0.006014151704737952,
+          "3_DAY_RETURN": -0.00547879302938709,
+          "7_DAY_RETURN": -0.003300847754635053,
+          "TEXTBLOB_POLARITY": 0.020034546603617275,
+          "1_DAY_RETURN_Corr_Sentiment": 0.014790902616428625,
+          "2_DAY_RETURN_Corr_Sentiment": 0.05201137844335543,
+          "3_DAY_RETURN_Corr_Sentiment": 0.07578010236790013,
+          "7_DAY_RETURN_Corr_Sentiment": 0.01607938532129366
+        },
+        {
+          "STOCK": "BMW",
+          "1_DAY_RETURN": 0.0006335728174719257,
+          "2_DAY_RETURN": 0.0040388264079044165,
+          "3_DAY_RETURN": 0.006112296884867957,
+          "7_DAY_RETURN": 0.013695974533809404,
+          "TEXTBLOB_POLARITY": -0.007992734611164693,
+          "1_DAY_RETURN_Corr_Sentiment": 0.28293505290488324,
+          "2_DAY_RETURN_Corr_Sentiment": 0.23410832863902245,
+          "3_DAY_RETURN_Corr_Sentiment": 0.034670153215808366,
+          "7_DAY_RETURN_Corr_Sentiment": -0.08139607619852908
+        },
+        {
+          "STOCK": "BP",
+          "1_DAY_RETURN": -0.0008837616981194268,
+          "2_DAY_RETURN": -0.0020769427578566273,
+          "3_DAY_RETURN": -0.0013133190187676615,
+          "7_DAY_RETURN": 0.0019315961363445455,
+          "TEXTBLOB_POLARITY": 0.09900413693281522,
+          "1_DAY_RETURN_Corr_Sentiment": -0.008358728518240524,
+          "2_DAY_RETURN_Corr_Sentiment": -0.10808431599364718,
+          "3_DAY_RETURN_Corr_Sentiment": -0.16395182555367807,
+          "7_DAY_RETURN_Corr_Sentiment": -0.018337613848939515
+        },
+        {
+          "STOCK": "Bank of America",
+          "1_DAY_RETURN": 0.006520987514548951,
+          "2_DAY_RETURN": 0.004071914477648815,
+          "3_DAY_RETURN": -0.0013938160657902558,
+          "7_DAY_RETURN": -0.0024798821525229705,
+          "TEXTBLOB_POLARITY": 0.001252101325961997,
+          "1_DAY_RETURN_Corr_Sentiment": 0.008586737359697135,
+          "2_DAY_RETURN_Corr_Sentiment": 0.0632758805416329,
+          "3_DAY_RETURN_Corr_Sentiment": 0.1306982706668738,
+          "7_DAY_RETURN_Corr_Sentiment": 0.007386115448511476
+        },
+        {
+          "STOCK": "Bayer",
+          "1_DAY_RETURN": 0.006198926410105352,
+          "2_DAY_RETURN": 0.0020085669735433603,
+          "3_DAY_RETURN": 0.004139960441435364,
+          "7_DAY_RETURN": 0.0029239990848211623,
+          "TEXTBLOB_POLARITY": -0.084635353653143,
+          "1_DAY_RETURN_Corr_Sentiment": 0.394046010038654,
+          "2_DAY_RETURN_Corr_Sentiment": 0.28965071209190746,
+          "3_DAY_RETURN_Corr_Sentiment": 0.281523955375591,
+          "7_DAY_RETURN_Corr_Sentiment": -0.01792110236082818
+        },
+        {
+          "STOCK": "BlackRock",
+          "1_DAY_RETURN": 0.0035348085258294385,
+          "2_DAY_RETURN": 0.006044149848485704,
+          "3_DAY_RETURN": 0.004865748400771615,
+          "7_DAY_RETURN": 0.011870380607027348,
+          "TEXTBLOB_POLARITY": -0.05830751585941742,
+          "1_DAY_RETURN_Corr_Sentiment": -0.1780593337096828,
+          "2_DAY_RETURN_Corr_Sentiment": 0.5388972284908711,
+          "3_DAY_RETURN_Corr_Sentiment": 0.5782555291799352,
+          "7_DAY_RETURN_Corr_Sentiment": 0.005880853018467644
+        },
+        {
+          "STOCK": "Boeing",
+          "1_DAY_RETURN": 0.0010966303131623553,
+          "2_DAY_RETURN": 0.001440951836121163,
+          "3_DAY_RETURN": -0.000739350384283701,
+          "7_DAY_RETURN": -0.015072634972302162,
+          "TEXTBLOB_POLARITY": 0.023942562013075243,
+          "1_DAY_RETURN_Corr_Sentiment": 0.0021614965430465875,
+          "2_DAY_RETURN_Corr_Sentiment": 0.18906894969657612,
+          "3_DAY_RETURN_Corr_Sentiment": 0.24776717818538227,
+          "7_DAY_RETURN_Corr_Sentiment": -0.04205359927323096
+        },
+        {
+          "STOCK": "Burberry",
+          "1_DAY_RETURN": 0.003637119930046256,
+          "2_DAY_RETURN": 0.0063858127850927385,
+          "3_DAY_RETURN": 0.006586316261806913,
+          "7_DAY_RETURN": 0.015119868642441326,
+          "TEXTBLOB_POLARITY": -0.10482520017635624,
+          "1_DAY_RETURN_Corr_Sentiment": -0.06499360020506795,
+          "2_DAY_RETURN_Corr_Sentiment": 0.006339689095994183,
+          "3_DAY_RETURN_Corr_Sentiment": 0.032299581284844926,
+          "7_DAY_RETURN_Corr_Sentiment": -0.018099893018024008
+        },
+        {
+          "STOCK": "CBS",
+          "1_DAY_RETURN": 0.00019634222899565096,
+          "2_DAY_RETURN": 0.0012139886569226396,
+          "3_DAY_RETURN": 0.00600122741607312,
+          "7_DAY_RETURN": 0.006853815288682322,
+          "TEXTBLOB_POLARITY": -0.034362623132115126,
+          "1_DAY_RETURN_Corr_Sentiment": -0.08735752771337059,
+          "2_DAY_RETURN_Corr_Sentiment": 0.012541489303151807,
+          "3_DAY_RETURN_Corr_Sentiment": 0.10155115262690033,
+          "7_DAY_RETURN_Corr_Sentiment": 0.027174817332422534
+        },
+        {
+          "STOCK": "CVS Health",
+          "1_DAY_RETURN": 0.0005795684929367413,
+          "2_DAY_RETURN": -0.0008069406506017392,
+          "3_DAY_RETURN": 0.00024072739413495518,
+          "7_DAY_RETURN": -0.012550135733161138,
+          "TEXTBLOB_POLARITY": 0.09483367021295924,
+          "1_DAY_RETURN_Corr_Sentiment": -0.14839573393233313,
+          "2_DAY_RETURN_Corr_Sentiment": -0.18433995357934374,
+          "3_DAY_RETURN_Corr_Sentiment": -0.09407187838767848,
+          "7_DAY_RETURN_Corr_Sentiment": -0.6880477009488887
+        },
+        {
+          "STOCK": "Chevron",
+          "1_DAY_RETURN": -0.0024544330965851355,
+          "2_DAY_RETURN": 0.0019191021615221023,
+          "3_DAY_RETURN": 0.004262181786558297,
+          "7_DAY_RETURN": 0.011283872831398294,
+          "TEXTBLOB_POLARITY": -0.16962042524892518,
+          "1_DAY_RETURN_Corr_Sentiment": -0.3647712090497522,
+          "2_DAY_RETURN_Corr_Sentiment": -0.49505045501932904,
+          "3_DAY_RETURN_Corr_Sentiment": -0.45621568735360535,
+          "7_DAY_RETURN_Corr_Sentiment": -0.4935377730073985
+        },
+        {
+          "STOCK": "Cisco",
+          "1_DAY_RETURN": -0.0002986218862600271,
+          "2_DAY_RETURN": -0.0014960532174356986,
+          "3_DAY_RETURN": -0.0014785573773055923,
+          "7_DAY_RETURN": -0.004378638232474541,
+          "TEXTBLOB_POLARITY": -0.01379648290179539,
+          "1_DAY_RETURN_Corr_Sentiment": 0.010010573190692961,
+          "2_DAY_RETURN_Corr_Sentiment": 0.15114895864591074,
+          "3_DAY_RETURN_Corr_Sentiment": 0.14349062449937228,
+          "7_DAY_RETURN_Corr_Sentiment": 0.08668396286240804
+        },
+        {
+          "STOCK": "Citigroup",
+          "1_DAY_RETURN": 0.0019633936059123744,
+          "2_DAY_RETURN": -0.003976646030685215,
+          "3_DAY_RETURN": -0.00917700682811709,
+          "7_DAY_RETURN": -0.01433353414730547,
+          "TEXTBLOB_POLARITY": -0.07902661900497887,
+          "1_DAY_RETURN_Corr_Sentiment": -0.04795364364639372,
+          "2_DAY_RETURN_Corr_Sentiment": 0.10082964997825081,
+          "3_DAY_RETURN_Corr_Sentiment": 0.04705823142669475,
+          "7_DAY_RETURN_Corr_Sentiment": 0.21264940179478828
+        },
+        {
+          "STOCK": "CocaCola",
+          "1_DAY_RETURN": -0.00023161131701545097,
+          "2_DAY_RETURN": 0.0006769664856713584,
+          "3_DAY_RETURN": 0.002002762122068231,
+          "7_DAY_RETURN": 0.0022186512379033423,
+          "TEXTBLOB_POLARITY": -0.047744437095446124,
+          "1_DAY_RETURN_Corr_Sentiment": 0.03689926701912265,
+          "2_DAY_RETURN_Corr_Sentiment": 0.07992817239375238,
+          "3_DAY_RETURN_Corr_Sentiment": 0.1639015507377328,
+          "7_DAY_RETURN_Corr_Sentiment": 0.11846217479922475
+        },
+        {
+          "STOCK": "Deutsche Bank",
+          "1_DAY_RETURN": -0.0023077262837598984,
+          "2_DAY_RETURN": 0.0011998191386700134,
+          "3_DAY_RETURN": 0.0035324501523811684,
+          "7_DAY_RETURN": 0.0025340762519612393,
+          "TEXTBLOB_POLARITY": -0.02004076033352752,
+          "1_DAY_RETURN_Corr_Sentiment": 0.27416870010157696,
+          "2_DAY_RETURN_Corr_Sentiment": 0.2347050029482978,
+          "3_DAY_RETURN_Corr_Sentiment": 0.27465278236396523,
+          "7_DAY_RETURN_Corr_Sentiment": 0.3380465113701279
+        },
+        {
+          "STOCK": "Disney",
+          "1_DAY_RETURN": 0.001814110202483467,
+          "2_DAY_RETURN": -0.0029518340985869,
+          "3_DAY_RETURN": -0.004112430119638054,
+          "7_DAY_RETURN": -0.005506961939641402,
+          "TEXTBLOB_POLARITY": 0.01732213395643623,
+          "1_DAY_RETURN_Corr_Sentiment": 0.039553911957089224,
+          "2_DAY_RETURN_Corr_Sentiment": 0.04537812875969685,
+          "3_DAY_RETURN_Corr_Sentiment": 0.07157957231323295,
+          "7_DAY_RETURN_Corr_Sentiment": 0.054283123344864
+        },
+        {
+          "STOCK": "Exxon",
+          "1_DAY_RETURN": 0.00326766403225618,
+          "2_DAY_RETURN": 0.004636437180760003,
+          "3_DAY_RETURN": 0.004855706893715337,
+          "7_DAY_RETURN": 0.009367944997934792,
+          "TEXTBLOB_POLARITY": -0.11296829068343266,
+          "1_DAY_RETURN_Corr_Sentiment": -0.06549319223695342,
+          "2_DAY_RETURN_Corr_Sentiment": 0.09916708665391419,
+          "3_DAY_RETURN_Corr_Sentiment": -0.06856979394267586,
+          "7_DAY_RETURN_Corr_Sentiment": 0.10257766040563478
+        },
+        {
+          "STOCK": "Facebook",
+          "1_DAY_RETURN": -0.000760839718163264,
+          "2_DAY_RETURN": -0.0014600294151169112,
+          "3_DAY_RETURN": -0.003511480981176073,
+          "7_DAY_RETURN": -0.005617552584545785,
+          "TEXTBLOB_POLARITY": -0.08043263132373195,
+          "1_DAY_RETURN_Corr_Sentiment": 0.06802422565355674,
+          "2_DAY_RETURN_Corr_Sentiment": 0.05801619420223291,
+          "3_DAY_RETURN_Corr_Sentiment": 0.028158423610572667,
+          "7_DAY_RETURN_Corr_Sentiment": -0.02028609917863605
+        },
+        {
+          "STOCK": "FedEx",
+          "1_DAY_RETURN": 0.0008139576127953255,
+          "2_DAY_RETURN": -0.005637071152075764,
+          "3_DAY_RETURN": -0.00842384036432777,
+          "7_DAY_RETURN": -0.011897110039916399,
+          "TEXTBLOB_POLARITY": -0.06851224792984188,
+          "1_DAY_RETURN_Corr_Sentiment": 0.1021255203894139,
+          "2_DAY_RETURN_Corr_Sentiment": 0.0274502719841624,
+          "3_DAY_RETURN_Corr_Sentiment": 0.018260786433878327,
+          "7_DAY_RETURN_Corr_Sentiment": 0.04283828971106485
+        },
+        {
+          "STOCK": "Ford",
+          "1_DAY_RETURN": -0.002724621319016299,
+          "2_DAY_RETURN": -0.006716204101130986,
+          "3_DAY_RETURN": -0.00856986472576455,
+          "7_DAY_RETURN": -0.004538631100719021,
+          "TEXTBLOB_POLARITY": -0.1335398391325298,
+          "1_DAY_RETURN_Corr_Sentiment": 0.08006929377144437,
+          "2_DAY_RETURN_Corr_Sentiment": -0.056554304008377916,
+          "3_DAY_RETURN_Corr_Sentiment": -0.03619528570176733,
+          "7_DAY_RETURN_Corr_Sentiment": -0.03970653664700624
+        },
+        {
+          "STOCK": "GSK",
+          "1_DAY_RETURN": -0.0004217340125179001,
+          "2_DAY_RETURN": -0.001649120524907678,
+          "3_DAY_RETURN": 0.003782309209001079,
+          "7_DAY_RETURN": 0.010215311202697926,
+          "TEXTBLOB_POLARITY": -0.0178223067219985,
+          "1_DAY_RETURN_Corr_Sentiment": 0.21005512021123135,
+          "2_DAY_RETURN_Corr_Sentiment": 0.09325632994602631,
+          "3_DAY_RETURN_Corr_Sentiment": 0.14094111999375614,
+          "7_DAY_RETURN_Corr_Sentiment": 0.4160735930580154
+        },
+        {
+          "STOCK": "General Electric",
+          "1_DAY_RETURN": 0.004180567251989682,
+          "2_DAY_RETURN": 0.004008298750361615,
+          "3_DAY_RETURN": 0.007907399520381784,
+          "7_DAY_RETURN": 0.017666685331616708,
+          "TEXTBLOB_POLARITY": 0.0010137000105631757,
+          "1_DAY_RETURN_Corr_Sentiment": -0.13191490705971629,
+          "2_DAY_RETURN_Corr_Sentiment": 0.1174739196057987,
+          "3_DAY_RETURN_Corr_Sentiment": -0.04251081338201188,
+          "7_DAY_RETURN_Corr_Sentiment": 0.029578529096562924
+        },
+        {
+          "STOCK": "Google",
+          "1_DAY_RETURN": 0.0009009150225708002,
+          "2_DAY_RETURN": 0.0031679580943485643,
+          "3_DAY_RETURN": 0.0020851908953694958,
+          "7_DAY_RETURN": 0.0008992908109854257,
+          "TEXTBLOB_POLARITY": -0.03263748047928493,
+          "1_DAY_RETURN_Corr_Sentiment": -0.02453555195065202,
+          "2_DAY_RETURN_Corr_Sentiment": -0.01476296147002697,
+          "3_DAY_RETURN_Corr_Sentiment": -0.009934477305295366,
+          "7_DAY_RETURN_Corr_Sentiment": -0.07184262783665837
+        },
+        {
+          "STOCK": "HP",
+          "1_DAY_RETURN": 0.0022064453338397245,
+          "2_DAY_RETURN": -0.003210488132343854,
+          "3_DAY_RETURN": -0.0007639743408147836,
+          "7_DAY_RETURN": 0.0022701756965062955,
+          "TEXTBLOB_POLARITY": -0.057526848435088755,
+          "1_DAY_RETURN_Corr_Sentiment": -0.11142260021910204,
+          "2_DAY_RETURN_Corr_Sentiment": 0.17936907748251413,
+          "3_DAY_RETURN_Corr_Sentiment": 0.26420535202451245,
+          "7_DAY_RETURN_Corr_Sentiment": 0.27977668015347334
+        },
+        {
+          "STOCK": "HSBC",
+          "1_DAY_RETURN": -0.00008200242071822678,
+          "2_DAY_RETURN": 0.0033012471321171868,
+          "3_DAY_RETURN": 0.00318357629612391,
+          "7_DAY_RETURN": 0.002848827050754416,
+          "TEXTBLOB_POLARITY": -0.14386450832414974,
+          "1_DAY_RETURN_Corr_Sentiment": 0.1341168503987284,
+          "2_DAY_RETURN_Corr_Sentiment": -0.037802585627052146,
+          "3_DAY_RETURN_Corr_Sentiment": 0.051436769358077956,
+          "7_DAY_RETURN_Corr_Sentiment": -0.018375160014653107
+        },
+        {
+          "STOCK": "Heineken",
+          "1_DAY_RETURN": 0.0010918185325046775,
+          "2_DAY_RETURN": 0.002967934136807076,
+          "3_DAY_RETURN": 0.0035918694303205033,
+          "7_DAY_RETURN": 0.01279046424426031,
+          "TEXTBLOB_POLARITY": 0.03303918663072237,
+          "1_DAY_RETURN_Corr_Sentiment": 0.08940318436534513,
+          "2_DAY_RETURN_Corr_Sentiment": 0.17756112889131906,
+          "3_DAY_RETURN_Corr_Sentiment": 0.2180725465207958,
+          "7_DAY_RETURN_Corr_Sentiment": 0.08592002767616616
+        },
+        {
+          "STOCK": "Home Depot",
+          "1_DAY_RETURN": -0.0006443128438868394,
+          "2_DAY_RETURN": 0.0015218869629607175,
+          "3_DAY_RETURN": 0.0035305112473850665,
+          "7_DAY_RETURN": 0.004346522633005004,
+          "TEXTBLOB_POLARITY": -0.01279617362823853,
+          "1_DAY_RETURN_Corr_Sentiment": -0.31262488562801105,
+          "2_DAY_RETURN_Corr_Sentiment": -0.29990853686763363,
+          "3_DAY_RETURN_Corr_Sentiment": -0.2708360809503349,
+          "7_DAY_RETURN_Corr_Sentiment": -0.3307704606684887
+        },
+        {
+          "STOCK": "Honda",
+          "1_DAY_RETURN": 0.0030107268469609185,
+          "2_DAY_RETURN": 0.004088445714937261,
+          "3_DAY_RETURN": 0.0027230650326108487,
+          "7_DAY_RETURN": 0.004194410617594686,
+          "TEXTBLOB_POLARITY": -0.08621285172649625,
+          "1_DAY_RETURN_Corr_Sentiment": -0.08206900837932792,
+          "2_DAY_RETURN_Corr_Sentiment": -0.03503747073296032,
+          "3_DAY_RETURN_Corr_Sentiment": 0.026325607045461805,
+          "7_DAY_RETURN_Corr_Sentiment": -0.03738517993386736
+        },
+        {
+          "STOCK": "Hyundai",
+          "1_DAY_RETURN": 0.0012243307895818327,
+          "2_DAY_RETURN": 0.009527038988038696,
+          "3_DAY_RETURN": 0.001974714160386617,
+          "7_DAY_RETURN": -0.006165959140623029,
+          "TEXTBLOB_POLARITY": -0.11051683602362092,
+          "1_DAY_RETURN_Corr_Sentiment": 0.2768855137478508,
+          "2_DAY_RETURN_Corr_Sentiment": 0.12124074796905389,
+          "3_DAY_RETURN_Corr_Sentiment": 0.09712485148271136,
+          "7_DAY_RETURN_Corr_Sentiment": 0.2439904092600602
+        },
+        {
+          "STOCK": "IBM",
+          "1_DAY_RETURN": 0.00001618742536914251,
+          "2_DAY_RETURN": 0.0010892876173942045,
+          "3_DAY_RETURN": 0.002769332644523901,
+          "7_DAY_RETURN": 0.0038099161191264123,
+          "TEXTBLOB_POLARITY": -0.002675326493477061,
+          "1_DAY_RETURN_Corr_Sentiment": -0.1172434969426313,
+          "2_DAY_RETURN_Corr_Sentiment": -0.12207704714278533,
+          "3_DAY_RETURN_Corr_Sentiment": -0.11936617825056246,
+          "7_DAY_RETURN_Corr_Sentiment": -0.08530119027461128
+        },
+        {
+          "STOCK": "Intel",
+          "1_DAY_RETURN": -0.0001638957054641496,
+          "2_DAY_RETURN": -0.0000700123406415827,
+          "3_DAY_RETURN": -0.0001526285992400756,
+          "7_DAY_RETURN": -0.0016273413036446025,
+          "TEXTBLOB_POLARITY": -0.03035562831756444,
+          "1_DAY_RETURN_Corr_Sentiment": 0.07884715192210395,
+          "2_DAY_RETURN_Corr_Sentiment": -0.025187821381868487,
+          "3_DAY_RETURN_Corr_Sentiment": -0.028728781584766078,
+          "7_DAY_RETURN_Corr_Sentiment": -0.07699248417245047
+        },
+        {
+          "STOCK": "JPMorgan",
+          "1_DAY_RETURN": 0.0006682166986742501,
+          "2_DAY_RETURN": 0.001048959973024425,
+          "3_DAY_RETURN": -0.0014130570929380938,
+          "7_DAY_RETURN": -0.001773059915995536,
+          "TEXTBLOB_POLARITY": -0.0269799768723272,
+          "1_DAY_RETURN_Corr_Sentiment": -0.12110987265594457,
+          "2_DAY_RETURN_Corr_Sentiment": -0.12019660884600485,
+          "3_DAY_RETURN_Corr_Sentiment": -0.10886832589215541,
+          "7_DAY_RETURN_Corr_Sentiment": -0.1086146566188074
+        },
+        {
+          "STOCK": "John Deere",
+          "1_DAY_RETURN": -0.002598295685351582,
+          "2_DAY_RETURN": -0.002135598388029747,
+          "3_DAY_RETURN": 0.00007717961983901199,
+          "7_DAY_RETURN": -0.008127801308776748,
+          "TEXTBLOB_POLARITY": 0.025446220675815975,
+          "1_DAY_RETURN_Corr_Sentiment": -0.4307911236496017,
+          "2_DAY_RETURN_Corr_Sentiment": -0.30902913062903464,
+          "3_DAY_RETURN_Corr_Sentiment": -0.20195115858433196,
+          "7_DAY_RETURN_Corr_Sentiment": -0.3124108992648139
+        },
+        {
+          "STOCK": "Kroger",
+          "1_DAY_RETURN": 0.0013966388199501156,
+          "2_DAY_RETURN": -0.003988546443422019,
+          "3_DAY_RETURN": -0.00830630990836526,
+          "7_DAY_RETURN": -0.0124249099037347,
+          "TEXTBLOB_POLARITY": -0.09208844061161739,
+          "1_DAY_RETURN_Corr_Sentiment": 0.22258012371312166,
+          "2_DAY_RETURN_Corr_Sentiment": 0.23033718932401756,
+          "3_DAY_RETURN_Corr_Sentiment": 0.20872038940517973,
+          "7_DAY_RETURN_Corr_Sentiment": 0.0584339640896561
+        },
+        {
+          "STOCK": "L'Oreal",
+          "1_DAY_RETURN": 0.004780560650383034,
+          "2_DAY_RETURN": 0.006679187881992655,
+          "3_DAY_RETURN": 0.007087456582725274,
+          "7_DAY_RETURN": 0.0032747765988201806,
+          "TEXTBLOB_POLARITY": -0.12256455425461349,
+          "1_DAY_RETURN_Corr_Sentiment": -0.09151054191824451,
+          "2_DAY_RETURN_Corr_Sentiment": -0.10101479383909127,
+          "3_DAY_RETURN_Corr_Sentiment": -0.14327189218201788,
+          "7_DAY_RETURN_Corr_Sentiment": 0.05513116536775533
+        },
+        {
+          "STOCK": "Mastercard",
+          "1_DAY_RETURN": -0.0020118692282552132,
+          "2_DAY_RETURN": 0.008894050981603497,
+          "3_DAY_RETURN": 0.00793245397798235,
+          "7_DAY_RETURN": 0.0034900643848141326,
+          "TEXTBLOB_POLARITY": -0.03389946343992375,
+          "1_DAY_RETURN_Corr_Sentiment": -0.45499021015498364,
+          "2_DAY_RETURN_Corr_Sentiment": 0.28223133241635545,
+          "3_DAY_RETURN_Corr_Sentiment": 0.14087516288591792,
+          "7_DAY_RETURN_Corr_Sentiment": 0.1345160129786083
+        },
+        {
+          "STOCK": "Microsoft",
+          "1_DAY_RETURN": 0.00006427729284153423,
+          "2_DAY_RETURN": 0.00030852507085281,
+          "3_DAY_RETURN": -0.00014665291804520723,
+          "7_DAY_RETURN": -0.0031473966318365542,
+          "TEXTBLOB_POLARITY": -0.019123698421832164,
+          "1_DAY_RETURN_Corr_Sentiment": 0.04605059558621497,
+          "2_DAY_RETURN_Corr_Sentiment": 0.04842241998936722,
+          "3_DAY_RETURN_Corr_Sentiment": -0.01181271169388093,
+          "7_DAY_RETURN_Corr_Sentiment": -0.15377946735190573
+        },
+        {
+          "STOCK": "Morgan Stanley",
+          "1_DAY_RETURN": 0.0004981608180358697,
+          "2_DAY_RETURN": -0.003398855490648521,
+          "3_DAY_RETURN": -0.006633213312715695,
+          "7_DAY_RETURN": -0.006615332884258195,
+          "TEXTBLOB_POLARITY": -0.008068065218884096,
+          "1_DAY_RETURN_Corr_Sentiment": -0.0683843467789647,
+          "2_DAY_RETURN_Corr_Sentiment": 0.07485790375118903,
+          "3_DAY_RETURN_Corr_Sentiment": 0.20485094155042105,
+          "7_DAY_RETURN_Corr_Sentiment": 0.11350608419867089
+        },
+        {
+          "STOCK": "Nestle",
+          "1_DAY_RETURN": 0.0004274429826396435,
+          "2_DAY_RETURN": 0.0021681579862424145,
+          "3_DAY_RETURN": 0.0036949842500078045,
+          "7_DAY_RETURN": -0.0027579523137428686,
+          "TEXTBLOB_POLARITY": -0.004755827149192048,
+          "1_DAY_RETURN_Corr_Sentiment": -0.24852841967888814,
+          "2_DAY_RETURN_Corr_Sentiment": -0.19541560935886207,
+          "3_DAY_RETURN_Corr_Sentiment": -0.16927322124862496,
+          "7_DAY_RETURN_Corr_Sentiment": -0.002545572381491473
+        },
+        {
+          "STOCK": "Netflix",
+          "1_DAY_RETURN": 0.003294127593109835,
+          "2_DAY_RETURN": 0.0014723194916266328,
+          "3_DAY_RETURN": -0.0007564166792250706,
+          "7_DAY_RETURN": 0.0012242223275175644,
+          "TEXTBLOB_POLARITY": -0.011571730241982069,
+          "1_DAY_RETURN_Corr_Sentiment": 0.0046163854663304905,
+          "2_DAY_RETURN_Corr_Sentiment": 0.1641462133046306,
+          "3_DAY_RETURN_Corr_Sentiment": 0.13390059787087982,
+          "7_DAY_RETURN_Corr_Sentiment": 0.10680838171459375
+        },
+        {
+          "STOCK": "Next",
+          "1_DAY_RETURN": 0.002686139667808018,
+          "2_DAY_RETURN": -0.00549257420687728,
+          "3_DAY_RETURN": -0.004916231327210734,
+          "7_DAY_RETURN": 0.0015868222738805078,
+          "TEXTBLOB_POLARITY": -0.009197658837439128,
+          "1_DAY_RETURN_Corr_Sentiment": -0.15560159115602346,
+          "2_DAY_RETURN_Corr_Sentiment": -0.04704719022425093,
+          "3_DAY_RETURN_Corr_Sentiment": 0.01845500545286378,
+          "7_DAY_RETURN_Corr_Sentiment": -0.01816739415392712
+        },
+        {
+          "STOCK": "Nissan",
+          "1_DAY_RETURN": 0.003374286172412657,
+          "2_DAY_RETURN": 0.0026639857434112716,
+          "3_DAY_RETURN": 0.004231603604001657,
+          "7_DAY_RETURN": 0.004935293458896895,
+          "TEXTBLOB_POLARITY": -0.01922882000663962,
+          "1_DAY_RETURN_Corr_Sentiment": 0.0685889976136877,
+          "2_DAY_RETURN_Corr_Sentiment": -0.20704251016917888,
+          "3_DAY_RETURN_Corr_Sentiment": -0.13169102893922294,
+          "7_DAY_RETURN_Corr_Sentiment": 0.006881778296264046
+        },
+        {
+          "STOCK": "Oracle",
+          "1_DAY_RETURN": -0.0015845027112126487,
+          "2_DAY_RETURN": -0.0022320204561781065,
+          "3_DAY_RETURN": -0.0015259474709014983,
+          "7_DAY_RETURN": 0.0007268428059955646,
+          "TEXTBLOB_POLARITY": -0.025272843815647286,
+          "1_DAY_RETURN_Corr_Sentiment": 0.05367915417082269,
+          "2_DAY_RETURN_Corr_Sentiment": 0.034521338617057626,
+          "3_DAY_RETURN_Corr_Sentiment": 0.025945752810322464,
+          "7_DAY_RETURN_Corr_Sentiment": 0.02095127737646754
+        },
+        {
+          "STOCK": "P&G",
+          "1_DAY_RETURN": -0.00007679505251727795,
+          "2_DAY_RETURN": -0.0018375708876210615,
+          "3_DAY_RETURN": 0.003883127725894788,
+          "7_DAY_RETURN": -0.0034387135698988125,
+          "TEXTBLOB_POLARITY": -0.13211091645005818,
+          "1_DAY_RETURN_Corr_Sentiment": 0.13771311607883155,
+          "2_DAY_RETURN_Corr_Sentiment": 0.4417118607722016,
+          "3_DAY_RETURN_Corr_Sentiment": 0.3519399197426323,
+          "7_DAY_RETURN_Corr_Sentiment": 0.361632915746588
+        },
+        {
+          "STOCK": "PayPal",
+          "1_DAY_RETURN": -0.0032758738400833964,
+          "2_DAY_RETURN": 0.00007186869191453218,
+          "3_DAY_RETURN": -0.002491996122662205,
+          "7_DAY_RETURN": 0.0028699168546597927,
+          "TEXTBLOB_POLARITY": -0.10503587887461532,
+          "1_DAY_RETURN_Corr_Sentiment": 0.1607824873353464,
+          "2_DAY_RETURN_Corr_Sentiment": 0.10813908618077529,
+          "3_DAY_RETURN_Corr_Sentiment": -0.20679493726433917,
+          "7_DAY_RETURN_Corr_Sentiment": -0.10224447996254825
+        },
+        {
+          "STOCK": "Pepsi",
+          "1_DAY_RETURN": 0.0004022342193775592,
+          "2_DAY_RETURN": -0.0029240119366279183,
+          "3_DAY_RETURN": -0.002443089366165413,
+          "7_DAY_RETURN": 0.008595099048728105,
+          "TEXTBLOB_POLARITY": -0.024104730316508432,
+          "1_DAY_RETURN_Corr_Sentiment": 0.034043208933772856,
+          "2_DAY_RETURN_Corr_Sentiment": -0.0422368028845747,
+          "3_DAY_RETURN_Corr_Sentiment": -0.03952638296609912,
+          "7_DAY_RETURN_Corr_Sentiment": 0.019363468182867976
+        },
+        {
+          "STOCK": "Pfizer",
+          "1_DAY_RETURN": -0.004873526763138021,
+          "2_DAY_RETURN": -0.006534817221831948,
+          "3_DAY_RETURN": -0.007903652685044907,
+          "7_DAY_RETURN": -0.00886209365018364,
+          "TEXTBLOB_POLARITY": -0.032214720172254525,
+          "1_DAY_RETURN_Corr_Sentiment": 0.03031862098110862,
+          "2_DAY_RETURN_Corr_Sentiment": 0.25296636834656444,
+          "3_DAY_RETURN_Corr_Sentiment": -0.00588882418331465,
+          "7_DAY_RETURN_Corr_Sentiment": -0.11836960296848217
+        },
+        {
+          "STOCK": "Reuters",
+          "1_DAY_RETURN": -0.0030927796866944764,
+          "2_DAY_RETURN": -0.005154542116107975,
+          "3_DAY_RETURN": -0.005710977524078298,
+          "7_DAY_RETURN": 0.001639585930967049,
+          "TEXTBLOB_POLARITY": -0.10747626243803789,
+          "1_DAY_RETURN_Corr_Sentiment": -0.05757578811809175,
+          "2_DAY_RETURN_Corr_Sentiment": -0.05780847335038856,
+          "3_DAY_RETURN_Corr_Sentiment": -0.05793227345084932,
+          "7_DAY_RETURN_Corr_Sentiment": -0.029045806172761653
+        },
+        {
+          "STOCK": "Ryanair",
+          "1_DAY_RETURN": -0.004200361089345362,
+          "2_DAY_RETURN": 0.0065687518844389885,
+          "3_DAY_RETURN": -0.0026658663975113236,
+          "7_DAY_RETURN": -0.004758175813790918,
+          "TEXTBLOB_POLARITY": -0.18381564022961977,
+          "1_DAY_RETURN_Corr_Sentiment": -0.38817816376983266,
+          "2_DAY_RETURN_Corr_Sentiment": -0.5633991909584759,
+          "3_DAY_RETURN_Corr_Sentiment": -0.49398837790519323,
+          "7_DAY_RETURN_Corr_Sentiment": -0.4437689978700475
+        },
+        {
+          "STOCK": "SAP",
+          "1_DAY_RETURN": 0.001187600885067683,
+          "2_DAY_RETURN": 0.0028808260089298117,
+          "3_DAY_RETURN": 0.005624365191966814,
+          "7_DAY_RETURN": 0.003962546432630036,
+          "TEXTBLOB_POLARITY": 0.02750248114270737,
+          "1_DAY_RETURN_Corr_Sentiment": -0.08101037159763902,
+          "2_DAY_RETURN_Corr_Sentiment": -0.15778289176277152,
+          "3_DAY_RETURN_Corr_Sentiment": -0.14200215244946213,
+          "7_DAY_RETURN_Corr_Sentiment": -0.09110057352716792
+        },
+        {
+          "STOCK": "Samsung",
+          "1_DAY_RETURN": 0.0021863159498832106,
+          "2_DAY_RETURN": -0.003912896506127556,
+          "3_DAY_RETURN": -0.008370865757656531,
+          "7_DAY_RETURN": 0.016695163638985894,
+          "TEXTBLOB_POLARITY": -0.07306836960544284,
+          "1_DAY_RETURN_Corr_Sentiment": -0.027868015314110064,
+          "2_DAY_RETURN_Corr_Sentiment": -0.07330499344948313,
+          "3_DAY_RETURN_Corr_Sentiment": -0.14204243830874835,
+          "7_DAY_RETURN_Corr_Sentiment": -0.037228627720919456
+        },
+        {
+          "STOCK": "Shell",
+          "1_DAY_RETURN": 0.0005743844341849017,
+          "2_DAY_RETURN": 0.001170334164762601,
+          "3_DAY_RETURN": 0.003928263925848711,
+          "7_DAY_RETURN": 0.0000041468800163013536,
+          "TEXTBLOB_POLARITY": -0.11232775527597447,
+          "1_DAY_RETURN_Corr_Sentiment": 0.11898237820886617,
+          "2_DAY_RETURN_Corr_Sentiment": 0.05662919541066953,
+          "3_DAY_RETURN_Corr_Sentiment": 0.07134697109862544,
+          "7_DAY_RETURN_Corr_Sentiment": -0.1700844277059337
+        },
+        {
+          "STOCK": "Siemens",
+          "1_DAY_RETURN": 0.00001233204308393604,
+          "2_DAY_RETURN": -0.0014314505188762078,
+          "3_DAY_RETURN": -0.003189216123530668,
+          "7_DAY_RETURN": -0.001166925440358581,
+          "TEXTBLOB_POLARITY": 0.0012677337084506491,
+          "1_DAY_RETURN_Corr_Sentiment": -0.28063507442131624,
+          "2_DAY_RETURN_Corr_Sentiment": -0.1519482637173146,
+          "3_DAY_RETURN_Corr_Sentiment": -0.07245401694533357,
+          "7_DAY_RETURN_Corr_Sentiment": 0.21072495327808688
+        },
+        {
+          "STOCK": "Sony",
+          "1_DAY_RETURN": -0.0007832773384018879,
+          "2_DAY_RETURN": -0.007504658486848911,
+          "3_DAY_RETURN": -0.007048540879032101,
+          "7_DAY_RETURN": -0.011758107720336626,
+          "TEXTBLOB_POLARITY": -0.06974899912002258,
+          "1_DAY_RETURN_Corr_Sentiment": 0.016140629590418308,
+          "2_DAY_RETURN_Corr_Sentiment": 0.08492092471050254,
+          "3_DAY_RETURN_Corr_Sentiment": 0.09666666844738606,
+          "7_DAY_RETURN_Corr_Sentiment": 0.12052450087446767
+        },
+        {
+          "STOCK": "Tesco",
+          "1_DAY_RETURN": 0.004544964750276836,
+          "2_DAY_RETURN": 0.010403030000825144,
+          "3_DAY_RETURN": 0.009936689354272903,
+          "7_DAY_RETURN": 0.006701152371930737,
+          "TEXTBLOB_POLARITY": -0.07487174595416583,
+          "1_DAY_RETURN_Corr_Sentiment": -0.12564104392691375,
+          "2_DAY_RETURN_Corr_Sentiment": -0.04630863937252366,
+          "3_DAY_RETURN_Corr_Sentiment": 0.018914656002540525,
+          "7_DAY_RETURN_Corr_Sentiment": 0.007253060289521625
+        },
+        {
+          "STOCK": "Thales",
+          "1_DAY_RETURN": -0.0030778442119157876,
+          "2_DAY_RETURN": -0.0032061902341647157,
+          "3_DAY_RETURN": -0.0015170543764597701,
+          "7_DAY_RETURN": 0.001329754187077808,
+          "TEXTBLOB_POLARITY": 0.0235020790929057,
+          "1_DAY_RETURN_Corr_Sentiment": -0.08380730152492517,
+          "2_DAY_RETURN_Corr_Sentiment": 0.02460800859262755,
+          "3_DAY_RETURN_Corr_Sentiment": 0.35869604800211397,
+          "7_DAY_RETURN_Corr_Sentiment": 0.4789759791317928
+        },
+        {
+          "STOCK": "Toyota",
+          "1_DAY_RETURN": 0.005728045950202321,
+          "2_DAY_RETURN": 0.00696329805997451,
+          "3_DAY_RETURN": 0.005964979963359192,
+          "7_DAY_RETURN": 0.005305934630689847,
+          "TEXTBLOB_POLARITY": 0.01994537010802123,
+          "1_DAY_RETURN_Corr_Sentiment": -0.03398085764975089,
+          "2_DAY_RETURN_Corr_Sentiment": 0.18129489497293733,
+          "3_DAY_RETURN_Corr_Sentiment": 0.0521376794153445,
+          "7_DAY_RETURN_Corr_Sentiment": 0.08559016927662302
+        },
+        {
+          "STOCK": "Verizon",
+          "1_DAY_RETURN": 0.00011652391570817915,
+          "2_DAY_RETURN": 0.0013672269971240682,
+          "3_DAY_RETURN": 0.0008230200825019289,
+          "7_DAY_RETURN": -0.013596183449870918,
+          "TEXTBLOB_POLARITY": -0.11505733237681028,
+          "1_DAY_RETURN_Corr_Sentiment": -0.07869430099672009,
+          "2_DAY_RETURN_Corr_Sentiment": -0.14471180179617582,
+          "3_DAY_RETURN_Corr_Sentiment": -0.20352721273856075,
+          "7_DAY_RETURN_Corr_Sentiment": -0.16743626374189108
+        },
+        {
+          "STOCK": "Viacom",
+          "1_DAY_RETURN": 0.005682061792506826,
+          "2_DAY_RETURN": 0.004567783132202101,
+          "3_DAY_RETURN": 0.0011286719349396384,
+          "7_DAY_RETURN": 0.013439301971347383,
+          "TEXTBLOB_POLARITY": 0.04686051649993741,
+          "1_DAY_RETURN_Corr_Sentiment": 0.36920794532085655,
+          "2_DAY_RETURN_Corr_Sentiment": 0.2744175491130356,
+          "3_DAY_RETURN_Corr_Sentiment": 0.28874390067831435,
+          "7_DAY_RETURN_Corr_Sentiment": 0.2542374455419522
+        },
+        {
+          "STOCK": "Visa",
+          "1_DAY_RETURN": 0.0020687335069262966,
+          "2_DAY_RETURN": 0.00662765222965231,
+          "3_DAY_RETURN": 0.00648094770675826,
+          "7_DAY_RETURN": 0.008736862798201225,
+          "TEXTBLOB_POLARITY": 0.0869430500897292,
+          "1_DAY_RETURN_Corr_Sentiment": 0.07119576266669057,
+          "2_DAY_RETURN_Corr_Sentiment": -0.14028336757621707,
+          "3_DAY_RETURN_Corr_Sentiment": -0.03189529911245896,
+          "7_DAY_RETURN_Corr_Sentiment": 0.005175508549600771
+        },
+        {
+          "STOCK": "Volkswagen",
+          "1_DAY_RETURN": 0.0001442967754693388,
+          "2_DAY_RETURN": 0.0020390520083994656,
+          "3_DAY_RETURN": 0.006900917045720302,
+          "7_DAY_RETURN": 0.004312010657749838,
+          "TEXTBLOB_POLARITY": -0.05254402202016507,
+          "1_DAY_RETURN_Corr_Sentiment": -0.17126567311921725,
+          "2_DAY_RETURN_Corr_Sentiment": -0.08663584269569816,
+          "3_DAY_RETURN_Corr_Sentiment": -0.10394018995690486,
+          "7_DAY_RETURN_Corr_Sentiment": -0.09888320999563674
+        },
+        {
+          "STOCK": "Walmart",
+          "1_DAY_RETURN": 0.003453584976028872,
+          "2_DAY_RETURN": 0.004333040262622017,
+          "3_DAY_RETURN": 0.002268770313424394,
+          "7_DAY_RETURN": -0.0003618108457136445,
+          "TEXTBLOB_POLARITY": -0.005120100569101107,
+          "1_DAY_RETURN_Corr_Sentiment": 0.02403310086505285,
+          "2_DAY_RETURN_Corr_Sentiment": 0.018902553589959275,
+          "3_DAY_RETURN_Corr_Sentiment": 0.059102747735772114,
+          "7_DAY_RETURN_Corr_Sentiment": 0.05978873223795522
+        },
+        {
+          "STOCK": "Wells Fargo",
+          "1_DAY_RETURN": 0.004192857558909672,
+          "2_DAY_RETURN": 0.0039961214705699286,
+          "3_DAY_RETURN": 0.003744378181376692,
+          "7_DAY_RETURN": 0.00472784716583452,
+          "TEXTBLOB_POLARITY": -0.10166640276886575,
+          "1_DAY_RETURN_Corr_Sentiment": -0.017869384494561186,
+          "2_DAY_RETURN_Corr_Sentiment": -0.07803863044358883,
+          "3_DAY_RETURN_Corr_Sentiment": -0.07370202319801578,
+          "7_DAY_RETURN_Corr_Sentiment": -0.025203259472425684
+        },
+        {
+          "STOCK": "Yahoo",
+          "1_DAY_RETURN": 0.0026630980278891,
+          "2_DAY_RETURN": -0.005701304928125652,
+          "3_DAY_RETURN": -0.004989738654702376,
+          "7_DAY_RETURN": -0.0071815261157508435,
+          "TEXTBLOB_POLARITY": -0.09635344241452362,
+          "1_DAY_RETURN_Corr_Sentiment": -0.047330749439412706,
+          "2_DAY_RETURN_Corr_Sentiment": -0.24021905859715273,
+          "3_DAY_RETURN_Corr_Sentiment": -0.21390009832637275,
+          "7_DAY_RETURN_Corr_Sentiment": -0.11064443534831861
+        },
+        {
+          "STOCK": "adidas",
+          "1_DAY_RETURN": 0.0017183104310443047,
+          "2_DAY_RETURN": 0.0026486162776308744,
+          "3_DAY_RETURN": 0.002845656073011086,
+          "7_DAY_RETURN": -0.005940427478560329,
+          "TEXTBLOB_POLARITY": -0.003716756626455799,
+          "1_DAY_RETURN_Corr_Sentiment": 0.08756467951812134,
+          "2_DAY_RETURN_Corr_Sentiment": -0.05178684373438072,
+          "3_DAY_RETURN_Corr_Sentiment": -0.04842548227858827,
+          "7_DAY_RETURN_Corr_Sentiment": -0.03161068801158487
+        },
+        {
+          "STOCK": "eBay",
+          "1_DAY_RETURN": -0.0025865367054443344,
+          "2_DAY_RETURN": -0.0013720172629247173,
+          "3_DAY_RETURN": -0.00039936599470195253,
+          "7_DAY_RETURN": -0.0049315864105857424,
+          "TEXTBLOB_POLARITY": -0.06250326722518779,
+          "1_DAY_RETURN_Corr_Sentiment": -0.013652904412800197,
+          "2_DAY_RETURN_Corr_Sentiment": -0.0071022171243304445,
+          "3_DAY_RETURN_Corr_Sentiment": -0.00006629822664517142,
+          "7_DAY_RETURN_Corr_Sentiment": -0.003617997983941006
+        },
+        {
+          "STOCK": "easyJet",
+          "1_DAY_RETURN": -0.0031221262037051186,
+          "2_DAY_RETURN": -0.00008182144728116869,
+          "3_DAY_RETURN": -0.000977688777916669,
+          "7_DAY_RETURN": -0.00276503940015858,
+          "TEXTBLOB_POLARITY": -0.043592190261530224,
+          "1_DAY_RETURN_Corr_Sentiment": -0.031165142888551874,
+          "2_DAY_RETURN_Corr_Sentiment": -0.0009151529793580766,
+          "3_DAY_RETURN_Corr_Sentiment": 0.046276573365157336,
+          "7_DAY_RETURN_Corr_Sentiment": 0.08850388314609367
+        },
+        {
+          "STOCK": "salesforce.com",
+          "1_DAY_RETURN": -0.002285430465969619,
+          "2_DAY_RETURN": -0.002367023178643404,
+          "3_DAY_RETURN": -0.0021685552058950913,
+          "7_DAY_RETURN": 0.0006076844985278593,
+          "TEXTBLOB_POLARITY": 0.05830022371056247,
+          "1_DAY_RETURN_Corr_Sentiment": -0.16319959730383687,
+          "2_DAY_RETURN_Corr_Sentiment": -0.08829486041910178,
+          "3_DAY_RETURN_Corr_Sentiment": -0.08388784064442366,
+          "7_DAY_RETURN_Corr_Sentiment": 0.08335396455827367
+        }
+      ]
+    },
+    {
+      "name": "data-eb5b4802928e1c6230c021900863b599",
+      "values": [
+        {
+          "sentiment_q": -2,
+          "Period": "1_DAY_RETURN",
+          "Return": 0.0003391063580099373,
+          "sentiment_label": "very negative"
+        },
+        {
+          "sentiment_q": -1,
+          "Period": "1_DAY_RETURN",
+          "Return": 0,
+          "sentiment_label": "slightly negative"
+        },
+        {
+          "sentiment_q": 1,
+          "Period": "1_DAY_RETURN",
+          "Return": 0,
+          "sentiment_label": "slightly positive"
+        },
+        {
+          "sentiment_q": 2,
+          "Period": "1_DAY_RETURN",
+          "Return": 0.00012428881500358303,
+          "sentiment_label": "very positive"
+        },
+        {
+          "sentiment_q": -2,
+          "Period": "2_DAY_RETURN",
+          "Return": 0.00013205757516594752,
+          "sentiment_label": "very negative"
+        },
+        {
+          "sentiment_q": -1,
+          "Period": "2_DAY_RETURN",
+          "Return": 0.0009813839076222575,
+          "sentiment_label": "slightly negative"
+        },
+        {
+          "sentiment_q": 1,
+          "Period": "2_DAY_RETURN",
+          "Return": -0.0012159782365504974,
+          "sentiment_label": "slightly positive"
+        },
+        {
+          "sentiment_q": 2,
+          "Period": "2_DAY_RETURN",
+          "Return": 0.00047422496556107454,
+          "sentiment_label": "very positive"
+        },
+        {
+          "sentiment_q": -2,
+          "Period": "3_DAY_RETURN",
+          "Return": 0.00047422496556107454,
+          "sentiment_label": "very negative"
+        },
+        {
+          "sentiment_q": -1,
+          "Period": "3_DAY_RETURN",
+          "Return": 0.0005209165443614628,
+          "sentiment_label": "slightly negative"
+        },
+        {
+          "sentiment_q": 1,
+          "Period": "3_DAY_RETURN",
+          "Return": -0.0005338431907575027,
+          "sentiment_label": "slightly positive"
+        },
+        {
+          "sentiment_q": 2,
+          "Period": "3_DAY_RETURN",
+          "Return": 0.0005624503721815587,
+          "sentiment_label": "very positive"
+        },
+        {
+          "sentiment_q": -2,
+          "Period": "7_DAY_RETURN",
+          "Return": -0.0012177572323639188,
+          "sentiment_label": "very negative"
+        },
+        {
+          "sentiment_q": -1,
+          "Period": "7_DAY_RETURN",
+          "Return": -0.0009308685860320105,
+          "sentiment_label": "slightly negative"
+        },
+        {
+          "sentiment_q": 1,
+          "Period": "7_DAY_RETURN",
+          "Return": -0.003461419077684595,
+          "sentiment_label": "slightly positive"
+        },
+        {
+          "sentiment_q": 2,
+          "Period": "7_DAY_RETURN",
+          "Return": 0.00013000895183460455,
+          "sentiment_label": "very positive"
+        }
+      ]
+    },
+    {
+      "name": "data_0",
+      "source": "data-82cc9c0513a2b6f12306cdccad4855f5",
+      "transform": [
+        {
+          "type": "formula",
+          "expr": "datum[\"sentiment_label\"]===\"very negative\" ? 0 : datum[\"sentiment_label\"]===\"slightly negative\" ? 1 : datum[\"sentiment_label\"]===\"slightly positive\" ? 2 : datum[\"sentiment_label\"]===\"very positive\" ? 3 : 4",
+          "as": "column_sentiment_label_sort_index"
+        },
+        {
+          "type": "formula",
+          "expr": "datum[\"Period\"]===\"1_DAY_RETURN\" ? 0 : datum[\"Period\"]===\"2_DAY_RETURN\" ? 1 : datum[\"Period\"]===\"3_DAY_RETURN\" ? 2 : datum[\"Period\"]===\"7_DAY_RETURN\" ? 3 : 4",
+          "as": "x_Period_sort_index"
+        }
+      ]
+    },
+    {
+      "name": "concat_0_concat_0_column_domain",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["sentiment_label"],
+          "fields": ["column_sentiment_label_sort_index"],
+          "ops": ["max"],
+          "as": ["column_sentiment_label_sort_index"]
+        }
+      ]
+    },
+    {
+      "name": "data_3",
+      "source": "data_0",
+      "transform": [
+        {
+          "type": "stack",
+          "groupby": ["Period", "sentiment_label"],
+          "field": "Return",
+          "sort": {"field": ["Return"], "order": ["descending"]},
+          "as": ["Return_start", "Return_end"],
+          "offset": "zero"
+        },
+        {
+          "type": "filter",
+          "expr": "isValid(datum[\"Return\"]) && isFinite(+datum[\"Return\"])"
+        }
+      ]
+    },
+    {
+      "name": "data_5",
+      "source": "data-51f26b1d49622b2f32d60abddaf6f8c5",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "isValid(datum[\"TEXTBLOB_POLARITY\"]) && isFinite(+datum[\"TEXTBLOB_POLARITY\"]) && isValid(datum[\"1_DAY_RETURN\"]) && isFinite(+datum[\"1_DAY_RETURN\"]) && isValid(datum[\"1_DAY_RETURN_Corr_Sentiment\"]) && isFinite(+datum[\"1_DAY_RETURN_Corr_Sentiment\"])"
+        }
+      ]
+    },
+    {
+      "name": "data_6",
+      "source": "data-51f26b1d49622b2f32d60abddaf6f8c5",
+      "transform": [
+        {
+          "type": "regression",
+          "x": "TEXTBLOB_POLARITY",
+          "y": "1_DAY_RETURN",
+          "as": ["TEXTBLOB_POLARITY", "1_DAY_RETURN"]
+        }
+      ]
+    },
+    {
+      "name": "data_7",
+      "source": "data-51f26b1d49622b2f32d60abddaf6f8c5",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "isValid(datum[\"TEXTBLOB_POLARITY\"]) && isFinite(+datum[\"TEXTBLOB_POLARITY\"]) && isValid(datum[\"2_DAY_RETURN\"]) && isFinite(+datum[\"2_DAY_RETURN\"]) && isValid(datum[\"2_DAY_RETURN_Corr_Sentiment\"]) && isFinite(+datum[\"2_DAY_RETURN_Corr_Sentiment\"])"
+        }
+      ]
+    },
+    {
+      "name": "data_8",
+      "source": "data-51f26b1d49622b2f32d60abddaf6f8c5",
+      "transform": [
+        {
+          "type": "regression",
+          "x": "TEXTBLOB_POLARITY",
+          "y": "2_DAY_RETURN",
+          "as": ["TEXTBLOB_POLARITY", "2_DAY_RETURN"]
+        }
+      ]
+    },
+    {
+      "name": "data_9",
+      "source": "data-51f26b1d49622b2f32d60abddaf6f8c5",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "isValid(datum[\"TEXTBLOB_POLARITY\"]) && isFinite(+datum[\"TEXTBLOB_POLARITY\"]) && isValid(datum[\"3_DAY_RETURN\"]) && isFinite(+datum[\"3_DAY_RETURN\"]) && isValid(datum[\"3_DAY_RETURN_Corr_Sentiment\"]) && isFinite(+datum[\"3_DAY_RETURN_Corr_Sentiment\"])"
+        }
+      ]
+    },
+    {
+      "name": "data_10",
+      "source": "data-51f26b1d49622b2f32d60abddaf6f8c5",
+      "transform": [
+        {
+          "type": "regression",
+          "x": "TEXTBLOB_POLARITY",
+          "y": "3_DAY_RETURN",
+          "as": ["TEXTBLOB_POLARITY", "3_DAY_RETURN"]
+        }
+      ]
+    },
+    {
+      "name": "data_11",
+      "source": "data-51f26b1d49622b2f32d60abddaf6f8c5",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "isValid(datum[\"TEXTBLOB_POLARITY\"]) && isFinite(+datum[\"TEXTBLOB_POLARITY\"]) && isValid(datum[\"7_DAY_RETURN\"]) && isFinite(+datum[\"7_DAY_RETURN\"]) && isValid(datum[\"7_DAY_RETURN_Corr_Sentiment\"]) && isFinite(+datum[\"7_DAY_RETURN_Corr_Sentiment\"])"
+        }
+      ]
+    },
+    {
+      "name": "data_12",
+      "source": "data-51f26b1d49622b2f32d60abddaf6f8c5",
+      "transform": [
+        {
+          "type": "regression",
+          "x": "TEXTBLOB_POLARITY",
+          "y": "7_DAY_RETURN",
+          "as": ["TEXTBLOB_POLARITY", "7_DAY_RETURN"]
+        }
+      ]
+    },
+    {
+      "name": "data_13",
+      "source": "data-eb5b4802928e1c6230c021900863b599",
+      "transform": [
+        {
+          "type": "formula",
+          "expr": "datum[\"sentiment_label\"]===\"very negative\" ? 0 : datum[\"sentiment_label\"]===\"slightly negative\" ? 1 : datum[\"sentiment_label\"]===\"slightly positive\" ? 2 : datum[\"sentiment_label\"]===\"very positive\" ? 3 : 4",
+          "as": "x_sentiment_label_sort_index"
+        }
+      ]
+    },
+    {
+      "name": "concat_1_concat_0_column_domain",
+      "source": "data_13",
+      "transform": [{"type": "aggregate", "groupby": ["Period"]}]
+    },
+    {
+      "name": "data_16",
+      "source": "data_13",
+      "transform": [
+        {
+          "type": "stack",
+          "groupby": ["sentiment_label", "Period"],
+          "field": "Return",
+          "sort": {"field": ["Return"], "order": ["descending"]},
+          "as": ["Return_start", "Return_end"],
+          "offset": "zero"
+        },
+        {
+          "type": "filter",
+          "expr": "isValid(datum[\"Return\"]) && isFinite(+datum[\"Return\"])"
         }
       ]
     }
   ],
-  "title": {
-    "text": ["Sentiment Analysis"],
-    "fontSize": 18,
-    "anchor": "middle",
-    "color": "black"
-  },
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
-  "datasets": {
-    "data-82cc9c0513a2b6f12306cdccad4855f5": [
-      {
-        "sentiment_label": "very negative",
-        "Period": "1_DAY_RETURN",
-        "Return": 0.0003391063580099373
+  "signals": [
+    {"name": "concat_0_concat_0_child_width", "value": 100},
+    {"name": "concat_0_concat_0_child_height", "value": 300},
+    {"name": "concat_0_concat_1_width", "value": 400},
+    {"name": "concat_0_concat_1_height", "value": 300},
+    {"name": "concat_0_concat_2_width", "value": 400},
+    {"name": "concat_0_concat_2_height", "value": 300},
+    {"name": "concat_1_concat_0_child_width", "value": 100},
+    {"name": "concat_1_concat_0_child_height", "value": 300},
+    {"name": "concat_1_concat_1_width", "value": 400},
+    {"name": "concat_1_concat_1_height", "value": 300},
+    {"name": "concat_1_concat_2_width", "value": 400},
+    {"name": "concat_1_concat_2_height", "value": 300}
+  ],
+  "layout": {"padding": 20, "columns": 1, "bounds": "full", "align": "each"},
+  "marks": [
+    {
+      "type": "group",
+      "name": "concat_0_group",
+      "layout": {"padding": 20, "bounds": "full", "align": "each"},
+      "marks": [
+        {
+          "type": "group",
+          "name": "concat_0_concat_0_group",
+          "title": {
+            "anchor": "middle",
+            "text": "Return Trajectory by Sentiment Level and Period"
+          },
+          "layout": {
+            "padding": 20,
+            "offset": {"columnTitle": 10},
+            "columns": {
+              "signal": "length(data('concat_0_concat_0_column_domain'))"
+            },
+            "bounds": "full",
+            "align": "all"
+          },
+          "marks": [
+            {
+              "name": "column-title",
+              "type": "group",
+              "role": "column-title",
+              "title": {
+                "text": "Sentiment Level",
+                "style": "guide-title",
+                "offset": 10
+              }
+            },
+            {
+              "name": "concat_0_concat_0_row_header",
+              "type": "group",
+              "role": "row-header",
+              "encode": {
+                "update": {
+                  "height": {"signal": "concat_0_concat_0_child_height"}
+                }
+              },
+              "axes": [
+                {
+                  "scale": "concat_0_concat_0_y",
+                  "orient": "left",
+                  "grid": false,
+                  "title": "Average Future Return",
+                  "labelOverlap": true,
+                  "tickCount": {
+                    "signal": "ceil(concat_0_concat_0_child_height/40)"
+                  },
+                  "zindex": 0
+                }
+              ]
+            },
+            {
+              "name": "concat_0_concat_0_column_header",
+              "type": "group",
+              "role": "column-header",
+              "from": {"data": "concat_0_concat_0_column_domain"},
+              "sort": {
+                "field": "datum[\"column_sentiment_label_sort_index\"]",
+                "order": "ascending"
+              },
+              "title": {
+                "text": {
+                  "signal": "isValid(parent[\"sentiment_label\"]) ? parent[\"sentiment_label\"] : \"\"+parent[\"sentiment_label\"]"
+                },
+                "style": "guide-label",
+                "frame": "group",
+                "offset": 10
+              },
+              "encode": {
+                "update": {"width": {"signal": "concat_0_concat_0_child_width"}}
+              }
+            },
+            {
+              "name": "concat_0_concat_0_column_footer",
+              "type": "group",
+              "role": "column-footer",
+              "from": {"data": "concat_0_concat_0_column_domain"},
+              "sort": {
+                "field": "datum[\"column_sentiment_label_sort_index\"]",
+                "order": "ascending"
+              },
+              "encode": {
+                "update": {"width": {"signal": "concat_0_concat_0_child_width"}}
+              },
+              "axes": [
+                {
+                  "scale": "concat_0_concat_0_x",
+                  "orient": "bottom",
+                  "grid": false,
+                  "title": "Period",
+                  "labelAlign": "right",
+                  "labelAngle": 270,
+                  "labelBaseline": "middle",
+                  "zindex": 0
+                }
+              ]
+            },
+            {
+              "name": "concat_0_concat_0_cell",
+              "type": "group",
+              "style": "cell",
+              "from": {
+                "facet": {
+                  "name": "concat_0_concat_0_facet",
+                  "data": "data_0",
+                  "groupby": ["sentiment_label"],
+                  "aggregate": {
+                    "fields": ["column_sentiment_label_sort_index"],
+                    "ops": ["max"],
+                    "as": ["column_sentiment_label_sort_index"]
+                  }
+                }
+              },
+              "sort": {
+                "field": ["datum[\"column_sentiment_label_sort_index\"]"],
+                "order": ["ascending"]
+              },
+              "data": [
+                {
+                  "source": "concat_0_concat_0_facet",
+                  "name": "data_0",
+                  "transform": [
+                    {
+                      "type": "stack",
+                      "groupby": ["Period"],
+                      "field": "Return",
+                      "sort": {"field": ["Return"], "order": ["descending"]},
+                      "as": ["Return_start", "Return_end"],
+                      "offset": "zero"
+                    },
+                    {
+                      "type": "filter",
+                      "expr": "isValid(datum[\"Return\"]) && isFinite(+datum[\"Return\"])"
+                    }
+                  ]
+                }
+              ],
+              "encode": {
+                "update": {
+                  "width": {"signal": "concat_0_concat_0_child_width"},
+                  "height": {"signal": "concat_0_concat_0_child_height"}
+                }
+              },
+              "marks": [
+                {
+                  "name": "concat_0_concat_0_child_marks",
+                  "type": "rect",
+                  "style": ["bar"],
+                  "from": {"data": "data_0"},
+                  "encode": {
+                    "update": {
+                      "fill": {"scale": "color", "field": "Return"},
+                      "tooltip": {
+                        "signal": "{\"Period\": isValid(datum[\"Period\"]) ? datum[\"Period\"] : \"\"+datum[\"Period\"], \"Return\": format(datum[\"Return\"], \"\")}"
+                      },
+                      "ariaRoleDescription": {"value": "bar"},
+                      "description": {
+                        "signal": "\"Period: \" + (isValid(datum[\"Period\"]) ? datum[\"Period\"] : \"\"+datum[\"Period\"]) + \"; Average Future Return: \" + (format(datum[\"Return\"], \"\")) + \"; Return: \" + (format(datum[\"Return\"], \"\"))"
+                      },
+                      "x": {"scale": "concat_0_concat_0_x", "field": "Period"},
+                      "width": {
+                        "signal": "max(0.25, bandwidth('concat_0_concat_0_x'))"
+                      },
+                      "y": {
+                        "scale": "concat_0_concat_0_y",
+                        "field": "Return_end"
+                      },
+                      "y2": {
+                        "scale": "concat_0_concat_0_y",
+                        "field": "Return_start"
+                      }
+                    }
+                  }
+                }
+              ],
+              "axes": [
+                {
+                  "scale": "concat_0_concat_0_y",
+                  "orient": "left",
+                  "gridScale": "concat_0_concat_0_x",
+                  "grid": true,
+                  "tickCount": {
+                    "signal": "ceil(concat_0_concat_0_child_height/40)"
+                  },
+                  "domain": false,
+                  "labels": false,
+                  "aria": false,
+                  "maxExtent": 0,
+                  "minExtent": 0,
+                  "ticks": false,
+                  "zindex": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "concat_0_concat_1_group",
+          "title": {
+            "anchor": "middle",
+            "text": "1-Day Future Return",
+            "frame": "group"
+          },
+          "style": "cell",
+          "encode": {
+            "update": {
+              "width": {"signal": "concat_0_concat_1_width"},
+              "height": {"signal": "concat_0_concat_1_height"}
+            }
+          },
+          "marks": [
+            {
+              "name": "concat_0_concat_1_layer_0_marks",
+              "type": "symbol",
+              "style": ["circle"],
+              "from": {"data": "data_5"},
+              "encode": {
+                "update": {
+                  "opacity": {"value": 0.7},
+                  "fill": {"value": "#4c78a8"},
+                  "tooltip": {
+                    "signal": "{\"STOCK\": isValid(datum[\"STOCK\"]) ? datum[\"STOCK\"] : \"\"+datum[\"STOCK\"], \"TEXTBLOB_POLARITY\": format(datum[\"TEXTBLOB_POLARITY\"], \"\"), \"1_DAY_RETURN\": format(datum[\"1_DAY_RETURN\"], \"\"), \"1_DAY_RETURN_Corr_Sentiment\": format(datum[\"1_DAY_RETURN_Corr_Sentiment\"], \"\")}"
+                  },
+                  "ariaRoleDescription": {"value": "circle"},
+                  "description": {
+                    "signal": "\"Tweet Sentiment: \" + (format(datum[\"TEXTBLOB_POLARITY\"], \"\")) + \"; 1-Day Future Return: \" + (format(datum[\"1_DAY_RETURN\"], \".2%\")) + \"; sentiment.corr: \" + (format(datum[\"1_DAY_RETURN_Corr_Sentiment\"], \"\")) + \"; STOCK: \" + (isValid(datum[\"STOCK\"]) ? datum[\"STOCK\"] : \"\"+datum[\"STOCK\"]) + \"; TEXTBLOB_POLARITY: \" + (format(datum[\"TEXTBLOB_POLARITY\"], \"\")) + \"; 1_DAY_RETURN: \" + (format(datum[\"1_DAY_RETURN\"], \"\")) + \"; 1_DAY_RETURN_Corr_Sentiment: \" + (format(datum[\"1_DAY_RETURN_Corr_Sentiment\"], \"\"))"
+                  },
+                  "x": {
+                    "scale": "concat_0_concat_1_x",
+                    "field": "TEXTBLOB_POLARITY"
+                  },
+                  "y": {
+                    "scale": "concat_0_concat_1_y",
+                    "field": "1_DAY_RETURN"
+                  },
+                  "size": {
+                    "scale": "size",
+                    "field": "1_DAY_RETURN_Corr_Sentiment"
+                  },
+                  "shape": {"value": "circle"}
+                }
+              }
+            },
+            {
+              "name": "concat_0_concat_1_layer_1_pathgroup",
+              "type": "group",
+              "from": {
+                "facet": {
+                  "name": "faceted_path_concat_0_concat_1_layer_1_main",
+                  "data": "data_6",
+                  "groupby": ["1_DAY_RETURN_Corr_Sentiment"]
+                }
+              },
+              "encode": {
+                "update": {
+                  "width": {"field": {"group": "width"}},
+                  "height": {"field": {"group": "height"}}
+                }
+              },
+              "marks": [
+                {
+                  "name": "concat_0_concat_1_layer_1_marks",
+                  "type": "line",
+                  "style": ["line"],
+                  "sort": {"field": "datum[\"TEXTBLOB_POLARITY\"]"},
+                  "from": {
+                    "data": "faceted_path_concat_0_concat_1_layer_1_main"
+                  },
+                  "encode": {
+                    "update": {
+                      "stroke": {"value": "green"},
+                      "tooltip": {
+                        "signal": "{\"STOCK\": isValid(datum[\"STOCK\"]) ? datum[\"STOCK\"] : \"\"+datum[\"STOCK\"], \"TEXTBLOB_POLARITY\": format(datum[\"TEXTBLOB_POLARITY\"], \"\"), \"1_DAY_RETURN\": format(datum[\"1_DAY_RETURN\"], \"\"), \"1_DAY_RETURN_Corr_Sentiment\": format(datum[\"1_DAY_RETURN_Corr_Sentiment\"], \"\")}"
+                      },
+                      "description": {
+                        "signal": "\"Tweet Sentiment: \" + (format(datum[\"TEXTBLOB_POLARITY\"], \"\")) + \"; 1-Day Future Return: \" + (format(datum[\"1_DAY_RETURN\"], \".2%\")) + \"; sentiment.corr: \" + (format(datum[\"1_DAY_RETURN_Corr_Sentiment\"], \"\")) + \"; STOCK: \" + (isValid(datum[\"STOCK\"]) ? datum[\"STOCK\"] : \"\"+datum[\"STOCK\"]) + \"; TEXTBLOB_POLARITY: \" + (format(datum[\"TEXTBLOB_POLARITY\"], \"\")) + \"; 1_DAY_RETURN: \" + (format(datum[\"1_DAY_RETURN\"], \"\")) + \"; 1_DAY_RETURN_Corr_Sentiment: \" + (format(datum[\"1_DAY_RETURN_Corr_Sentiment\"], \"\"))"
+                      },
+                      "x": {
+                        "scale": "concat_0_concat_1_x",
+                        "field": "TEXTBLOB_POLARITY"
+                      },
+                      "y": {
+                        "scale": "concat_0_concat_1_y",
+                        "field": "1_DAY_RETURN"
+                      },
+                      "strokeWidth": {
+                        "scale": "size",
+                        "field": "1_DAY_RETURN_Corr_Sentiment"
+                      },
+                      "defined": {
+                        "signal": "isValid(datum[\"TEXTBLOB_POLARITY\"]) && isFinite(+datum[\"TEXTBLOB_POLARITY\"]) && isValid(datum[\"1_DAY_RETURN\"]) && isFinite(+datum[\"1_DAY_RETURN\"])"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "axes": [
+            {
+              "scale": "concat_0_concat_1_x",
+              "orient": "bottom",
+              "gridScale": "concat_0_concat_1_y",
+              "grid": true,
+              "tickCount": {"signal": "ceil(concat_0_concat_1_width/40)"},
+              "domain": false,
+              "labels": false,
+              "aria": false,
+              "maxExtent": 0,
+              "minExtent": 0,
+              "ticks": false,
+              "zindex": 0
+            },
+            {
+              "scale": "concat_0_concat_1_y",
+              "orient": "left",
+              "gridScale": "concat_0_concat_1_x",
+              "grid": true,
+              "tickCount": {"signal": "ceil(concat_0_concat_1_height/40)"},
+              "domain": false,
+              "labels": false,
+              "aria": false,
+              "maxExtent": 0,
+              "minExtent": 0,
+              "ticks": false,
+              "zindex": 0
+            },
+            {
+              "scale": "concat_0_concat_1_x",
+              "orient": "bottom",
+              "grid": false,
+              "title": "Tweet Sentiment",
+              "labelFlush": true,
+              "labelOverlap": true,
+              "tickCount": {"signal": "ceil(concat_0_concat_1_width/40)"},
+              "zindex": 0
+            },
+            {
+              "scale": "concat_0_concat_1_y",
+              "orient": "left",
+              "grid": false,
+              "title": "1-Day Future Return",
+              "format": ".2%",
+              "labelOverlap": true,
+              "tickCount": {"signal": "ceil(concat_0_concat_1_height/40)"},
+              "zindex": 0
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "concat_0_concat_2_group",
+          "title": {
+            "anchor": "middle",
+            "text": "2-Day Future Return",
+            "frame": "group"
+          },
+          "style": "cell",
+          "encode": {
+            "update": {
+              "width": {"signal": "concat_0_concat_2_width"},
+              "height": {"signal": "concat_0_concat_2_height"}
+            }
+          },
+          "marks": [
+            {
+              "name": "concat_0_concat_2_layer_0_marks",
+              "type": "symbol",
+              "style": ["circle"],
+              "from": {"data": "data_7"},
+              "encode": {
+                "update": {
+                  "opacity": {"value": 0.7},
+                  "fill": {"value": "#4c78a8"},
+                  "tooltip": {
+                    "signal": "{\"STOCK\": isValid(datum[\"STOCK\"]) ? datum[\"STOCK\"] : \"\"+datum[\"STOCK\"], \"TEXTBLOB_POLARITY\": format(datum[\"TEXTBLOB_POLARITY\"], \"\"), \"2_DAY_RETURN\": format(datum[\"2_DAY_RETURN\"], \"\"), \"2_DAY_RETURN_Corr_Sentiment\": format(datum[\"2_DAY_RETURN_Corr_Sentiment\"], \"\")}"
+                  },
+                  "ariaRoleDescription": {"value": "circle"},
+                  "description": {
+                    "signal": "\"Tweet Sentiment: \" + (format(datum[\"TEXTBLOB_POLARITY\"], \"\")) + \"; 2-Day Future Return: \" + (format(datum[\"2_DAY_RETURN\"], \".2%\")) + \"; sentiment.corr: \" + (format(datum[\"2_DAY_RETURN_Corr_Sentiment\"], \"\")) + \"; STOCK: \" + (isValid(datum[\"STOCK\"]) ? datum[\"STOCK\"] : \"\"+datum[\"STOCK\"]) + \"; TEXTBLOB_POLARITY: \" + (format(datum[\"TEXTBLOB_POLARITY\"], \"\")) + \"; 2_DAY_RETURN: \" + (format(datum[\"2_DAY_RETURN\"], \"\")) + \"; 2_DAY_RETURN_Corr_Sentiment: \" + (format(datum[\"2_DAY_RETURN_Corr_Sentiment\"], \"\"))"
+                  },
+                  "x": {
+                    "scale": "concat_0_concat_2_x",
+                    "field": "TEXTBLOB_POLARITY"
+                  },
+                  "y": {
+                    "scale": "concat_0_concat_2_y",
+                    "field": "2_DAY_RETURN"
+                  },
+                  "size": {
+                    "scale": "size",
+                    "field": "2_DAY_RETURN_Corr_Sentiment"
+                  },
+                  "shape": {"value": "circle"}
+                }
+              }
+            },
+            {
+              "name": "concat_0_concat_2_layer_1_pathgroup",
+              "type": "group",
+              "from": {
+                "facet": {
+                  "name": "faceted_path_concat_0_concat_2_layer_1_main",
+                  "data": "data_8",
+                  "groupby": ["2_DAY_RETURN_Corr_Sentiment"]
+                }
+              },
+              "encode": {
+                "update": {
+                  "width": {"field": {"group": "width"}},
+                  "height": {"field": {"group": "height"}}
+                }
+              },
+              "marks": [
+                {
+                  "name": "concat_0_concat_2_layer_1_marks",
+                  "type": "line",
+                  "style": ["line"],
+                  "sort": {"field": "datum[\"TEXTBLOB_POLARITY\"]"},
+                  "from": {
+                    "data": "faceted_path_concat_0_concat_2_layer_1_main"
+                  },
+                  "encode": {
+                    "update": {
+                      "stroke": {"value": "green"},
+                      "tooltip": {
+                        "signal": "{\"STOCK\": isValid(datum[\"STOCK\"]) ? datum[\"STOCK\"] : \"\"+datum[\"STOCK\"], \"TEXTBLOB_POLARITY\": format(datum[\"TEXTBLOB_POLARITY\"], \"\"), \"2_DAY_RETURN\": format(datum[\"2_DAY_RETURN\"], \"\"), \"2_DAY_RETURN_Corr_Sentiment\": format(datum[\"2_DAY_RETURN_Corr_Sentiment\"], \"\")}"
+                      },
+                      "description": {
+                        "signal": "\"Tweet Sentiment: \" + (format(datum[\"TEXTBLOB_POLARITY\"], \"\")) + \"; 2-Day Future Return: \" + (format(datum[\"2_DAY_RETURN\"], \".2%\")) + \"; sentiment.corr: \" + (format(datum[\"2_DAY_RETURN_Corr_Sentiment\"], \"\")) + \"; STOCK: \" + (isValid(datum[\"STOCK\"]) ? datum[\"STOCK\"] : \"\"+datum[\"STOCK\"]) + \"; TEXTBLOB_POLARITY: \" + (format(datum[\"TEXTBLOB_POLARITY\"], \"\")) + \"; 2_DAY_RETURN: \" + (format(datum[\"2_DAY_RETURN\"], \"\")) + \"; 2_DAY_RETURN_Corr_Sentiment: \" + (format(datum[\"2_DAY_RETURN_Corr_Sentiment\"], \"\"))"
+                      },
+                      "x": {
+                        "scale": "concat_0_concat_2_x",
+                        "field": "TEXTBLOB_POLARITY"
+                      },
+                      "y": {
+                        "scale": "concat_0_concat_2_y",
+                        "field": "2_DAY_RETURN"
+                      },
+                      "strokeWidth": {
+                        "scale": "size",
+                        "field": "2_DAY_RETURN_Corr_Sentiment"
+                      },
+                      "defined": {
+                        "signal": "isValid(datum[\"TEXTBLOB_POLARITY\"]) && isFinite(+datum[\"TEXTBLOB_POLARITY\"]) && isValid(datum[\"2_DAY_RETURN\"]) && isFinite(+datum[\"2_DAY_RETURN\"])"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "axes": [
+            {
+              "scale": "concat_0_concat_2_x",
+              "orient": "bottom",
+              "gridScale": "concat_0_concat_2_y",
+              "grid": true,
+              "tickCount": {"signal": "ceil(concat_0_concat_2_width/40)"},
+              "domain": false,
+              "labels": false,
+              "aria": false,
+              "maxExtent": 0,
+              "minExtent": 0,
+              "ticks": false,
+              "zindex": 0
+            },
+            {
+              "scale": "concat_0_concat_2_y",
+              "orient": "left",
+              "gridScale": "concat_0_concat_2_x",
+              "grid": true,
+              "tickCount": {"signal": "ceil(concat_0_concat_2_height/40)"},
+              "domain": false,
+              "labels": false,
+              "aria": false,
+              "maxExtent": 0,
+              "minExtent": 0,
+              "ticks": false,
+              "zindex": 0
+            },
+            {
+              "scale": "concat_0_concat_2_x",
+              "orient": "bottom",
+              "grid": false,
+              "title": "Tweet Sentiment",
+              "labelFlush": true,
+              "labelOverlap": true,
+              "tickCount": {"signal": "ceil(concat_0_concat_2_width/40)"},
+              "zindex": 0
+            },
+            {
+              "scale": "concat_0_concat_2_y",
+              "orient": "left",
+              "grid": false,
+              "title": "2-Day Future Return",
+              "format": ".2%",
+              "labelOverlap": true,
+              "tickCount": {"signal": "ceil(concat_0_concat_2_height/40)"},
+              "zindex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "concat_1_group",
+      "layout": {"padding": 20, "bounds": "full", "align": "each"},
+      "marks": [
+        {
+          "type": "group",
+          "name": "concat_1_concat_0_group",
+          "title": {
+            "anchor": "middle",
+            "text": "Return Trajectory by Sentiment Quantile and Period"
+          },
+          "layout": {
+            "padding": 20,
+            "offset": {"columnTitle": 10},
+            "columns": {
+              "signal": "length(data('concat_1_concat_0_column_domain'))"
+            },
+            "bounds": "full",
+            "align": "all"
+          },
+          "marks": [
+            {
+              "name": "column-title",
+              "type": "group",
+              "role": "column-title",
+              "title": {"text": "Period", "style": "guide-title", "offset": 10}
+            },
+            {
+              "name": "concat_1_concat_0_row_header",
+              "type": "group",
+              "role": "row-header",
+              "encode": {
+                "update": {
+                  "height": {"signal": "concat_1_concat_0_child_height"}
+                }
+              },
+              "axes": [
+                {
+                  "scale": "concat_1_concat_0_y",
+                  "orient": "left",
+                  "grid": false,
+                  "title": "Average Future Return",
+                  "format": ".2%",
+                  "labelOverlap": true,
+                  "tickCount": {
+                    "signal": "ceil(concat_1_concat_0_child_height/40)"
+                  },
+                  "zindex": 0
+                }
+              ]
+            },
+            {
+              "name": "concat_1_concat_0_column_header",
+              "type": "group",
+              "role": "column-header",
+              "from": {"data": "concat_1_concat_0_column_domain"},
+              "sort": {"field": "datum[\"Period\"]", "order": "ascending"},
+              "title": {
+                "text": {
+                  "signal": "isValid(parent[\"Period\"]) ? parent[\"Period\"] : \"\"+parent[\"Period\"]"
+                },
+                "style": "guide-label",
+                "frame": "group",
+                "offset": 10
+              },
+              "encode": {
+                "update": {"width": {"signal": "concat_1_concat_0_child_width"}}
+              }
+            },
+            {
+              "name": "concat_1_concat_0_column_footer",
+              "type": "group",
+              "role": "column-footer",
+              "from": {"data": "concat_1_concat_0_column_domain"},
+              "sort": {"field": "datum[\"Period\"]", "order": "ascending"},
+              "encode": {
+                "update": {"width": {"signal": "concat_1_concat_0_child_width"}}
+              },
+              "axes": [
+                {
+                  "scale": "concat_1_concat_0_x",
+                  "orient": "bottom",
+                  "grid": false,
+                  "title": "Sentiment Level",
+                  "labelAlign": "right",
+                  "labelAngle": 270,
+                  "labelBaseline": "middle",
+                  "zindex": 0
+                }
+              ]
+            },
+            {
+              "name": "concat_1_concat_0_cell",
+              "type": "group",
+              "style": "cell",
+              "from": {
+                "facet": {
+                  "name": "concat_1_concat_0_facet",
+                  "data": "data_13",
+                  "groupby": ["Period"]
+                }
+              },
+              "sort": {"field": ["datum[\"Period\"]"], "order": ["ascending"]},
+              "data": [
+                {
+                  "source": "concat_1_concat_0_facet",
+                  "name": "data_0",
+                  "transform": [
+                    {
+                      "type": "stack",
+                      "groupby": ["sentiment_label"],
+                      "field": "Return",
+                      "sort": {"field": ["Return"], "order": ["descending"]},
+                      "as": ["Return_start", "Return_end"],
+                      "offset": "zero"
+                    },
+                    {
+                      "type": "filter",
+                      "expr": "isValid(datum[\"Return\"]) && isFinite(+datum[\"Return\"])"
+                    }
+                  ]
+                }
+              ],
+              "encode": {
+                "update": {
+                  "width": {"signal": "concat_1_concat_0_child_width"},
+                  "height": {"signal": "concat_1_concat_0_child_height"}
+                }
+              },
+              "marks": [
+                {
+                  "name": "concat_1_concat_0_child_marks",
+                  "type": "rect",
+                  "style": ["bar"],
+                  "from": {"data": "data_0"},
+                  "encode": {
+                    "update": {
+                      "fill": {"scale": "color", "field": "Return"},
+                      "tooltip": {
+                        "signal": "{\"sentiment_label\": isValid(datum[\"sentiment_label\"]) ? datum[\"sentiment_label\"] : \"\"+datum[\"sentiment_label\"], \"Period\": isValid(datum[\"Period\"]) ? datum[\"Period\"] : \"\"+datum[\"Period\"], \"Return\": format(datum[\"Return\"], \".2%\")}"
+                      },
+                      "ariaRoleDescription": {"value": "bar"},
+                      "description": {
+                        "signal": "\"Sentiment Level: \" + (isValid(datum[\"sentiment_label\"]) ? datum[\"sentiment_label\"] : \"\"+datum[\"sentiment_label\"]) + \"; Average Future Return: \" + (format(datum[\"Return\"], \".2%\")) + \"; Return: \" + (format(datum[\"Return\"], \"\")) + \"; sentiment_label: \" + (isValid(datum[\"sentiment_label\"]) ? datum[\"sentiment_label\"] : \"\"+datum[\"sentiment_label\"]) + \"; Period: \" + (isValid(datum[\"Period\"]) ? datum[\"Period\"] : \"\"+datum[\"Period\"])"
+                      },
+                      "x": {
+                        "scale": "concat_1_concat_0_x",
+                        "field": "sentiment_label"
+                      },
+                      "width": {
+                        "signal": "max(0.25, bandwidth('concat_1_concat_0_x'))"
+                      },
+                      "y": {
+                        "scale": "concat_1_concat_0_y",
+                        "field": "Return_end"
+                      },
+                      "y2": {
+                        "scale": "concat_1_concat_0_y",
+                        "field": "Return_start"
+                      }
+                    }
+                  }
+                }
+              ],
+              "axes": [
+                {
+                  "scale": "concat_1_concat_0_y",
+                  "orient": "left",
+                  "gridScale": "concat_1_concat_0_x",
+                  "grid": true,
+                  "tickCount": {
+                    "signal": "ceil(concat_1_concat_0_child_height/40)"
+                  },
+                  "domain": false,
+                  "labels": false,
+                  "aria": false,
+                  "maxExtent": 0,
+                  "minExtent": 0,
+                  "ticks": false,
+                  "zindex": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "concat_1_concat_1_group",
+          "title": {
+            "anchor": "middle",
+            "text": "3-Day Future Return",
+            "frame": "group"
+          },
+          "style": "cell",
+          "encode": {
+            "update": {
+              "width": {"signal": "concat_1_concat_1_width"},
+              "height": {"signal": "concat_1_concat_1_height"}
+            }
+          },
+          "marks": [
+            {
+              "name": "concat_1_concat_1_layer_0_marks",
+              "type": "symbol",
+              "style": ["circle"],
+              "from": {"data": "data_9"},
+              "encode": {
+                "update": {
+                  "opacity": {"value": 0.7},
+                  "fill": {"value": "#4c78a8"},
+                  "tooltip": {
+                    "signal": "{\"STOCK\": isValid(datum[\"STOCK\"]) ? datum[\"STOCK\"] : \"\"+datum[\"STOCK\"], \"TEXTBLOB_POLARITY\": format(datum[\"TEXTBLOB_POLARITY\"], \"\"), \"3_DAY_RETURN\": format(datum[\"3_DAY_RETURN\"], \"\"), \"3_DAY_RETURN_Corr_Sentiment\": format(datum[\"3_DAY_RETURN_Corr_Sentiment\"], \"\")}"
+                  },
+                  "ariaRoleDescription": {"value": "circle"},
+                  "description": {
+                    "signal": "\"Tweet Sentiment: \" + (format(datum[\"TEXTBLOB_POLARITY\"], \"\")) + \"; 3-Day Future Return: \" + (format(datum[\"3_DAY_RETURN\"], \".2%\")) + \"; sentiment.corr: \" + (format(datum[\"3_DAY_RETURN_Corr_Sentiment\"], \"\")) + \"; STOCK: \" + (isValid(datum[\"STOCK\"]) ? datum[\"STOCK\"] : \"\"+datum[\"STOCK\"]) + \"; TEXTBLOB_POLARITY: \" + (format(datum[\"TEXTBLOB_POLARITY\"], \"\")) + \"; 3_DAY_RETURN: \" + (format(datum[\"3_DAY_RETURN\"], \"\")) + \"; 3_DAY_RETURN_Corr_Sentiment: \" + (format(datum[\"3_DAY_RETURN_Corr_Sentiment\"], \"\"))"
+                  },
+                  "x": {
+                    "scale": "concat_1_concat_1_x",
+                    "field": "TEXTBLOB_POLARITY"
+                  },
+                  "y": {
+                    "scale": "concat_1_concat_1_y",
+                    "field": "3_DAY_RETURN"
+                  },
+                  "size": {
+                    "scale": "size",
+                    "field": "3_DAY_RETURN_Corr_Sentiment"
+                  },
+                  "shape": {"value": "circle"}
+                }
+              }
+            },
+            {
+              "name": "concat_1_concat_1_layer_1_pathgroup",
+              "type": "group",
+              "from": {
+                "facet": {
+                  "name": "faceted_path_concat_1_concat_1_layer_1_main",
+                  "data": "data_10",
+                  "groupby": ["3_DAY_RETURN_Corr_Sentiment"]
+                }
+              },
+              "encode": {
+                "update": {
+                  "width": {"field": {"group": "width"}},
+                  "height": {"field": {"group": "height"}}
+                }
+              },
+              "marks": [
+                {
+                  "name": "concat_1_concat_1_layer_1_marks",
+                  "type": "line",
+                  "style": ["line"],
+                  "sort": {"field": "datum[\"TEXTBLOB_POLARITY\"]"},
+                  "from": {
+                    "data": "faceted_path_concat_1_concat_1_layer_1_main"
+                  },
+                  "encode": {
+                    "update": {
+                      "stroke": {"value": "green"},
+                      "tooltip": {
+                        "signal": "{\"STOCK\": isValid(datum[\"STOCK\"]) ? datum[\"STOCK\"] : \"\"+datum[\"STOCK\"], \"TEXTBLOB_POLARITY\": format(datum[\"TEXTBLOB_POLARITY\"], \"\"), \"3_DAY_RETURN\": format(datum[\"3_DAY_RETURN\"], \"\"), \"3_DAY_RETURN_Corr_Sentiment\": format(datum[\"3_DAY_RETURN_Corr_Sentiment\"], \"\")}"
+                      },
+                      "description": {
+                        "signal": "\"Tweet Sentiment: \" + (format(datum[\"TEXTBLOB_POLARITY\"], \"\")) + \"; 3-Day Future Return: \" + (format(datum[\"3_DAY_RETURN\"], \".2%\")) + \"; sentiment.corr: \" + (format(datum[\"3_DAY_RETURN_Corr_Sentiment\"], \"\")) + \"; STOCK: \" + (isValid(datum[\"STOCK\"]) ? datum[\"STOCK\"] : \"\"+datum[\"STOCK\"]) + \"; TEXTBLOB_POLARITY: \" + (format(datum[\"TEXTBLOB_POLARITY\"], \"\")) + \"; 3_DAY_RETURN: \" + (format(datum[\"3_DAY_RETURN\"], \"\")) + \"; 3_DAY_RETURN_Corr_Sentiment: \" + (format(datum[\"3_DAY_RETURN_Corr_Sentiment\"], \"\"))"
+                      },
+                      "x": {
+                        "scale": "concat_1_concat_1_x",
+                        "field": "TEXTBLOB_POLARITY"
+                      },
+                      "y": {
+                        "scale": "concat_1_concat_1_y",
+                        "field": "3_DAY_RETURN"
+                      },
+                      "strokeWidth": {
+                        "scale": "size",
+                        "field": "3_DAY_RETURN_Corr_Sentiment"
+                      },
+                      "defined": {
+                        "signal": "isValid(datum[\"TEXTBLOB_POLARITY\"]) && isFinite(+datum[\"TEXTBLOB_POLARITY\"]) && isValid(datum[\"3_DAY_RETURN\"]) && isFinite(+datum[\"3_DAY_RETURN\"])"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "axes": [
+            {
+              "scale": "concat_1_concat_1_x",
+              "orient": "bottom",
+              "gridScale": "concat_1_concat_1_y",
+              "grid": true,
+              "tickCount": {"signal": "ceil(concat_1_concat_1_width/40)"},
+              "domain": false,
+              "labels": false,
+              "aria": false,
+              "maxExtent": 0,
+              "minExtent": 0,
+              "ticks": false,
+              "zindex": 0
+            },
+            {
+              "scale": "concat_1_concat_1_y",
+              "orient": "left",
+              "gridScale": "concat_1_concat_1_x",
+              "grid": true,
+              "tickCount": {"signal": "ceil(concat_1_concat_1_height/40)"},
+              "domain": false,
+              "labels": false,
+              "aria": false,
+              "maxExtent": 0,
+              "minExtent": 0,
+              "ticks": false,
+              "zindex": 0
+            },
+            {
+              "scale": "concat_1_concat_1_x",
+              "orient": "bottom",
+              "grid": false,
+              "title": "Tweet Sentiment",
+              "labelFlush": true,
+              "labelOverlap": true,
+              "tickCount": {"signal": "ceil(concat_1_concat_1_width/40)"},
+              "zindex": 0
+            },
+            {
+              "scale": "concat_1_concat_1_y",
+              "orient": "left",
+              "grid": false,
+              "title": "3-Day Future Return",
+              "format": ".2%",
+              "labelOverlap": true,
+              "tickCount": {"signal": "ceil(concat_1_concat_1_height/40)"},
+              "zindex": 0
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "name": "concat_1_concat_2_group",
+          "title": {
+            "anchor": "middle",
+            "text": "7-Day Future Return",
+            "frame": "group"
+          },
+          "style": "cell",
+          "encode": {
+            "update": {
+              "width": {"signal": "concat_1_concat_2_width"},
+              "height": {"signal": "concat_1_concat_2_height"}
+            }
+          },
+          "marks": [
+            {
+              "name": "concat_1_concat_2_layer_0_marks",
+              "type": "symbol",
+              "style": ["circle"],
+              "from": {"data": "data_11"},
+              "encode": {
+                "update": {
+                  "opacity": {"value": 0.7},
+                  "fill": {"value": "#4c78a8"},
+                  "tooltip": {
+                    "signal": "{\"STOCK\": isValid(datum[\"STOCK\"]) ? datum[\"STOCK\"] : \"\"+datum[\"STOCK\"], \"TEXTBLOB_POLARITY\": format(datum[\"TEXTBLOB_POLARITY\"], \"\"), \"7_DAY_RETURN\": format(datum[\"7_DAY_RETURN\"], \"\"), \"7_DAY_RETURN_Corr_Sentiment\": format(datum[\"7_DAY_RETURN_Corr_Sentiment\"], \"\")}"
+                  },
+                  "ariaRoleDescription": {"value": "circle"},
+                  "description": {
+                    "signal": "\"Tweet Sentiment: \" + (format(datum[\"TEXTBLOB_POLARITY\"], \"\")) + \"; 7-Day Future Return: \" + (format(datum[\"7_DAY_RETURN\"], \".2%\")) + \"; sentiment.corr: \" + (format(datum[\"7_DAY_RETURN_Corr_Sentiment\"], \"\")) + \"; STOCK: \" + (isValid(datum[\"STOCK\"]) ? datum[\"STOCK\"] : \"\"+datum[\"STOCK\"]) + \"; TEXTBLOB_POLARITY: \" + (format(datum[\"TEXTBLOB_POLARITY\"], \"\")) + \"; 7_DAY_RETURN: \" + (format(datum[\"7_DAY_RETURN\"], \"\")) + \"; 7_DAY_RETURN_Corr_Sentiment: \" + (format(datum[\"7_DAY_RETURN_Corr_Sentiment\"], \"\"))"
+                  },
+                  "x": {
+                    "scale": "concat_1_concat_2_x",
+                    "field": "TEXTBLOB_POLARITY"
+                  },
+                  "y": {
+                    "scale": "concat_1_concat_2_y",
+                    "field": "7_DAY_RETURN"
+                  },
+                  "size": {
+                    "scale": "size",
+                    "field": "7_DAY_RETURN_Corr_Sentiment"
+                  },
+                  "shape": {"value": "circle"}
+                }
+              }
+            },
+            {
+              "name": "concat_1_concat_2_layer_1_pathgroup",
+              "type": "group",
+              "from": {
+                "facet": {
+                  "name": "faceted_path_concat_1_concat_2_layer_1_main",
+                  "data": "data_12",
+                  "groupby": ["7_DAY_RETURN_Corr_Sentiment"]
+                }
+              },
+              "encode": {
+                "update": {
+                  "width": {"field": {"group": "width"}},
+                  "height": {"field": {"group": "height"}}
+                }
+              },
+              "marks": [
+                {
+                  "name": "concat_1_concat_2_layer_1_marks",
+                  "type": "line",
+                  "style": ["line"],
+                  "sort": {"field": "datum[\"TEXTBLOB_POLARITY\"]"},
+                  "from": {
+                    "data": "faceted_path_concat_1_concat_2_layer_1_main"
+                  },
+                  "encode": {
+                    "update": {
+                      "stroke": {"value": "green"},
+                      "tooltip": {
+                        "signal": "{\"STOCK\": isValid(datum[\"STOCK\"]) ? datum[\"STOCK\"] : \"\"+datum[\"STOCK\"], \"TEXTBLOB_POLARITY\": format(datum[\"TEXTBLOB_POLARITY\"], \"\"), \"7_DAY_RETURN\": format(datum[\"7_DAY_RETURN\"], \"\"), \"7_DAY_RETURN_Corr_Sentiment\": format(datum[\"7_DAY_RETURN_Corr_Sentiment\"], \"\")}"
+                      },
+                      "description": {
+                        "signal": "\"Tweet Sentiment: \" + (format(datum[\"TEXTBLOB_POLARITY\"], \"\")) + \"; 7-Day Future Return: \" + (format(datum[\"7_DAY_RETURN\"], \".2%\")) + \"; sentiment.corr: \" + (format(datum[\"7_DAY_RETURN_Corr_Sentiment\"], \"\")) + \"; STOCK: \" + (isValid(datum[\"STOCK\"]) ? datum[\"STOCK\"] : \"\"+datum[\"STOCK\"]) + \"; TEXTBLOB_POLARITY: \" + (format(datum[\"TEXTBLOB_POLARITY\"], \"\")) + \"; 7_DAY_RETURN: \" + (format(datum[\"7_DAY_RETURN\"], \"\")) + \"; 7_DAY_RETURN_Corr_Sentiment: \" + (format(datum[\"7_DAY_RETURN_Corr_Sentiment\"], \"\"))"
+                      },
+                      "x": {
+                        "scale": "concat_1_concat_2_x",
+                        "field": "TEXTBLOB_POLARITY"
+                      },
+                      "y": {
+                        "scale": "concat_1_concat_2_y",
+                        "field": "7_DAY_RETURN"
+                      },
+                      "strokeWidth": {
+                        "scale": "size",
+                        "field": "7_DAY_RETURN_Corr_Sentiment"
+                      },
+                      "defined": {
+                        "signal": "isValid(datum[\"TEXTBLOB_POLARITY\"]) && isFinite(+datum[\"TEXTBLOB_POLARITY\"]) && isValid(datum[\"7_DAY_RETURN\"]) && isFinite(+datum[\"7_DAY_RETURN\"])"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "axes": [
+            {
+              "scale": "concat_1_concat_2_x",
+              "orient": "bottom",
+              "gridScale": "concat_1_concat_2_y",
+              "grid": true,
+              "tickCount": {"signal": "ceil(concat_1_concat_2_width/40)"},
+              "domain": false,
+              "labels": false,
+              "aria": false,
+              "maxExtent": 0,
+              "minExtent": 0,
+              "ticks": false,
+              "zindex": 0
+            },
+            {
+              "scale": "concat_1_concat_2_y",
+              "orient": "left",
+              "gridScale": "concat_1_concat_2_x",
+              "grid": true,
+              "tickCount": {"signal": "ceil(concat_1_concat_2_height/40)"},
+              "domain": false,
+              "labels": false,
+              "aria": false,
+              "maxExtent": 0,
+              "minExtent": 0,
+              "ticks": false,
+              "zindex": 0
+            },
+            {
+              "scale": "concat_1_concat_2_x",
+              "orient": "bottom",
+              "grid": false,
+              "title": "Tweet Sentiment",
+              "labelFlush": true,
+              "labelOverlap": true,
+              "tickCount": {"signal": "ceil(concat_1_concat_2_width/40)"},
+              "zindex": 0
+            },
+            {
+              "scale": "concat_1_concat_2_y",
+              "orient": "left",
+              "grid": false,
+              "title": "7-Day Future Return",
+              "format": ".2%",
+              "labelOverlap": true,
+              "tickCount": {"signal": "ceil(concat_1_concat_2_height/40)"},
+              "zindex": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "color",
+      "type": "linear",
+      "domain": [-0.003461419077684595, 0.0009813839076222575],
+      "range": ["purple", "yellow", "green"],
+      "interpolate": "hcl",
+      "zero": true
+    },
+    {
+      "name": "size",
+      "type": "linear",
+      "domain": {
+        "fields": [
+          [-0.45499021015498364, 0.5812607448826022],
+          [-0.5633991909584759, 0.5388972284908711],
+          [-0.49398837790519323, 0.6092784905754072],
+          [-0.6880477009488887, 0.4789759791317928]
+        ]
       },
-      {
-        "sentiment_label": "slightly negative",
-        "Period": "1_DAY_RETURN",
-        "Return": 0
+      "range": [5, 300],
+      "zero": true
+    },
+    {
+      "name": "concat_0_concat_0_x",
+      "type": "band",
+      "domain": {
+        "data": "data_0",
+        "field": "Period",
+        "sort": {"op": "min", "field": "x_Period_sort_index"}
       },
-      {
-        "sentiment_label": "slightly positive",
-        "Period": "1_DAY_RETURN",
-        "Return": 0
+      "range": [0, {"signal": "concat_0_concat_0_child_width"}],
+      "paddingInner": 0.1,
+      "paddingOuter": 0.05
+    },
+    {
+      "name": "concat_0_concat_0_y",
+      "type": "linear",
+      "domain": {"data": "data_3", "fields": ["Return_start", "Return_end"]},
+      "range": [{"signal": "concat_0_concat_0_child_height"}, 0],
+      "nice": true,
+      "zero": true
+    },
+    {
+      "name": "concat_0_concat_1_x",
+      "type": "linear",
+      "domain": [-0.19381564022961978, 0.10900413693281522],
+      "range": [0, {"signal": "concat_0_concat_1_width"}],
+      "zero": true
+    },
+    {
+      "name": "concat_0_concat_1_y",
+      "type": "linear",
+      "domain": {
+        "fields": [
+          {"data": "data_5", "field": "1_DAY_RETURN"},
+          {"data": "data_6", "field": "1_DAY_RETURN"}
+        ]
       },
-      {
-        "sentiment_label": "very positive",
-        "Period": "1_DAY_RETURN",
-        "Return": 0.00012428881500358303
+      "range": [{"signal": "concat_0_concat_1_height"}, 0],
+      "nice": true,
+      "zero": true
+    },
+    {
+      "name": "concat_0_concat_2_x",
+      "type": "linear",
+      "domain": [-0.19381564022961978, 0.10900413693281522],
+      "range": [0, {"signal": "concat_0_concat_2_width"}],
+      "zero": true
+    },
+    {
+      "name": "concat_0_concat_2_y",
+      "type": "linear",
+      "domain": {
+        "fields": [
+          {"data": "data_7", "field": "2_DAY_RETURN"},
+          {"data": "data_8", "field": "2_DAY_RETURN"}
+        ]
       },
-      {
-        "sentiment_label": "very negative",
-        "Period": "2_DAY_RETURN",
-        "Return": 0.00013205757516594752
+      "range": [{"signal": "concat_0_concat_2_height"}, 0],
+      "nice": true,
+      "zero": true
+    },
+    {
+      "name": "concat_1_concat_0_x",
+      "type": "band",
+      "domain": {
+        "data": "data_13",
+        "field": "sentiment_label",
+        "sort": {"op": "min", "field": "x_sentiment_label_sort_index"}
       },
-      {
-        "sentiment_label": "slightly negative",
-        "Period": "2_DAY_RETURN",
-        "Return": 0.0009813839076222575
+      "range": [0, {"signal": "concat_1_concat_0_child_width"}],
+      "paddingInner": 0.1,
+      "paddingOuter": 0.05
+    },
+    {
+      "name": "concat_1_concat_0_y",
+      "type": "linear",
+      "domain": {"data": "data_16", "fields": ["Return_start", "Return_end"]},
+      "range": [{"signal": "concat_1_concat_0_child_height"}, 0],
+      "nice": true,
+      "zero": true
+    },
+    {
+      "name": "concat_1_concat_1_x",
+      "type": "linear",
+      "domain": [-0.19381564022961978, 0.10900413693281522],
+      "range": [0, {"signal": "concat_1_concat_1_width"}],
+      "zero": true
+    },
+    {
+      "name": "concat_1_concat_1_y",
+      "type": "linear",
+      "domain": {
+        "fields": [
+          {"data": "data_9", "field": "3_DAY_RETURN"},
+          {"data": "data_10", "field": "3_DAY_RETURN"}
+        ]
       },
-      {
-        "sentiment_label": "slightly positive",
-        "Period": "2_DAY_RETURN",
-        "Return": -0.0012159782365504974
+      "range": [{"signal": "concat_1_concat_1_height"}, 0],
+      "nice": true,
+      "zero": true
+    },
+    {
+      "name": "concat_1_concat_2_x",
+      "type": "linear",
+      "domain": [-0.19381564022961978, 0.10900413693281522],
+      "range": [0, {"signal": "concat_1_concat_2_width"}],
+      "zero": true
+    },
+    {
+      "name": "concat_1_concat_2_y",
+      "type": "linear",
+      "domain": {
+        "fields": [
+          {"data": "data_11", "field": "7_DAY_RETURN"},
+          {"data": "data_12", "field": "7_DAY_RETURN"}
+        ]
       },
-      {
-        "sentiment_label": "very positive",
-        "Period": "2_DAY_RETURN",
-        "Return": 0.00047422496556107454
-      },
-      {
-        "sentiment_label": "very negative",
-        "Period": "3_DAY_RETURN",
-        "Return": 0.00047422496556107454
-      },
-      {
-        "sentiment_label": "slightly negative",
-        "Period": "3_DAY_RETURN",
-        "Return": 0.0005209165443614628
-      },
-      {
-        "sentiment_label": "slightly positive",
-        "Period": "3_DAY_RETURN",
-        "Return": -0.0005338431907575027
-      },
-      {
-        "sentiment_label": "very positive",
-        "Period": "3_DAY_RETURN",
-        "Return": 0.0005624503721815587
-      },
-      {
-        "sentiment_label": "very negative",
-        "Period": "7_DAY_RETURN",
-        "Return": -0.0012177572323639188
-      },
-      {
-        "sentiment_label": "slightly negative",
-        "Period": "7_DAY_RETURN",
-        "Return": -0.0009308685860320105
-      },
-      {
-        "sentiment_label": "slightly positive",
-        "Period": "7_DAY_RETURN",
-        "Return": -0.003461419077684595
-      },
-      {
-        "sentiment_label": "very positive",
-        "Period": "7_DAY_RETURN",
-        "Return": 0.00013000895183460455
+      "range": [{"signal": "concat_1_concat_2_height"}, 0],
+      "nice": true,
+      "zero": true
+    }
+  ],
+  "legends": [
+    {
+      "title": "Return",
+      "fill": "color",
+      "gradientLength": {
+        "signal": "clamp(concat_0_concat_0_child_height, 64, 200)"
       }
-    ],
-    "data-51f26b1d49622b2f32d60abddaf6f8c5": [
-      {
-        "STOCK": "21CF",
-        "1_DAY_RETURN": -0.002849574788463793,
-        "2_DAY_RETURN": -0.007404480419833003,
-        "3_DAY_RETURN": -0.002625228330706653,
-        "7_DAY_RETURN": -0.007846027052870675,
-        "TEXTBLOB_POLARITY": -0.024306960162666855,
-        "1_DAY_RETURN_Corr_Sentiment": 0.5812607448826022,
-        "2_DAY_RETURN_Corr_Sentiment": 0.5331679285134593,
-        "3_DAY_RETURN_Corr_Sentiment": 0.6092784905754072,
-        "7_DAY_RETURN_Corr_Sentiment": 0.4194600118566203
-      },
-      {
-        "STOCK": "ASOS",
-        "1_DAY_RETURN": 0.00042432632329407667,
-        "2_DAY_RETURN": 0.0028569141555647125,
-        "3_DAY_RETURN": 0.009594582261555275,
-        "7_DAY_RETURN": -0.0042659975452949955,
-        "TEXTBLOB_POLARITY": -0.045971378679768866,
-        "1_DAY_RETURN_Corr_Sentiment": 0.1647368268431104,
-        "2_DAY_RETURN_Corr_Sentiment": -0.10097337074030018,
-        "3_DAY_RETURN_Corr_Sentiment": -0.05543424503490866,
-        "7_DAY_RETURN_Corr_Sentiment": -0.07430272879991455
-      },
-      {
-        "STOCK": "AT&T",
-        "1_DAY_RETURN": -0.0001422146955942131,
-        "2_DAY_RETURN": -0.001917272721558393,
-        "3_DAY_RETURN": -0.002509123937657322,
-        "7_DAY_RETURN": -0.004532330604091919,
-        "TEXTBLOB_POLARITY": -0.10923946820466589,
-        "1_DAY_RETURN_Corr_Sentiment": -0.0028047390478625,
-        "2_DAY_RETURN_Corr_Sentiment": 0.021725456140391095,
-        "3_DAY_RETURN_Corr_Sentiment": -0.008714900046792616,
-        "7_DAY_RETURN_Corr_Sentiment": 0.04334236554375186
-      },
-      {
-        "STOCK": "Adobe",
-        "1_DAY_RETURN": -0.002831243242690845,
-        "2_DAY_RETURN": -0.001153966029366609,
-        "3_DAY_RETURN": -0.0011139376740816364,
-        "7_DAY_RETURN": 0.001387334374402758,
-        "TEXTBLOB_POLARITY": -0.007493852536023468,
-        "1_DAY_RETURN_Corr_Sentiment": 0.08111555875116737,
-        "2_DAY_RETURN_Corr_Sentiment": 0.3306553037512656,
-        "3_DAY_RETURN_Corr_Sentiment": 0.22399646073360915,
-        "7_DAY_RETURN_Corr_Sentiment": -0.04418305796911326
-      },
-      {
-        "STOCK": "Amazon",
-        "1_DAY_RETURN": 0.0015753298940483977,
-        "2_DAY_RETURN": 0.0006188944925241275,
-        "3_DAY_RETURN": -0.0020302288443673415,
-        "7_DAY_RETURN": -0.009525342633398817,
-        "TEXTBLOB_POLARITY": -0.03733508235534085,
-        "1_DAY_RETURN_Corr_Sentiment": -0.034033525693917814,
-        "2_DAY_RETURN_Corr_Sentiment": -0.0009740243279888701,
-        "3_DAY_RETURN_Corr_Sentiment": -0.01890546227168339,
-        "7_DAY_RETURN_Corr_Sentiment": -0.050526378025490794
-      },
-      {
-        "STOCK": "American Express",
-        "1_DAY_RETURN": 0.0012661004100921196,
-        "2_DAY_RETURN": -0.0016638268084930618,
-        "3_DAY_RETURN": -0.0025134872239116735,
-        "7_DAY_RETURN": -0.002957863108868095,
-        "TEXTBLOB_POLARITY": -0.06158916113674441,
-        "1_DAY_RETURN_Corr_Sentiment": -0.16619354621205798,
-        "2_DAY_RETURN_Corr_Sentiment": -0.3183687452279275,
-        "3_DAY_RETURN_Corr_Sentiment": -0.3156726780560685,
-        "7_DAY_RETURN_Corr_Sentiment": -0.21570913693936447
-      },
-      {
-        "STOCK": "Apple",
-        "1_DAY_RETURN": -0.0023597387021260913,
-        "2_DAY_RETURN": -0.0033076706090505157,
-        "3_DAY_RETURN": -0.0033007283795122837,
-        "7_DAY_RETURN": -0.0029783439691785634,
-        "TEXTBLOB_POLARITY": -0.05365024875113604,
-        "1_DAY_RETURN_Corr_Sentiment": -0.013121239694884018,
-        "2_DAY_RETURN_Corr_Sentiment": 0.03532207952461294,
-        "3_DAY_RETURN_Corr_Sentiment": 0.02076233684273021,
-        "7_DAY_RETURN_Corr_Sentiment": 0.02611852681447695
-      },
-      {
-        "STOCK": "Audi",
-        "1_DAY_RETURN": -0.0005955521227092968,
-        "2_DAY_RETURN": -0.006014151704737952,
-        "3_DAY_RETURN": -0.00547879302938709,
-        "7_DAY_RETURN": -0.003300847754635053,
-        "TEXTBLOB_POLARITY": 0.020034546603617275,
-        "1_DAY_RETURN_Corr_Sentiment": 0.014790902616428625,
-        "2_DAY_RETURN_Corr_Sentiment": 0.05201137844335543,
-        "3_DAY_RETURN_Corr_Sentiment": 0.07578010236790013,
-        "7_DAY_RETURN_Corr_Sentiment": 0.01607938532129366
-      },
-      {
-        "STOCK": "BMW",
-        "1_DAY_RETURN": 0.0006335728174719257,
-        "2_DAY_RETURN": 0.0040388264079044165,
-        "3_DAY_RETURN": 0.006112296884867957,
-        "7_DAY_RETURN": 0.013695974533809404,
-        "TEXTBLOB_POLARITY": -0.007992734611164693,
-        "1_DAY_RETURN_Corr_Sentiment": 0.28293505290488324,
-        "2_DAY_RETURN_Corr_Sentiment": 0.23410832863902245,
-        "3_DAY_RETURN_Corr_Sentiment": 0.034670153215808366,
-        "7_DAY_RETURN_Corr_Sentiment": -0.08139607619852908
-      },
-      {
-        "STOCK": "BP",
-        "1_DAY_RETURN": -0.0008837616981194268,
-        "2_DAY_RETURN": -0.0020769427578566273,
-        "3_DAY_RETURN": -0.0013133190187676615,
-        "7_DAY_RETURN": 0.0019315961363445455,
-        "TEXTBLOB_POLARITY": 0.09900413693281522,
-        "1_DAY_RETURN_Corr_Sentiment": -0.008358728518240524,
-        "2_DAY_RETURN_Corr_Sentiment": -0.10808431599364718,
-        "3_DAY_RETURN_Corr_Sentiment": -0.16395182555367807,
-        "7_DAY_RETURN_Corr_Sentiment": -0.018337613848939515
-      },
-      {
-        "STOCK": "Bank of America",
-        "1_DAY_RETURN": 0.006520987514548951,
-        "2_DAY_RETURN": 0.004071914477648815,
-        "3_DAY_RETURN": -0.0013938160657902558,
-        "7_DAY_RETURN": -0.0024798821525229705,
-        "TEXTBLOB_POLARITY": 0.001252101325961997,
-        "1_DAY_RETURN_Corr_Sentiment": 0.008586737359697135,
-        "2_DAY_RETURN_Corr_Sentiment": 0.0632758805416329,
-        "3_DAY_RETURN_Corr_Sentiment": 0.1306982706668738,
-        "7_DAY_RETURN_Corr_Sentiment": 0.007386115448511476
-      },
-      {
-        "STOCK": "Bayer",
-        "1_DAY_RETURN": 0.006198926410105352,
-        "2_DAY_RETURN": 0.0020085669735433603,
-        "3_DAY_RETURN": 0.004139960441435364,
-        "7_DAY_RETURN": 0.0029239990848211623,
-        "TEXTBLOB_POLARITY": -0.084635353653143,
-        "1_DAY_RETURN_Corr_Sentiment": 0.394046010038654,
-        "2_DAY_RETURN_Corr_Sentiment": 0.28965071209190746,
-        "3_DAY_RETURN_Corr_Sentiment": 0.281523955375591,
-        "7_DAY_RETURN_Corr_Sentiment": -0.01792110236082818
-      },
-      {
-        "STOCK": "BlackRock",
-        "1_DAY_RETURN": 0.0035348085258294385,
-        "2_DAY_RETURN": 0.006044149848485704,
-        "3_DAY_RETURN": 0.004865748400771615,
-        "7_DAY_RETURN": 0.011870380607027348,
-        "TEXTBLOB_POLARITY": -0.05830751585941742,
-        "1_DAY_RETURN_Corr_Sentiment": -0.1780593337096828,
-        "2_DAY_RETURN_Corr_Sentiment": 0.5388972284908711,
-        "3_DAY_RETURN_Corr_Sentiment": 0.5782555291799352,
-        "7_DAY_RETURN_Corr_Sentiment": 0.005880853018467644
-      },
-      {
-        "STOCK": "Boeing",
-        "1_DAY_RETURN": 0.0010966303131623553,
-        "2_DAY_RETURN": 0.001440951836121163,
-        "3_DAY_RETURN": -0.000739350384283701,
-        "7_DAY_RETURN": -0.015072634972302162,
-        "TEXTBLOB_POLARITY": 0.023942562013075243,
-        "1_DAY_RETURN_Corr_Sentiment": 0.0021614965430465875,
-        "2_DAY_RETURN_Corr_Sentiment": 0.18906894969657612,
-        "3_DAY_RETURN_Corr_Sentiment": 0.24776717818538227,
-        "7_DAY_RETURN_Corr_Sentiment": -0.04205359927323096
-      },
-      {
-        "STOCK": "Burberry",
-        "1_DAY_RETURN": 0.003637119930046256,
-        "2_DAY_RETURN": 0.0063858127850927385,
-        "3_DAY_RETURN": 0.006586316261806913,
-        "7_DAY_RETURN": 0.015119868642441326,
-        "TEXTBLOB_POLARITY": -0.10482520017635624,
-        "1_DAY_RETURN_Corr_Sentiment": -0.06499360020506795,
-        "2_DAY_RETURN_Corr_Sentiment": 0.006339689095994183,
-        "3_DAY_RETURN_Corr_Sentiment": 0.032299581284844926,
-        "7_DAY_RETURN_Corr_Sentiment": -0.018099893018024008
-      },
-      {
-        "STOCK": "CBS",
-        "1_DAY_RETURN": 0.00019634222899565096,
-        "2_DAY_RETURN": 0.0012139886569226396,
-        "3_DAY_RETURN": 0.00600122741607312,
-        "7_DAY_RETURN": 0.006853815288682322,
-        "TEXTBLOB_POLARITY": -0.034362623132115126,
-        "1_DAY_RETURN_Corr_Sentiment": -0.08735752771337059,
-        "2_DAY_RETURN_Corr_Sentiment": 0.012541489303151807,
-        "3_DAY_RETURN_Corr_Sentiment": 0.10155115262690033,
-        "7_DAY_RETURN_Corr_Sentiment": 0.027174817332422534
-      },
-      {
-        "STOCK": "CVS Health",
-        "1_DAY_RETURN": 0.0005795684929367413,
-        "2_DAY_RETURN": -0.0008069406506017392,
-        "3_DAY_RETURN": 0.00024072739413495518,
-        "7_DAY_RETURN": -0.012550135733161138,
-        "TEXTBLOB_POLARITY": 0.09483367021295924,
-        "1_DAY_RETURN_Corr_Sentiment": -0.14839573393233313,
-        "2_DAY_RETURN_Corr_Sentiment": -0.18433995357934374,
-        "3_DAY_RETURN_Corr_Sentiment": -0.09407187838767848,
-        "7_DAY_RETURN_Corr_Sentiment": -0.6880477009488887
-      },
-      {
-        "STOCK": "Chevron",
-        "1_DAY_RETURN": -0.0024544330965851355,
-        "2_DAY_RETURN": 0.0019191021615221023,
-        "3_DAY_RETURN": 0.004262181786558297,
-        "7_DAY_RETURN": 0.011283872831398294,
-        "TEXTBLOB_POLARITY": -0.16962042524892518,
-        "1_DAY_RETURN_Corr_Sentiment": -0.3647712090497522,
-        "2_DAY_RETURN_Corr_Sentiment": -0.49505045501932904,
-        "3_DAY_RETURN_Corr_Sentiment": -0.45621568735360535,
-        "7_DAY_RETURN_Corr_Sentiment": -0.4935377730073985
-      },
-      {
-        "STOCK": "Cisco",
-        "1_DAY_RETURN": -0.0002986218862600271,
-        "2_DAY_RETURN": -0.0014960532174356986,
-        "3_DAY_RETURN": -0.0014785573773055923,
-        "7_DAY_RETURN": -0.004378638232474541,
-        "TEXTBLOB_POLARITY": -0.01379648290179539,
-        "1_DAY_RETURN_Corr_Sentiment": 0.010010573190692961,
-        "2_DAY_RETURN_Corr_Sentiment": 0.15114895864591074,
-        "3_DAY_RETURN_Corr_Sentiment": 0.14349062449937228,
-        "7_DAY_RETURN_Corr_Sentiment": 0.08668396286240804
-      },
-      {
-        "STOCK": "Citigroup",
-        "1_DAY_RETURN": 0.0019633936059123744,
-        "2_DAY_RETURN": -0.003976646030685215,
-        "3_DAY_RETURN": -0.00917700682811709,
-        "7_DAY_RETURN": -0.01433353414730547,
-        "TEXTBLOB_POLARITY": -0.07902661900497887,
-        "1_DAY_RETURN_Corr_Sentiment": -0.04795364364639372,
-        "2_DAY_RETURN_Corr_Sentiment": 0.10082964997825081,
-        "3_DAY_RETURN_Corr_Sentiment": 0.04705823142669475,
-        "7_DAY_RETURN_Corr_Sentiment": 0.21264940179478828
-      },
-      {
-        "STOCK": "CocaCola",
-        "1_DAY_RETURN": -0.00023161131701545097,
-        "2_DAY_RETURN": 0.0006769664856713584,
-        "3_DAY_RETURN": 0.002002762122068231,
-        "7_DAY_RETURN": 0.0022186512379033423,
-        "TEXTBLOB_POLARITY": -0.047744437095446124,
-        "1_DAY_RETURN_Corr_Sentiment": 0.03689926701912265,
-        "2_DAY_RETURN_Corr_Sentiment": 0.07992817239375238,
-        "3_DAY_RETURN_Corr_Sentiment": 0.1639015507377328,
-        "7_DAY_RETURN_Corr_Sentiment": 0.11846217479922475
-      },
-      {
-        "STOCK": "Deutsche Bank",
-        "1_DAY_RETURN": -0.0023077262837598984,
-        "2_DAY_RETURN": 0.0011998191386700134,
-        "3_DAY_RETURN": 0.0035324501523811684,
-        "7_DAY_RETURN": 0.0025340762519612393,
-        "TEXTBLOB_POLARITY": -0.02004076033352752,
-        "1_DAY_RETURN_Corr_Sentiment": 0.27416870010157696,
-        "2_DAY_RETURN_Corr_Sentiment": 0.2347050029482978,
-        "3_DAY_RETURN_Corr_Sentiment": 0.27465278236396523,
-        "7_DAY_RETURN_Corr_Sentiment": 0.3380465113701279
-      },
-      {
-        "STOCK": "Disney",
-        "1_DAY_RETURN": 0.001814110202483467,
-        "2_DAY_RETURN": -0.0029518340985869,
-        "3_DAY_RETURN": -0.004112430119638054,
-        "7_DAY_RETURN": -0.005506961939641402,
-        "TEXTBLOB_POLARITY": 0.01732213395643623,
-        "1_DAY_RETURN_Corr_Sentiment": 0.039553911957089224,
-        "2_DAY_RETURN_Corr_Sentiment": 0.04537812875969685,
-        "3_DAY_RETURN_Corr_Sentiment": 0.07157957231323295,
-        "7_DAY_RETURN_Corr_Sentiment": 0.054283123344864
-      },
-      {
-        "STOCK": "Exxon",
-        "1_DAY_RETURN": 0.00326766403225618,
-        "2_DAY_RETURN": 0.004636437180760003,
-        "3_DAY_RETURN": 0.004855706893715337,
-        "7_DAY_RETURN": 0.009367944997934792,
-        "TEXTBLOB_POLARITY": -0.11296829068343266,
-        "1_DAY_RETURN_Corr_Sentiment": -0.06549319223695342,
-        "2_DAY_RETURN_Corr_Sentiment": 0.09916708665391419,
-        "3_DAY_RETURN_Corr_Sentiment": -0.06856979394267586,
-        "7_DAY_RETURN_Corr_Sentiment": 0.10257766040563478
-      },
-      {
-        "STOCK": "Facebook",
-        "1_DAY_RETURN": -0.000760839718163264,
-        "2_DAY_RETURN": -0.0014600294151169112,
-        "3_DAY_RETURN": -0.003511480981176073,
-        "7_DAY_RETURN": -0.005617552584545785,
-        "TEXTBLOB_POLARITY": -0.08043263132373195,
-        "1_DAY_RETURN_Corr_Sentiment": 0.06802422565355674,
-        "2_DAY_RETURN_Corr_Sentiment": 0.05801619420223291,
-        "3_DAY_RETURN_Corr_Sentiment": 0.028158423610572667,
-        "7_DAY_RETURN_Corr_Sentiment": -0.02028609917863605
-      },
-      {
-        "STOCK": "FedEx",
-        "1_DAY_RETURN": 0.0008139576127953255,
-        "2_DAY_RETURN": -0.005637071152075764,
-        "3_DAY_RETURN": -0.00842384036432777,
-        "7_DAY_RETURN": -0.011897110039916399,
-        "TEXTBLOB_POLARITY": -0.06851224792984188,
-        "1_DAY_RETURN_Corr_Sentiment": 0.1021255203894139,
-        "2_DAY_RETURN_Corr_Sentiment": 0.0274502719841624,
-        "3_DAY_RETURN_Corr_Sentiment": 0.018260786433878327,
-        "7_DAY_RETURN_Corr_Sentiment": 0.04283828971106485
-      },
-      {
-        "STOCK": "Ford",
-        "1_DAY_RETURN": -0.002724621319016299,
-        "2_DAY_RETURN": -0.006716204101130986,
-        "3_DAY_RETURN": -0.00856986472576455,
-        "7_DAY_RETURN": -0.004538631100719021,
-        "TEXTBLOB_POLARITY": -0.1335398391325298,
-        "1_DAY_RETURN_Corr_Sentiment": 0.08006929377144437,
-        "2_DAY_RETURN_Corr_Sentiment": -0.056554304008377916,
-        "3_DAY_RETURN_Corr_Sentiment": -0.03619528570176733,
-        "7_DAY_RETURN_Corr_Sentiment": -0.03970653664700624
-      },
-      {
-        "STOCK": "GSK",
-        "1_DAY_RETURN": -0.0004217340125179001,
-        "2_DAY_RETURN": -0.001649120524907678,
-        "3_DAY_RETURN": 0.003782309209001079,
-        "7_DAY_RETURN": 0.010215311202697926,
-        "TEXTBLOB_POLARITY": -0.0178223067219985,
-        "1_DAY_RETURN_Corr_Sentiment": 0.21005512021123135,
-        "2_DAY_RETURN_Corr_Sentiment": 0.09325632994602631,
-        "3_DAY_RETURN_Corr_Sentiment": 0.14094111999375614,
-        "7_DAY_RETURN_Corr_Sentiment": 0.4160735930580154
-      },
-      {
-        "STOCK": "General Electric",
-        "1_DAY_RETURN": 0.004180567251989682,
-        "2_DAY_RETURN": 0.004008298750361615,
-        "3_DAY_RETURN": 0.007907399520381784,
-        "7_DAY_RETURN": 0.017666685331616708,
-        "TEXTBLOB_POLARITY": 0.0010137000105631757,
-        "1_DAY_RETURN_Corr_Sentiment": -0.13191490705971629,
-        "2_DAY_RETURN_Corr_Sentiment": 0.1174739196057987,
-        "3_DAY_RETURN_Corr_Sentiment": -0.04251081338201188,
-        "7_DAY_RETURN_Corr_Sentiment": 0.029578529096562924
-      },
-      {
-        "STOCK": "Google",
-        "1_DAY_RETURN": 0.0009009150225708002,
-        "2_DAY_RETURN": 0.0031679580943485643,
-        "3_DAY_RETURN": 0.0020851908953694958,
-        "7_DAY_RETURN": 0.0008992908109854257,
-        "TEXTBLOB_POLARITY": -0.03263748047928493,
-        "1_DAY_RETURN_Corr_Sentiment": -0.02453555195065202,
-        "2_DAY_RETURN_Corr_Sentiment": -0.01476296147002697,
-        "3_DAY_RETURN_Corr_Sentiment": -0.009934477305295366,
-        "7_DAY_RETURN_Corr_Sentiment": -0.07184262783665837
-      },
-      {
-        "STOCK": "HP",
-        "1_DAY_RETURN": 0.0022064453338397245,
-        "2_DAY_RETURN": -0.003210488132343854,
-        "3_DAY_RETURN": -0.0007639743408147836,
-        "7_DAY_RETURN": 0.0022701756965062955,
-        "TEXTBLOB_POLARITY": -0.057526848435088755,
-        "1_DAY_RETURN_Corr_Sentiment": -0.11142260021910204,
-        "2_DAY_RETURN_Corr_Sentiment": 0.17936907748251413,
-        "3_DAY_RETURN_Corr_Sentiment": 0.26420535202451245,
-        "7_DAY_RETURN_Corr_Sentiment": 0.27977668015347334
-      },
-      {
-        "STOCK": "HSBC",
-        "1_DAY_RETURN": -0.00008200242071822678,
-        "2_DAY_RETURN": 0.0033012471321171868,
-        "3_DAY_RETURN": 0.00318357629612391,
-        "7_DAY_RETURN": 0.002848827050754416,
-        "TEXTBLOB_POLARITY": -0.14386450832414974,
-        "1_DAY_RETURN_Corr_Sentiment": 0.1341168503987284,
-        "2_DAY_RETURN_Corr_Sentiment": -0.037802585627052146,
-        "3_DAY_RETURN_Corr_Sentiment": 0.051436769358077956,
-        "7_DAY_RETURN_Corr_Sentiment": -0.018375160014653107
-      },
-      {
-        "STOCK": "Heineken",
-        "1_DAY_RETURN": 0.0010918185325046775,
-        "2_DAY_RETURN": 0.002967934136807076,
-        "3_DAY_RETURN": 0.0035918694303205033,
-        "7_DAY_RETURN": 0.01279046424426031,
-        "TEXTBLOB_POLARITY": 0.03303918663072237,
-        "1_DAY_RETURN_Corr_Sentiment": 0.08940318436534513,
-        "2_DAY_RETURN_Corr_Sentiment": 0.17756112889131906,
-        "3_DAY_RETURN_Corr_Sentiment": 0.2180725465207958,
-        "7_DAY_RETURN_Corr_Sentiment": 0.08592002767616616
-      },
-      {
-        "STOCK": "Home Depot",
-        "1_DAY_RETURN": -0.0006443128438868394,
-        "2_DAY_RETURN": 0.0015218869629607175,
-        "3_DAY_RETURN": 0.0035305112473850665,
-        "7_DAY_RETURN": 0.004346522633005004,
-        "TEXTBLOB_POLARITY": -0.01279617362823853,
-        "1_DAY_RETURN_Corr_Sentiment": -0.31262488562801105,
-        "2_DAY_RETURN_Corr_Sentiment": -0.29990853686763363,
-        "3_DAY_RETURN_Corr_Sentiment": -0.2708360809503349,
-        "7_DAY_RETURN_Corr_Sentiment": -0.3307704606684887
-      },
-      {
-        "STOCK": "Honda",
-        "1_DAY_RETURN": 0.0030107268469609185,
-        "2_DAY_RETURN": 0.004088445714937261,
-        "3_DAY_RETURN": 0.0027230650326108487,
-        "7_DAY_RETURN": 0.004194410617594686,
-        "TEXTBLOB_POLARITY": -0.08621285172649625,
-        "1_DAY_RETURN_Corr_Sentiment": -0.08206900837932792,
-        "2_DAY_RETURN_Corr_Sentiment": -0.03503747073296032,
-        "3_DAY_RETURN_Corr_Sentiment": 0.026325607045461805,
-        "7_DAY_RETURN_Corr_Sentiment": -0.03738517993386736
-      },
-      {
-        "STOCK": "Hyundai",
-        "1_DAY_RETURN": 0.0012243307895818327,
-        "2_DAY_RETURN": 0.009527038988038696,
-        "3_DAY_RETURN": 0.001974714160386617,
-        "7_DAY_RETURN": -0.006165959140623029,
-        "TEXTBLOB_POLARITY": -0.11051683602362092,
-        "1_DAY_RETURN_Corr_Sentiment": 0.2768855137478508,
-        "2_DAY_RETURN_Corr_Sentiment": 0.12124074796905389,
-        "3_DAY_RETURN_Corr_Sentiment": 0.09712485148271136,
-        "7_DAY_RETURN_Corr_Sentiment": 0.2439904092600602
-      },
-      {
-        "STOCK": "IBM",
-        "1_DAY_RETURN": 0.00001618742536914251,
-        "2_DAY_RETURN": 0.0010892876173942045,
-        "3_DAY_RETURN": 0.002769332644523901,
-        "7_DAY_RETURN": 0.0038099161191264123,
-        "TEXTBLOB_POLARITY": -0.002675326493477061,
-        "1_DAY_RETURN_Corr_Sentiment": -0.1172434969426313,
-        "2_DAY_RETURN_Corr_Sentiment": -0.12207704714278533,
-        "3_DAY_RETURN_Corr_Sentiment": -0.11936617825056246,
-        "7_DAY_RETURN_Corr_Sentiment": -0.08530119027461128
-      },
-      {
-        "STOCK": "Intel",
-        "1_DAY_RETURN": -0.0001638957054641496,
-        "2_DAY_RETURN": -0.0000700123406415827,
-        "3_DAY_RETURN": -0.0001526285992400756,
-        "7_DAY_RETURN": -0.0016273413036446025,
-        "TEXTBLOB_POLARITY": -0.03035562831756444,
-        "1_DAY_RETURN_Corr_Sentiment": 0.07884715192210395,
-        "2_DAY_RETURN_Corr_Sentiment": -0.025187821381868487,
-        "3_DAY_RETURN_Corr_Sentiment": -0.028728781584766078,
-        "7_DAY_RETURN_Corr_Sentiment": -0.07699248417245047
-      },
-      {
-        "STOCK": "JPMorgan",
-        "1_DAY_RETURN": 0.0006682166986742501,
-        "2_DAY_RETURN": 0.001048959973024425,
-        "3_DAY_RETURN": -0.0014130570929380938,
-        "7_DAY_RETURN": -0.001773059915995536,
-        "TEXTBLOB_POLARITY": -0.0269799768723272,
-        "1_DAY_RETURN_Corr_Sentiment": -0.12110987265594457,
-        "2_DAY_RETURN_Corr_Sentiment": -0.12019660884600485,
-        "3_DAY_RETURN_Corr_Sentiment": -0.10886832589215541,
-        "7_DAY_RETURN_Corr_Sentiment": -0.1086146566188074
-      },
-      {
-        "STOCK": "John Deere",
-        "1_DAY_RETURN": -0.002598295685351582,
-        "2_DAY_RETURN": -0.002135598388029747,
-        "3_DAY_RETURN": 0.00007717961983901199,
-        "7_DAY_RETURN": -0.008127801308776748,
-        "TEXTBLOB_POLARITY": 0.025446220675815975,
-        "1_DAY_RETURN_Corr_Sentiment": -0.4307911236496017,
-        "2_DAY_RETURN_Corr_Sentiment": -0.30902913062903464,
-        "3_DAY_RETURN_Corr_Sentiment": -0.20195115858433196,
-        "7_DAY_RETURN_Corr_Sentiment": -0.3124108992648139
-      },
-      {
-        "STOCK": "Kroger",
-        "1_DAY_RETURN": 0.0013966388199501156,
-        "2_DAY_RETURN": -0.003988546443422019,
-        "3_DAY_RETURN": -0.00830630990836526,
-        "7_DAY_RETURN": -0.0124249099037347,
-        "TEXTBLOB_POLARITY": -0.09208844061161739,
-        "1_DAY_RETURN_Corr_Sentiment": 0.22258012371312166,
-        "2_DAY_RETURN_Corr_Sentiment": 0.23033718932401756,
-        "3_DAY_RETURN_Corr_Sentiment": 0.20872038940517973,
-        "7_DAY_RETURN_Corr_Sentiment": 0.0584339640896561
-      },
-      {
-        "STOCK": "L'Oreal",
-        "1_DAY_RETURN": 0.004780560650383034,
-        "2_DAY_RETURN": 0.006679187881992655,
-        "3_DAY_RETURN": 0.007087456582725274,
-        "7_DAY_RETURN": 0.0032747765988201806,
-        "TEXTBLOB_POLARITY": -0.12256455425461349,
-        "1_DAY_RETURN_Corr_Sentiment": -0.09151054191824451,
-        "2_DAY_RETURN_Corr_Sentiment": -0.10101479383909127,
-        "3_DAY_RETURN_Corr_Sentiment": -0.14327189218201788,
-        "7_DAY_RETURN_Corr_Sentiment": 0.05513116536775533
-      },
-      {
-        "STOCK": "Mastercard",
-        "1_DAY_RETURN": -0.0020118692282552132,
-        "2_DAY_RETURN": 0.008894050981603497,
-        "3_DAY_RETURN": 0.00793245397798235,
-        "7_DAY_RETURN": 0.0034900643848141326,
-        "TEXTBLOB_POLARITY": -0.03389946343992375,
-        "1_DAY_RETURN_Corr_Sentiment": -0.45499021015498364,
-        "2_DAY_RETURN_Corr_Sentiment": 0.28223133241635545,
-        "3_DAY_RETURN_Corr_Sentiment": 0.14087516288591792,
-        "7_DAY_RETURN_Corr_Sentiment": 0.1345160129786083
-      },
-      {
-        "STOCK": "Microsoft",
-        "1_DAY_RETURN": 0.00006427729284153423,
-        "2_DAY_RETURN": 0.00030852507085281,
-        "3_DAY_RETURN": -0.00014665291804520723,
-        "7_DAY_RETURN": -0.0031473966318365542,
-        "TEXTBLOB_POLARITY": -0.019123698421832164,
-        "1_DAY_RETURN_Corr_Sentiment": 0.04605059558621497,
-        "2_DAY_RETURN_Corr_Sentiment": 0.04842241998936722,
-        "3_DAY_RETURN_Corr_Sentiment": -0.01181271169388093,
-        "7_DAY_RETURN_Corr_Sentiment": -0.15377946735190573
-      },
-      {
-        "STOCK": "Morgan Stanley",
-        "1_DAY_RETURN": 0.0004981608180358697,
-        "2_DAY_RETURN": -0.003398855490648521,
-        "3_DAY_RETURN": -0.006633213312715695,
-        "7_DAY_RETURN": -0.006615332884258195,
-        "TEXTBLOB_POLARITY": -0.008068065218884096,
-        "1_DAY_RETURN_Corr_Sentiment": -0.0683843467789647,
-        "2_DAY_RETURN_Corr_Sentiment": 0.07485790375118903,
-        "3_DAY_RETURN_Corr_Sentiment": 0.20485094155042105,
-        "7_DAY_RETURN_Corr_Sentiment": 0.11350608419867089
-      },
-      {
-        "STOCK": "Nestle",
-        "1_DAY_RETURN": 0.0004274429826396435,
-        "2_DAY_RETURN": 0.0021681579862424145,
-        "3_DAY_RETURN": 0.0036949842500078045,
-        "7_DAY_RETURN": -0.0027579523137428686,
-        "TEXTBLOB_POLARITY": -0.004755827149192048,
-        "1_DAY_RETURN_Corr_Sentiment": -0.24852841967888814,
-        "2_DAY_RETURN_Corr_Sentiment": -0.19541560935886207,
-        "3_DAY_RETURN_Corr_Sentiment": -0.16927322124862496,
-        "7_DAY_RETURN_Corr_Sentiment": -0.002545572381491473
-      },
-      {
-        "STOCK": "Netflix",
-        "1_DAY_RETURN": 0.003294127593109835,
-        "2_DAY_RETURN": 0.0014723194916266328,
-        "3_DAY_RETURN": -0.0007564166792250706,
-        "7_DAY_RETURN": 0.0012242223275175644,
-        "TEXTBLOB_POLARITY": -0.011571730241982069,
-        "1_DAY_RETURN_Corr_Sentiment": 0.0046163854663304905,
-        "2_DAY_RETURN_Corr_Sentiment": 0.1641462133046306,
-        "3_DAY_RETURN_Corr_Sentiment": 0.13390059787087982,
-        "7_DAY_RETURN_Corr_Sentiment": 0.10680838171459375
-      },
-      {
-        "STOCK": "Next",
-        "1_DAY_RETURN": 0.002686139667808018,
-        "2_DAY_RETURN": -0.00549257420687728,
-        "3_DAY_RETURN": -0.004916231327210734,
-        "7_DAY_RETURN": 0.0015868222738805078,
-        "TEXTBLOB_POLARITY": -0.009197658837439128,
-        "1_DAY_RETURN_Corr_Sentiment": -0.15560159115602346,
-        "2_DAY_RETURN_Corr_Sentiment": -0.04704719022425093,
-        "3_DAY_RETURN_Corr_Sentiment": 0.01845500545286378,
-        "7_DAY_RETURN_Corr_Sentiment": -0.01816739415392712
-      },
-      {
-        "STOCK": "Nissan",
-        "1_DAY_RETURN": 0.003374286172412657,
-        "2_DAY_RETURN": 0.0026639857434112716,
-        "3_DAY_RETURN": 0.004231603604001657,
-        "7_DAY_RETURN": 0.004935293458896895,
-        "TEXTBLOB_POLARITY": -0.01922882000663962,
-        "1_DAY_RETURN_Corr_Sentiment": 0.0685889976136877,
-        "2_DAY_RETURN_Corr_Sentiment": -0.20704251016917888,
-        "3_DAY_RETURN_Corr_Sentiment": -0.13169102893922294,
-        "7_DAY_RETURN_Corr_Sentiment": 0.006881778296264046
-      },
-      {
-        "STOCK": "Oracle",
-        "1_DAY_RETURN": -0.0015845027112126487,
-        "2_DAY_RETURN": -0.0022320204561781065,
-        "3_DAY_RETURN": -0.0015259474709014983,
-        "7_DAY_RETURN": 0.0007268428059955646,
-        "TEXTBLOB_POLARITY": -0.025272843815647286,
-        "1_DAY_RETURN_Corr_Sentiment": 0.05367915417082269,
-        "2_DAY_RETURN_Corr_Sentiment": 0.034521338617057626,
-        "3_DAY_RETURN_Corr_Sentiment": 0.025945752810322464,
-        "7_DAY_RETURN_Corr_Sentiment": 0.02095127737646754
-      },
-      {
-        "STOCK": "P&G",
-        "1_DAY_RETURN": -0.00007679505251727795,
-        "2_DAY_RETURN": -0.0018375708876210615,
-        "3_DAY_RETURN": 0.003883127725894788,
-        "7_DAY_RETURN": -0.0034387135698988125,
-        "TEXTBLOB_POLARITY": -0.13211091645005818,
-        "1_DAY_RETURN_Corr_Sentiment": 0.13771311607883155,
-        "2_DAY_RETURN_Corr_Sentiment": 0.4417118607722016,
-        "3_DAY_RETURN_Corr_Sentiment": 0.3519399197426323,
-        "7_DAY_RETURN_Corr_Sentiment": 0.361632915746588
-      },
-      {
-        "STOCK": "PayPal",
-        "1_DAY_RETURN": -0.0032758738400833964,
-        "2_DAY_RETURN": 0.00007186869191453218,
-        "3_DAY_RETURN": -0.002491996122662205,
-        "7_DAY_RETURN": 0.0028699168546597927,
-        "TEXTBLOB_POLARITY": -0.10503587887461532,
-        "1_DAY_RETURN_Corr_Sentiment": 0.1607824873353464,
-        "2_DAY_RETURN_Corr_Sentiment": 0.10813908618077529,
-        "3_DAY_RETURN_Corr_Sentiment": -0.20679493726433917,
-        "7_DAY_RETURN_Corr_Sentiment": -0.10224447996254825
-      },
-      {
-        "STOCK": "Pepsi",
-        "1_DAY_RETURN": 0.0004022342193775592,
-        "2_DAY_RETURN": -0.0029240119366279183,
-        "3_DAY_RETURN": -0.002443089366165413,
-        "7_DAY_RETURN": 0.008595099048728105,
-        "TEXTBLOB_POLARITY": -0.024104730316508432,
-        "1_DAY_RETURN_Corr_Sentiment": 0.034043208933772856,
-        "2_DAY_RETURN_Corr_Sentiment": -0.0422368028845747,
-        "3_DAY_RETURN_Corr_Sentiment": -0.03952638296609912,
-        "7_DAY_RETURN_Corr_Sentiment": 0.019363468182867976
-      },
-      {
-        "STOCK": "Pfizer",
-        "1_DAY_RETURN": -0.004873526763138021,
-        "2_DAY_RETURN": -0.006534817221831948,
-        "3_DAY_RETURN": -0.007903652685044907,
-        "7_DAY_RETURN": -0.00886209365018364,
-        "TEXTBLOB_POLARITY": -0.032214720172254525,
-        "1_DAY_RETURN_Corr_Sentiment": 0.03031862098110862,
-        "2_DAY_RETURN_Corr_Sentiment": 0.25296636834656444,
-        "3_DAY_RETURN_Corr_Sentiment": -0.00588882418331465,
-        "7_DAY_RETURN_Corr_Sentiment": -0.11836960296848217
-      },
-      {
-        "STOCK": "Reuters",
-        "1_DAY_RETURN": -0.0030927796866944764,
-        "2_DAY_RETURN": -0.005154542116107975,
-        "3_DAY_RETURN": -0.005710977524078298,
-        "7_DAY_RETURN": 0.001639585930967049,
-        "TEXTBLOB_POLARITY": -0.10747626243803789,
-        "1_DAY_RETURN_Corr_Sentiment": -0.05757578811809175,
-        "2_DAY_RETURN_Corr_Sentiment": -0.05780847335038856,
-        "3_DAY_RETURN_Corr_Sentiment": -0.05793227345084932,
-        "7_DAY_RETURN_Corr_Sentiment": -0.029045806172761653
-      },
-      {
-        "STOCK": "Ryanair",
-        "1_DAY_RETURN": -0.004200361089345362,
-        "2_DAY_RETURN": 0.0065687518844389885,
-        "3_DAY_RETURN": -0.0026658663975113236,
-        "7_DAY_RETURN": -0.004758175813790918,
-        "TEXTBLOB_POLARITY": -0.18381564022961977,
-        "1_DAY_RETURN_Corr_Sentiment": -0.38817816376983266,
-        "2_DAY_RETURN_Corr_Sentiment": -0.5633991909584759,
-        "3_DAY_RETURN_Corr_Sentiment": -0.49398837790519323,
-        "7_DAY_RETURN_Corr_Sentiment": -0.4437689978700475
-      },
-      {
-        "STOCK": "SAP",
-        "1_DAY_RETURN": 0.001187600885067683,
-        "2_DAY_RETURN": 0.0028808260089298117,
-        "3_DAY_RETURN": 0.005624365191966814,
-        "7_DAY_RETURN": 0.003962546432630036,
-        "TEXTBLOB_POLARITY": 0.02750248114270737,
-        "1_DAY_RETURN_Corr_Sentiment": -0.08101037159763902,
-        "2_DAY_RETURN_Corr_Sentiment": -0.15778289176277152,
-        "3_DAY_RETURN_Corr_Sentiment": -0.14200215244946213,
-        "7_DAY_RETURN_Corr_Sentiment": -0.09110057352716792
-      },
-      {
-        "STOCK": "Samsung",
-        "1_DAY_RETURN": 0.0021863159498832106,
-        "2_DAY_RETURN": -0.003912896506127556,
-        "3_DAY_RETURN": -0.008370865757656531,
-        "7_DAY_RETURN": 0.016695163638985894,
-        "TEXTBLOB_POLARITY": -0.07306836960544284,
-        "1_DAY_RETURN_Corr_Sentiment": -0.027868015314110064,
-        "2_DAY_RETURN_Corr_Sentiment": -0.07330499344948313,
-        "3_DAY_RETURN_Corr_Sentiment": -0.14204243830874835,
-        "7_DAY_RETURN_Corr_Sentiment": -0.037228627720919456
-      },
-      {
-        "STOCK": "Shell",
-        "1_DAY_RETURN": 0.0005743844341849017,
-        "2_DAY_RETURN": 0.001170334164762601,
-        "3_DAY_RETURN": 0.003928263925848711,
-        "7_DAY_RETURN": 0.0000041468800163013536,
-        "TEXTBLOB_POLARITY": -0.11232775527597447,
-        "1_DAY_RETURN_Corr_Sentiment": 0.11898237820886617,
-        "2_DAY_RETURN_Corr_Sentiment": 0.05662919541066953,
-        "3_DAY_RETURN_Corr_Sentiment": 0.07134697109862544,
-        "7_DAY_RETURN_Corr_Sentiment": -0.1700844277059337
-      },
-      {
-        "STOCK": "Siemens",
-        "1_DAY_RETURN": 0.00001233204308393604,
-        "2_DAY_RETURN": -0.0014314505188762078,
-        "3_DAY_RETURN": -0.003189216123530668,
-        "7_DAY_RETURN": -0.001166925440358581,
-        "TEXTBLOB_POLARITY": 0.0012677337084506491,
-        "1_DAY_RETURN_Corr_Sentiment": -0.28063507442131624,
-        "2_DAY_RETURN_Corr_Sentiment": -0.1519482637173146,
-        "3_DAY_RETURN_Corr_Sentiment": -0.07245401694533357,
-        "7_DAY_RETURN_Corr_Sentiment": 0.21072495327808688
-      },
-      {
-        "STOCK": "Sony",
-        "1_DAY_RETURN": -0.0007832773384018879,
-        "2_DAY_RETURN": -0.007504658486848911,
-        "3_DAY_RETURN": -0.007048540879032101,
-        "7_DAY_RETURN": -0.011758107720336626,
-        "TEXTBLOB_POLARITY": -0.06974899912002258,
-        "1_DAY_RETURN_Corr_Sentiment": 0.016140629590418308,
-        "2_DAY_RETURN_Corr_Sentiment": 0.08492092471050254,
-        "3_DAY_RETURN_Corr_Sentiment": 0.09666666844738606,
-        "7_DAY_RETURN_Corr_Sentiment": 0.12052450087446767
-      },
-      {
-        "STOCK": "Tesco",
-        "1_DAY_RETURN": 0.004544964750276836,
-        "2_DAY_RETURN": 0.010403030000825144,
-        "3_DAY_RETURN": 0.009936689354272903,
-        "7_DAY_RETURN": 0.006701152371930737,
-        "TEXTBLOB_POLARITY": -0.07487174595416583,
-        "1_DAY_RETURN_Corr_Sentiment": -0.12564104392691375,
-        "2_DAY_RETURN_Corr_Sentiment": -0.04630863937252366,
-        "3_DAY_RETURN_Corr_Sentiment": 0.018914656002540525,
-        "7_DAY_RETURN_Corr_Sentiment": 0.007253060289521625
-      },
-      {
-        "STOCK": "Thales",
-        "1_DAY_RETURN": -0.0030778442119157876,
-        "2_DAY_RETURN": -0.0032061902341647157,
-        "3_DAY_RETURN": -0.0015170543764597701,
-        "7_DAY_RETURN": 0.001329754187077808,
-        "TEXTBLOB_POLARITY": 0.0235020790929057,
-        "1_DAY_RETURN_Corr_Sentiment": -0.08380730152492517,
-        "2_DAY_RETURN_Corr_Sentiment": 0.02460800859262755,
-        "3_DAY_RETURN_Corr_Sentiment": 0.35869604800211397,
-        "7_DAY_RETURN_Corr_Sentiment": 0.4789759791317928
-      },
-      {
-        "STOCK": "Toyota",
-        "1_DAY_RETURN": 0.005728045950202321,
-        "2_DAY_RETURN": 0.00696329805997451,
-        "3_DAY_RETURN": 0.005964979963359192,
-        "7_DAY_RETURN": 0.005305934630689847,
-        "TEXTBLOB_POLARITY": 0.01994537010802123,
-        "1_DAY_RETURN_Corr_Sentiment": -0.03398085764975089,
-        "2_DAY_RETURN_Corr_Sentiment": 0.18129489497293733,
-        "3_DAY_RETURN_Corr_Sentiment": 0.0521376794153445,
-        "7_DAY_RETURN_Corr_Sentiment": 0.08559016927662302
-      },
-      {
-        "STOCK": "Verizon",
-        "1_DAY_RETURN": 0.00011652391570817915,
-        "2_DAY_RETURN": 0.0013672269971240682,
-        "3_DAY_RETURN": 0.0008230200825019289,
-        "7_DAY_RETURN": -0.013596183449870918,
-        "TEXTBLOB_POLARITY": -0.11505733237681028,
-        "1_DAY_RETURN_Corr_Sentiment": -0.07869430099672009,
-        "2_DAY_RETURN_Corr_Sentiment": -0.14471180179617582,
-        "3_DAY_RETURN_Corr_Sentiment": -0.20352721273856075,
-        "7_DAY_RETURN_Corr_Sentiment": -0.16743626374189108
-      },
-      {
-        "STOCK": "Viacom",
-        "1_DAY_RETURN": 0.005682061792506826,
-        "2_DAY_RETURN": 0.004567783132202101,
-        "3_DAY_RETURN": 0.0011286719349396384,
-        "7_DAY_RETURN": 0.013439301971347383,
-        "TEXTBLOB_POLARITY": 0.04686051649993741,
-        "1_DAY_RETURN_Corr_Sentiment": 0.36920794532085655,
-        "2_DAY_RETURN_Corr_Sentiment": 0.2744175491130356,
-        "3_DAY_RETURN_Corr_Sentiment": 0.28874390067831435,
-        "7_DAY_RETURN_Corr_Sentiment": 0.2542374455419522
-      },
-      {
-        "STOCK": "Visa",
-        "1_DAY_RETURN": 0.0020687335069262966,
-        "2_DAY_RETURN": 0.00662765222965231,
-        "3_DAY_RETURN": 0.00648094770675826,
-        "7_DAY_RETURN": 0.008736862798201225,
-        "TEXTBLOB_POLARITY": 0.0869430500897292,
-        "1_DAY_RETURN_Corr_Sentiment": 0.07119576266669057,
-        "2_DAY_RETURN_Corr_Sentiment": -0.14028336757621707,
-        "3_DAY_RETURN_Corr_Sentiment": -0.03189529911245896,
-        "7_DAY_RETURN_Corr_Sentiment": 0.005175508549600771
-      },
-      {
-        "STOCK": "Volkswagen",
-        "1_DAY_RETURN": 0.0001442967754693388,
-        "2_DAY_RETURN": 0.0020390520083994656,
-        "3_DAY_RETURN": 0.006900917045720302,
-        "7_DAY_RETURN": 0.004312010657749838,
-        "TEXTBLOB_POLARITY": -0.05254402202016507,
-        "1_DAY_RETURN_Corr_Sentiment": -0.17126567311921725,
-        "2_DAY_RETURN_Corr_Sentiment": -0.08663584269569816,
-        "3_DAY_RETURN_Corr_Sentiment": -0.10394018995690486,
-        "7_DAY_RETURN_Corr_Sentiment": -0.09888320999563674
-      },
-      {
-        "STOCK": "Walmart",
-        "1_DAY_RETURN": 0.003453584976028872,
-        "2_DAY_RETURN": 0.004333040262622017,
-        "3_DAY_RETURN": 0.002268770313424394,
-        "7_DAY_RETURN": -0.0003618108457136445,
-        "TEXTBLOB_POLARITY": -0.005120100569101107,
-        "1_DAY_RETURN_Corr_Sentiment": 0.02403310086505285,
-        "2_DAY_RETURN_Corr_Sentiment": 0.018902553589959275,
-        "3_DAY_RETURN_Corr_Sentiment": 0.059102747735772114,
-        "7_DAY_RETURN_Corr_Sentiment": 0.05978873223795522
-      },
-      {
-        "STOCK": "Wells Fargo",
-        "1_DAY_RETURN": 0.004192857558909672,
-        "2_DAY_RETURN": 0.0039961214705699286,
-        "3_DAY_RETURN": 0.003744378181376692,
-        "7_DAY_RETURN": 0.00472784716583452,
-        "TEXTBLOB_POLARITY": -0.10166640276886575,
-        "1_DAY_RETURN_Corr_Sentiment": -0.017869384494561186,
-        "2_DAY_RETURN_Corr_Sentiment": -0.07803863044358883,
-        "3_DAY_RETURN_Corr_Sentiment": -0.07370202319801578,
-        "7_DAY_RETURN_Corr_Sentiment": -0.025203259472425684
-      },
-      {
-        "STOCK": "Yahoo",
-        "1_DAY_RETURN": 0.0026630980278891,
-        "2_DAY_RETURN": -0.005701304928125652,
-        "3_DAY_RETURN": -0.004989738654702376,
-        "7_DAY_RETURN": -0.0071815261157508435,
-        "TEXTBLOB_POLARITY": -0.09635344241452362,
-        "1_DAY_RETURN_Corr_Sentiment": -0.047330749439412706,
-        "2_DAY_RETURN_Corr_Sentiment": -0.24021905859715273,
-        "3_DAY_RETURN_Corr_Sentiment": -0.21390009832637275,
-        "7_DAY_RETURN_Corr_Sentiment": -0.11064443534831861
-      },
-      {
-        "STOCK": "adidas",
-        "1_DAY_RETURN": 0.0017183104310443047,
-        "2_DAY_RETURN": 0.0026486162776308744,
-        "3_DAY_RETURN": 0.002845656073011086,
-        "7_DAY_RETURN": -0.005940427478560329,
-        "TEXTBLOB_POLARITY": -0.003716756626455799,
-        "1_DAY_RETURN_Corr_Sentiment": 0.08756467951812134,
-        "2_DAY_RETURN_Corr_Sentiment": -0.05178684373438072,
-        "3_DAY_RETURN_Corr_Sentiment": -0.04842548227858827,
-        "7_DAY_RETURN_Corr_Sentiment": -0.03161068801158487
-      },
-      {
-        "STOCK": "eBay",
-        "1_DAY_RETURN": -0.0025865367054443344,
-        "2_DAY_RETURN": -0.0013720172629247173,
-        "3_DAY_RETURN": -0.00039936599470195253,
-        "7_DAY_RETURN": -0.0049315864105857424,
-        "TEXTBLOB_POLARITY": -0.06250326722518779,
-        "1_DAY_RETURN_Corr_Sentiment": -0.013652904412800197,
-        "2_DAY_RETURN_Corr_Sentiment": -0.0071022171243304445,
-        "3_DAY_RETURN_Corr_Sentiment": -0.00006629822664517142,
-        "7_DAY_RETURN_Corr_Sentiment": -0.003617997983941006
-      },
-      {
-        "STOCK": "easyJet",
-        "1_DAY_RETURN": -0.0031221262037051186,
-        "2_DAY_RETURN": -0.00008182144728116869,
-        "3_DAY_RETURN": -0.000977688777916669,
-        "7_DAY_RETURN": -0.00276503940015858,
-        "TEXTBLOB_POLARITY": -0.043592190261530224,
-        "1_DAY_RETURN_Corr_Sentiment": -0.031165142888551874,
-        "2_DAY_RETURN_Corr_Sentiment": -0.0009151529793580766,
-        "3_DAY_RETURN_Corr_Sentiment": 0.046276573365157336,
-        "7_DAY_RETURN_Corr_Sentiment": 0.08850388314609367
-      },
-      {
-        "STOCK": "salesforce.com",
-        "1_DAY_RETURN": -0.002285430465969619,
-        "2_DAY_RETURN": -0.002367023178643404,
-        "3_DAY_RETURN": -0.0021685552058950913,
-        "7_DAY_RETURN": 0.0006076844985278593,
-        "TEXTBLOB_POLARITY": 0.05830022371056247,
-        "1_DAY_RETURN_Corr_Sentiment": -0.16319959730383687,
-        "2_DAY_RETURN_Corr_Sentiment": -0.08829486041910178,
-        "3_DAY_RETURN_Corr_Sentiment": -0.08388784064442366,
-        "7_DAY_RETURN_Corr_Sentiment": 0.08335396455827367
+    },
+    {
+      "title": "sentiment.corr",
+      "size": "size",
+      "symbolType": "circle",
+      "encode": {
+        "symbols": {
+          "update": {
+            "fill": {"value": "#4c78a8"},
+            "opacity": {"value": 0.7},
+            "stroke": {"value": "transparent"}
+          }
+        }
       }
-    ],
-    "data-eb5b4802928e1c6230c021900863b599": [
-      {
-        "sentiment_q": -2,
-        "Period": "1_DAY_RETURN",
-        "Return": 0.0003391063580099373,
-        "sentiment_label": "very negative"
-      },
-      {
-        "sentiment_q": -1,
-        "Period": "1_DAY_RETURN",
-        "Return": 0,
-        "sentiment_label": "slightly negative"
-      },
-      {
-        "sentiment_q": 1,
-        "Period": "1_DAY_RETURN",
-        "Return": 0,
-        "sentiment_label": "slightly positive"
-      },
-      {
-        "sentiment_q": 2,
-        "Period": "1_DAY_RETURN",
-        "Return": 0.00012428881500358303,
-        "sentiment_label": "very positive"
-      },
-      {
-        "sentiment_q": -2,
-        "Period": "2_DAY_RETURN",
-        "Return": 0.00013205757516594752,
-        "sentiment_label": "very negative"
-      },
-      {
-        "sentiment_q": -1,
-        "Period": "2_DAY_RETURN",
-        "Return": 0.0009813839076222575,
-        "sentiment_label": "slightly negative"
-      },
-      {
-        "sentiment_q": 1,
-        "Period": "2_DAY_RETURN",
-        "Return": -0.0012159782365504974,
-        "sentiment_label": "slightly positive"
-      },
-      {
-        "sentiment_q": 2,
-        "Period": "2_DAY_RETURN",
-        "Return": 0.00047422496556107454,
-        "sentiment_label": "very positive"
-      },
-      {
-        "sentiment_q": -2,
-        "Period": "3_DAY_RETURN",
-        "Return": 0.00047422496556107454,
-        "sentiment_label": "very negative"
-      },
-      {
-        "sentiment_q": -1,
-        "Period": "3_DAY_RETURN",
-        "Return": 0.0005209165443614628,
-        "sentiment_label": "slightly negative"
-      },
-      {
-        "sentiment_q": 1,
-        "Period": "3_DAY_RETURN",
-        "Return": -0.0005338431907575027,
-        "sentiment_label": "slightly positive"
-      },
-      {
-        "sentiment_q": 2,
-        "Period": "3_DAY_RETURN",
-        "Return": 0.0005624503721815587,
-        "sentiment_label": "very positive"
-      },
-      {
-        "sentiment_q": -2,
-        "Period": "7_DAY_RETURN",
-        "Return": -0.0012177572323639188,
-        "sentiment_label": "very negative"
-      },
-      {
-        "sentiment_q": -1,
-        "Period": "7_DAY_RETURN",
-        "Return": -0.0009308685860320105,
-        "sentiment_label": "slightly negative"
-      },
-      {
-        "sentiment_q": 1,
-        "Period": "7_DAY_RETURN",
-        "Return": -0.003461419077684595,
-        "sentiment_label": "slightly positive"
-      },
-      {
-        "sentiment_q": 2,
-        "Period": "7_DAY_RETURN",
-        "Return": 0.00013000895183460455,
-        "sentiment_label": "very positive"
-      }
-    ]
+    }
+  ],
+  "config": {
+    "axis": {"labelFontSize": 12, "titleFontSize": 10},
+    "style": {"group-title": {"fontSize": 12}}
   }
 }
