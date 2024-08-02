@@ -1,12 +1,8 @@
 {
   "config": {
+    "view": {"continuousWidth": 400, "continuousHeight": 300},
     "axis": {"labelFontSize": 12, "titleFontSize": 14},
-    "legend": {"labelFontSize": 12, "symbolSize": 100, "titleFontSize": 14},
     "title": {"anchor": "start", "fontSize": 16}
-  },
-  "autosize": {
-    "type": "fit",
-    "contains": "padding"
   },
   "hconcat": [
     {
@@ -14,14 +10,8 @@
         {
           "layer": [
             {
-              "mark": {"type": "circle", "size": 50},
+              "mark": {"type": "circle", "color": "black", "size": 50},
               "encoding": {
-                "color": {
-                  "field": "STOCK",
-                  "legend": {"columns": 2},
-                  "title": "Stock",
-                  "type": "nominal"
-                },
                 "tooltip": [
                   {"field": "DATE", "type": "temporal"},
                   {"field": "STOCK", "type": "nominal"},
@@ -35,20 +25,14 @@
                 },
                 "y": {
                   "field": "1_DAY_RETURN",
-                  "title": "1-Day Return vs Word Count",
+                  "title": "Return",
                   "type": "quantitative"
                 }
               }
             },
             {
-              "mark": {"type": "line", "color": "red"},
+              "mark": {"type": "line", "color": "blue"},
               "encoding": {
-                "color": {
-                  "field": "STOCK",
-                  "legend": {"columns": 2},
-                  "title": "Stock",
-                  "type": "nominal"
-                },
                 "tooltip": [
                   {"field": "DATE", "type": "temporal"},
                   {"field": "STOCK", "type": "nominal"},
@@ -62,25 +46,22 @@
                 },
                 "y": {
                   "field": "1_DAY_RETURN",
-                  "title": "1-Day Return vs Word Count",
+                  "title": "Return",
                   "type": "quantitative"
                 }
               },
               "transform": [{"on": "WORD_COUNT", "regression": "1_DAY_RETURN"}]
             }
-          ]
+          ],
+          "height": 400,
+          "title": "1-Day Return vs Word Count",
+          "width": 400
         },
         {
           "layer": [
             {
-              "mark": {"type": "circle", "size": 50},
+              "mark": {"type": "circle", "color": "black", "size": 50},
               "encoding": {
-                "color": {
-                  "field": "STOCK",
-                  "legend": {"columns": 2},
-                  "title": "Stock",
-                  "type": "nominal"
-                },
                 "tooltip": [
                   {"field": "DATE", "type": "temporal"},
                   {"field": "STOCK", "type": "nominal"},
@@ -94,20 +75,14 @@
                 },
                 "y": {
                   "field": "2_DAY_RETURN",
-                  "title": "2-Day Return vs Word Count",
+                  "title": "Return",
                   "type": "quantitative"
                 }
               }
             },
             {
-              "mark": {"type": "line", "color": "red"},
+              "mark": {"type": "line", "color": "blue"},
               "encoding": {
-                "color": {
-                  "field": "STOCK",
-                  "legend": {"columns": 2},
-                  "title": "Stock",
-                  "type": "nominal"
-                },
                 "tooltip": [
                   {"field": "DATE", "type": "temporal"},
                   {"field": "STOCK", "type": "nominal"},
@@ -121,25 +96,22 @@
                 },
                 "y": {
                   "field": "2_DAY_RETURN",
-                  "title": "2-Day Return vs Word Count",
+                  "title": "Return",
                   "type": "quantitative"
                 }
               },
               "transform": [{"on": "WORD_COUNT", "regression": "2_DAY_RETURN"}]
             }
-          ]
+          ],
+          "height": 400,
+          "title": "2-Day Return vs Word Count",
+          "width": 400
         },
         {
           "layer": [
             {
-              "mark": {"type": "circle", "size": 50},
+              "mark": {"type": "circle", "color": "black", "size": 50},
               "encoding": {
-                "color": {
-                  "field": "STOCK",
-                  "legend": {"columns": 2},
-                  "title": "Stock",
-                  "type": "nominal"
-                },
                 "tooltip": [
                   {"field": "DATE", "type": "temporal"},
                   {"field": "STOCK", "type": "nominal"},
@@ -153,20 +125,14 @@
                 },
                 "y": {
                   "field": "3_DAY_RETURN",
-                  "title": "3-Day Return vs Word Count",
+                  "title": "Return",
                   "type": "quantitative"
                 }
               }
             },
             {
-              "mark": {"type": "line", "color": "red"},
+              "mark": {"type": "line", "color": "blue"},
               "encoding": {
-                "color": {
-                  "field": "STOCK",
-                  "legend": {"columns": 2},
-                  "title": "Stock",
-                  "type": "nominal"
-                },
                 "tooltip": [
                   {"field": "DATE", "type": "temporal"},
                   {"field": "STOCK", "type": "nominal"},
@@ -180,25 +146,22 @@
                 },
                 "y": {
                   "field": "3_DAY_RETURN",
-                  "title": "3-Day Return vs Word Count",
+                  "title": "Return",
                   "type": "quantitative"
                 }
               },
               "transform": [{"on": "WORD_COUNT", "regression": "3_DAY_RETURN"}]
             }
-          ]
+          ],
+          "height": 400,
+          "title": "3-Day Return vs Word Count",
+          "width": 400
         },
         {
           "layer": [
             {
-              "mark": {"type": "circle", "size": 50},
+              "mark": {"type": "circle", "color": "black", "size": 50},
               "encoding": {
-                "color": {
-                  "field": "STOCK",
-                  "legend": {"columns": 2},
-                  "title": "Stock",
-                  "type": "nominal"
-                },
                 "tooltip": [
                   {"field": "DATE", "type": "temporal"},
                   {"field": "STOCK", "type": "nominal"},
@@ -212,20 +175,14 @@
                 },
                 "y": {
                   "field": "7_DAY_RETURN",
-                  "title": "7-Day Return vs Word Count",
+                  "title": "Return",
                   "type": "quantitative"
                 }
               }
             },
             {
-              "mark": {"type": "line", "color": "red"},
+              "mark": {"type": "line", "color": "blue"},
               "encoding": {
-                "color": {
-                  "field": "STOCK",
-                  "legend": {"columns": 2},
-                  "title": "Stock",
-                  "type": "nominal"
-                },
                 "tooltip": [
                   {"field": "DATE", "type": "temporal"},
                   {"field": "STOCK", "type": "nominal"},
@@ -239,31 +196,28 @@
                 },
                 "y": {
                   "field": "7_DAY_RETURN",
-                  "title": "7-Day Return vs Word Count",
+                  "title": "Return",
                   "type": "quantitative"
                 }
               },
               "transform": [{"on": "WORD_COUNT", "regression": "7_DAY_RETURN"}]
             }
-          ]
+          ],
+          "height": 400,
+          "title": "7-Day Return vs Word Count",
+          "width": 400
         }
       ],
-      "data": {"name": "data-a5075e1bd0ffc2317c7b22337a3ce1b7"},
-      "title": "Refined Charts: Word Count Analysis (Positive Sentiment)"
+      "data": {"name": "data-270cb39cb2da3cdbcc3e7e7b1c5ae824"},
+      "title": "Future Return vs. Word Count Analysis (Positive Sentiment)"
     },
     {
       "vconcat": [
         {
           "layer": [
             {
-              "mark": {"type": "circle", "size": 50},
+              "mark": {"type": "circle", "color": "black", "size": 50},
               "encoding": {
-                "color": {
-                  "field": "STOCK",
-                  "legend": {"columns": 2},
-                  "title": "Stock",
-                  "type": "nominal"
-                },
                 "tooltip": [
                   {"field": "DATE", "type": "temporal"},
                   {"field": "STOCK", "type": "nominal"},
@@ -277,20 +231,14 @@
                 },
                 "y": {
                   "field": "1_DAY_RETURN",
-                  "title": "1-Day Return vs Word Count",
+                  "title": "Return",
                   "type": "quantitative"
                 }
               }
             },
             {
-              "mark": {"type": "line", "color": "red"},
+              "mark": {"type": "line", "color": "blue"},
               "encoding": {
-                "color": {
-                  "field": "STOCK",
-                  "legend": {"columns": 2},
-                  "title": "Stock",
-                  "type": "nominal"
-                },
                 "tooltip": [
                   {"field": "DATE", "type": "temporal"},
                   {"field": "STOCK", "type": "nominal"},
@@ -304,25 +252,22 @@
                 },
                 "y": {
                   "field": "1_DAY_RETURN",
-                  "title": "1-Day Return vs Word Count",
+                  "title": "Return",
                   "type": "quantitative"
                 }
               },
               "transform": [{"on": "WORD_COUNT", "regression": "1_DAY_RETURN"}]
             }
-          ]
+          ],
+          "height": 400,
+          "title": "1-Day Return vs Word Count",
+          "width": 400
         },
         {
           "layer": [
             {
-              "mark": {"type": "circle", "size": 50},
+              "mark": {"type": "circle", "color": "black", "size": 50},
               "encoding": {
-                "color": {
-                  "field": "STOCK",
-                  "legend": {"columns": 2},
-                  "title": "Stock",
-                  "type": "nominal"
-                },
                 "tooltip": [
                   {"field": "DATE", "type": "temporal"},
                   {"field": "STOCK", "type": "nominal"},
@@ -336,20 +281,14 @@
                 },
                 "y": {
                   "field": "2_DAY_RETURN",
-                  "title": "2-Day Return vs Word Count",
+                  "title": "Return",
                   "type": "quantitative"
                 }
               }
             },
             {
-              "mark": {"type": "line", "color": "red"},
+              "mark": {"type": "line", "color": "blue"},
               "encoding": {
-                "color": {
-                  "field": "STOCK",
-                  "legend": {"columns": 2},
-                  "title": "Stock",
-                  "type": "nominal"
-                },
                 "tooltip": [
                   {"field": "DATE", "type": "temporal"},
                   {"field": "STOCK", "type": "nominal"},
@@ -363,25 +302,22 @@
                 },
                 "y": {
                   "field": "2_DAY_RETURN",
-                  "title": "2-Day Return vs Word Count",
+                  "title": "Return",
                   "type": "quantitative"
                 }
               },
               "transform": [{"on": "WORD_COUNT", "regression": "2_DAY_RETURN"}]
             }
-          ]
+          ],
+          "height": 400,
+          "title": "2-Day Return vs Word Count",
+          "width": 400
         },
         {
           "layer": [
             {
-              "mark": {"type": "circle", "size": 50},
+              "mark": {"type": "circle", "color": "black", "size": 50},
               "encoding": {
-                "color": {
-                  "field": "STOCK",
-                  "legend": {"columns": 2},
-                  "title": "Stock",
-                  "type": "nominal"
-                },
                 "tooltip": [
                   {"field": "DATE", "type": "temporal"},
                   {"field": "STOCK", "type": "nominal"},
@@ -395,20 +331,14 @@
                 },
                 "y": {
                   "field": "3_DAY_RETURN",
-                  "title": "3-Day Return vs Word Count",
+                  "title": "Return",
                   "type": "quantitative"
                 }
               }
             },
             {
-              "mark": {"type": "line", "color": "red"},
+              "mark": {"type": "line", "color": "blue"},
               "encoding": {
-                "color": {
-                  "field": "STOCK",
-                  "legend": {"columns": 2},
-                  "title": "Stock",
-                  "type": "nominal"
-                },
                 "tooltip": [
                   {"field": "DATE", "type": "temporal"},
                   {"field": "STOCK", "type": "nominal"},
@@ -422,25 +352,22 @@
                 },
                 "y": {
                   "field": "3_DAY_RETURN",
-                  "title": "3-Day Return vs Word Count",
+                  "title": "Return",
                   "type": "quantitative"
                 }
               },
               "transform": [{"on": "WORD_COUNT", "regression": "3_DAY_RETURN"}]
             }
-          ]
+          ],
+          "height": 400,
+          "title": "3-Day Return vs Word Count",
+          "width": 400
         },
         {
           "layer": [
             {
-              "mark": {"type": "circle", "size": 50},
+              "mark": {"type": "circle", "color": "black", "size": 50},
               "encoding": {
-                "color": {
-                  "field": "STOCK",
-                  "legend": {"columns": 2},
-                  "title": "Stock",
-                  "type": "nominal"
-                },
                 "tooltip": [
                   {"field": "DATE", "type": "temporal"},
                   {"field": "STOCK", "type": "nominal"},
@@ -454,20 +381,14 @@
                 },
                 "y": {
                   "field": "7_DAY_RETURN",
-                  "title": "7-Day Return vs Word Count",
+                  "title": "Return",
                   "type": "quantitative"
                 }
               }
             },
             {
-              "mark": {"type": "line", "color": "red"},
+              "mark": {"type": "line", "color": "blue"},
               "encoding": {
-                "color": {
-                  "field": "STOCK",
-                  "legend": {"columns": 2},
-                  "title": "Stock",
-                  "type": "nominal"
-                },
                 "tooltip": [
                   {"field": "DATE", "type": "temporal"},
                   {"field": "STOCK", "type": "nominal"},
@@ -481,23 +402,26 @@
                 },
                 "y": {
                   "field": "7_DAY_RETURN",
-                  "title": "7-Day Return vs Word Count",
+                  "title": "Return",
                   "type": "quantitative"
                 }
               },
               "transform": [{"on": "WORD_COUNT", "regression": "7_DAY_RETURN"}]
             }
-          ]
+          ],
+          "height": 400,
+          "title": "7-Day Return vs Word Count",
+          "width": 400
         }
       ],
-      "data": {"name": "data-f92829f0d6789890fb9a66607c7a2ef1"},
-      "title": "Refined Charts: Word Count Analysis (Negative Sentiment)"
+      "data": {"name": "data-0c1c016bd9bd9a50719957d966fe05b9"},
+      "title": "Future Return vs. Word Count Analysis (Negative Sentiment)"
     }
   ],
   "resolve": {"scale": {"color": "independent"}},
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json",
   "datasets": {
-    "data-a5075e1bd0ffc2317c7b22337a3ce1b7": [
+    "data-270cb39cb2da3cdbcc3e7e7b1c5ae824": [
       {
         " index": 21220,
         "TWEET": "Check out 14K YG  &amp; SS TURQUOISE &amp; LCS DIAMOND OMEGA NECKLACE + FREE BANGLE CUFF BRACELET!  https://t.co/0tdNWufIrA via @eBay ",
@@ -515,26 +439,8 @@
         "TEXTBLOB_POLARITY": 0.5,
         "MENTION": "@eBay",
         "WORD_COUNT": 20,
-        "YM": "201712"
-      },
-      {
-        " index": 8969,
-        "TWEET": "@bostonmarket @DrMyEyz @RobPalatchi @Rockprincess818 @Dodge @AARP @AARPOhio @sprint @exxonmobil @cnnbrk @HLNTV I always liked Boston Market. ",
-        "STOCK": "Exxon",
-        "DATE": "2017-05-31T00:00:00",
-        "LAST_PRICE": 80.5,
-        "1_DAY_RETURN": 0.0074534161490682,
-        "2_DAY_RETURN": 0.0130434782608695,
-        "3_DAY_RETURN": 0.0130434782608695,
-        "7_DAY_RETURN": 0.0222360248447205,
-        "PX_VOLUME": 13572313,
-        "VOLATILITY_10D": 7.101,
-        "VOLATILITY_30D": 9.511,
-        "LSTM_POLARITY": 1,
-        "TEXTBLOB_POLARITY": 0.6,
-        "MENTION": "@exxonmobil",
-        "WORD_COUNT": 16,
-        "YM": "201705"
+        "YM": "201712",
+        "AVERAGE_WORD_COUNT": 18
       },
       {
         " index": 4416,
@@ -553,7 +459,8 @@
         "TEXTBLOB_POLARITY": 0.1,
         "MENTION": "@Reuters",
         "WORD_COUNT": 15,
-        "YM": "201703"
+        "YM": "201703",
+        "AVERAGE_WORD_COUNT": 16.142857142857142
       },
       {
         " index": 567,
@@ -572,7 +479,8 @@
         "TEXTBLOB_POLARITY": 1,
         "MENTION": "@eBay",
         "WORD_COUNT": 17,
-        "YM": "201701"
+        "YM": "201701",
+        "AVERAGE_WORD_COUNT": 18
       },
       {
         " index": 8577,
@@ -591,26 +499,8 @@
         "TEXTBLOB_POLARITY": 0.3,
         "MENTION": "@Google",
         "WORD_COUNT": 17,
-        "YM": "201705"
-      },
-      {
-        " index": 13033,
-        "TWEET": "RT @wallyjt62: Flying @easyJet Liverpool to Nice. @swissport checkin girl needs to 😃😃😃. #SmileMore #behappy #thisiseasyjet ",
-        "STOCK": "easyJet",
-        "DATE": "2017-08-31T00:00:00",
-        "LAST_PRICE": 1196,
-        "1_DAY_RETURN": -0.011705685618729,
-        "2_DAY_RETURN": 0.0083612040133779,
-        "3_DAY_RETURN": 0.0167224080267558,
-        "7_DAY_RETURN": 0.0150501672240802,
-        "PX_VOLUME": 3908980,
-        "VOLATILITY_10D": 27.131,
-        "VOLATILITY_30D": 26.94400000000001,
-        "LSTM_POLARITY": 1,
-        "TEXTBLOB_POLARITY": 0.6,
-        "MENTION": "@easyJet",
-        "WORD_COUNT": 16,
-        "YM": "201708"
+        "YM": "201705",
+        "AVERAGE_WORD_COUNT": 16.666666666666668
       },
       {
         " index": 275,
@@ -629,7 +519,8 @@
         "TEXTBLOB_POLARITY": 0.2,
         "MENTION": "@Starbucks",
         "WORD_COUNT": 20,
-        "YM": "201701"
+        "YM": "201701",
+        "AVERAGE_WORD_COUNT": 16.166666666666668
       },
       {
         " index": 7598,
@@ -648,7 +539,8 @@
         "TEXTBLOB_POLARITY": 0.1704545454545454,
         "MENTION": "@eBay",
         "WORD_COUNT": 17,
-        "YM": "201704"
+        "YM": "201704",
+        "AVERAGE_WORD_COUNT": 18
       },
       {
         " index": 9771,
@@ -667,7 +559,8 @@
         "TEXTBLOB_POLARITY": 0.1,
         "MENTION": "@amazon",
         "WORD_COUNT": 9,
-        "YM": "201706"
+        "YM": "201706",
+        "AVERAGE_WORD_COUNT": 14.285714285714286
       },
       {
         " index": 17411,
@@ -686,7 +579,8 @@
         "TEXTBLOB_POLARITY": 0.0333333333333333,
         "MENTION": "@Google",
         "WORD_COUNT": 16,
-        "YM": "201710"
+        "YM": "201710",
+        "AVERAGE_WORD_COUNT": 16.666666666666668
       },
       {
         " index": 7562,
@@ -705,26 +599,8 @@
         "TEXTBLOB_POLARITY": 0.2,
         "MENTION": "@eBay",
         "WORD_COUNT": 22,
-        "YM": "201704"
-      },
-      {
-        " index": 6766,
-        "TWEET": "RT @scshenoy: Most trending status on @facebook profile for last 24 hours ...........Watching bahubali2 at..... @ssrajamouli @ndtv @Twitt… ",
-        "STOCK": "Facebook",
-        "DATE": "2017-04-28T00:00:00",
-        "LAST_PRICE": 150.25,
-        "1_DAY_RETURN": -0.0169717138103162,
-        "2_DAY_RETURN": -0.0245590682196339,
-        "3_DAY_RETURN": -0.0250249584026621,
-        "7_DAY_RETURN": -0.0437271214642262,
-        "PX_VOLUME": 30652248,
-        "VOLATILITY_10D": 10.803,
-        "VOLATILITY_30D": 10.879,
-        "LSTM_POLARITY": 1,
-        "TEXTBLOB_POLARITY": 0.25,
-        "MENTION": "@facebook",
-        "WORD_COUNT": 18,
-        "YM": "201704"
+        "YM": "201704",
+        "AVERAGE_WORD_COUNT": 18
       },
       {
         " index": 5867,
@@ -743,26 +619,8 @@
         "TEXTBLOB_POLARITY": 0.15,
         "MENTION": "@Google",
         "WORD_COUNT": 20,
-        "YM": "201704"
-      },
-      {
-        " index": 10299,
-        "TWEET": "RT @YaniAtCVS: @AdonaCoxCvs @jlbibb @CVSHealth @ARCareerEd @DocCJ7 @RobinW0203 Isn't it a gorgeous building?I absolutely love The… ",
-        "STOCK": "CVS Health",
-        "DATE": "2017-06-30T00:00:00",
-        "LAST_PRICE": 80.46,
-        "1_DAY_RETURN": -0.002361421824509,
-        "2_DAY_RETURN": 0.0098185433755904,
-        "3_DAY_RETURN": 0.000372856077554,
-        "7_DAY_RETURN": -0.0379070345513298,
-        "PX_VOLUME": 4425687,
-        "VOLATILITY_10D": 22.379,
-        "VOLATILITY_30D": 20.886,
-        "LSTM_POLARITY": -1,
-        "TEXTBLOB_POLARITY": 0.6,
-        "MENTION": "@CVSHealth",
-        "WORD_COUNT": 16,
-        "YM": "201706"
+        "YM": "201704",
+        "AVERAGE_WORD_COUNT": 16.666666666666668
       },
       {
         " index": 21617,
@@ -781,7 +639,8 @@
         "TEXTBLOB_POLARITY": 0.2753968253968253,
         "MENTION": "@CBS",
         "WORD_COUNT": 24,
-        "YM": "201712"
+        "YM": "201712",
+        "AVERAGE_WORD_COUNT": 24
       },
       {
         " index": 8202,
@@ -800,7 +659,8 @@
         "TEXTBLOB_POLARITY": 0.875,
         "MENTION": "@Google",
         "WORD_COUNT": 12,
-        "YM": "201705"
+        "YM": "201705",
+        "AVERAGE_WORD_COUNT": 16.666666666666668
       },
       {
         " index": 10785,
@@ -819,7 +679,8 @@
         "TEXTBLOB_POLARITY": 0.3125,
         "MENTION": "@eBay",
         "WORD_COUNT": 20,
-        "YM": "201706"
+        "YM": "201706",
+        "AVERAGE_WORD_COUNT": 18
       },
       {
         " index": 19757,
@@ -838,7 +699,8 @@
         "TEXTBLOB_POLARITY": 0.3666666666666667,
         "MENTION": "@eBay",
         "WORD_COUNT": 17,
-        "YM": "201711"
+        "YM": "201711",
+        "AVERAGE_WORD_COUNT": 18
       },
       {
         " index": 432,
@@ -857,26 +719,8 @@
         "TEXTBLOB_POLARITY": 0.05,
         "MENTION": "@Starbucks",
         "WORD_COUNT": 18,
-        "YM": "201701"
-      },
-      {
-        " index": 20324,
-        "TWEET": "@blbtrujillo @Disney Thanks for making wishes come true! #ShareYourEars https://t.co/ZAMySi8pL1 ",
-        "STOCK": "Disney",
-        "DATE": "2017-12-01T00:00:00",
-        "LAST_PRICE": 105.25,
-        "1_DAY_RETURN": -0.0040855106888361,
-        "2_DAY_RETURN": -0.00009501187648460918,
-        "3_DAY_RETURN": -0.0174821852731591,
-        "7_DAY_RETURN": -0.0247980997624703,
-        "PX_VOLUME": 9258403,
-        "VOLATILITY_10D": 11.45,
-        "VOLATILITY_30D": 13.969,
-        "LSTM_POLARITY": 1,
-        "TEXTBLOB_POLARITY": 0.31875,
-        "MENTION": "@Disney",
-        "WORD_COUNT": 10,
-        "YM": "201712"
+        "YM": "201701",
+        "AVERAGE_WORD_COUNT": 16.166666666666668
       },
       {
         " index": 20759,
@@ -895,7 +739,8 @@
         "TEXTBLOB_POLARITY": 0.2753968253968253,
         "MENTION": "@CBS",
         "WORD_COUNT": 24,
-        "YM": "201712"
+        "YM": "201712",
+        "AVERAGE_WORD_COUNT": 24
       },
       {
         " index": 21681,
@@ -914,7 +759,8 @@
         "TEXTBLOB_POLARITY": 0.1,
         "MENTION": "@eBay",
         "WORD_COUNT": 16,
-        "YM": "201712"
+        "YM": "201712",
+        "AVERAGE_WORD_COUNT": 18
       },
       {
         " index": 21539,
@@ -933,7 +779,8 @@
         "TEXTBLOB_POLARITY": 0.175,
         "MENTION": "@Apple",
         "WORD_COUNT": 24,
-        "YM": "201712"
+        "YM": "201712",
+        "AVERAGE_WORD_COUNT": 17.571428571428573
       },
       {
         " index": 5369,
@@ -952,7 +799,8 @@
         "TEXTBLOB_POLARITY": 0.1166666666666666,
         "MENTION": "@eBay",
         "WORD_COUNT": 16,
-        "YM": "201703"
+        "YM": "201703",
+        "AVERAGE_WORD_COUNT": 18
       },
       {
         " index": 8111,
@@ -971,7 +819,8 @@
         "TEXTBLOB_POLARITY": 0.1363636363636363,
         "MENTION": "@netflix",
         "WORD_COUNT": 16,
-        "YM": "201705"
+        "YM": "201705",
+        "AVERAGE_WORD_COUNT": 14.25
       },
       {
         " index": 15012,
@@ -990,26 +839,8 @@
         "TEXTBLOB_POLARITY": 0.05,
         "MENTION": "@Reuters",
         "WORD_COUNT": 11,
-        "YM": "201709"
-      },
-      {
-        " index": 14564,
-        "TWEET": "RT @TexasTechFB: The @TTU_EQUIPMENT truck is loaded with water thanks to @CocaCola &amp; on its way to Austin! See you there,… ",
-        "STOCK": "CocaCola",
-        "DATE": "2017-09-01T00:00:00",
-        "LAST_PRICE": 45.78,
-        "1_DAY_RETURN": -0.0050240279598078,
-        "2_DAY_RETURN": -0.0085190039318479,
-        "3_DAY_RETURN": -0.0072083879423328,
-        "7_DAY_RETURN": -0.0045871559633027,
-        "PX_VOLUME": 7391249,
-        "VOLATILITY_10D": 4.957,
-        "VOLATILITY_30D": 7.324,
-        "LSTM_POLARITY": -1,
-        "TEXTBLOB_POLARITY": 0.25,
-        "MENTION": "@CocaCola",
-        "WORD_COUNT": 21,
-        "YM": "201709"
+        "YM": "201709",
+        "AVERAGE_WORD_COUNT": 16.142857142857142
       },
       {
         " index": 14050,
@@ -1028,7 +859,8 @@
         "TEXTBLOB_POLARITY": 0.5,
         "MENTION": "@verizon",
         "WORD_COUNT": 17,
-        "YM": "201708"
+        "YM": "201708",
+        "AVERAGE_WORD_COUNT": 17
       },
       {
         " index": 10243,
@@ -1047,7 +879,8 @@
         "TEXTBLOB_POLARITY": 0.25,
         "MENTION": "@McDonalds",
         "WORD_COUNT": 11,
-        "YM": "201706"
+        "YM": "201706",
+        "AVERAGE_WORD_COUNT": 13.333333333333334
       },
       {
         " index": 16342,
@@ -1066,7 +899,8 @@
         "TEXTBLOB_POLARITY": 0.1465909090909091,
         "MENTION": "@Apple",
         "WORD_COUNT": 17,
-        "YM": "201709"
+        "YM": "201709",
+        "AVERAGE_WORD_COUNT": 17.571428571428573
       },
       {
         " index": 19954,
@@ -1085,7 +919,8 @@
         "TEXTBLOB_POLARITY": 0.2,
         "MENTION": "@amazon",
         "WORD_COUNT": 11,
-        "YM": "201712"
+        "YM": "201712",
+        "AVERAGE_WORD_COUNT": 14.285714285714286
       },
       {
         " index": 10927,
@@ -1104,7 +939,8 @@
         "TEXTBLOB_POLARITY": 0.5,
         "MENTION": "@Reuters",
         "WORD_COUNT": 27,
-        "YM": "201707"
+        "YM": "201707",
+        "AVERAGE_WORD_COUNT": 16.142857142857142
       },
       {
         " index": 5897,
@@ -1123,7 +959,8 @@
         "TEXTBLOB_POLARITY": 0.3166666666666666,
         "MENTION": "@netflix",
         "WORD_COUNT": 24,
-        "YM": "201704"
+        "YM": "201704",
+        "AVERAGE_WORD_COUNT": 14.25
       },
       {
         " index": 8393,
@@ -1142,7 +979,8 @@
         "TEXTBLOB_POLARITY": 0.25,
         "MENTION": "@Adobe",
         "WORD_COUNT": 15,
-        "YM": "201705"
+        "YM": "201705",
+        "AVERAGE_WORD_COUNT": 18
       },
       {
         " index": 11684,
@@ -1161,7 +999,8 @@
         "TEXTBLOB_POLARITY": 0.7,
         "MENTION": "@Apple",
         "WORD_COUNT": 5,
-        "YM": "201707"
+        "YM": "201707",
+        "AVERAGE_WORD_COUNT": 17.571428571428573
       },
       {
         " index": 8766,
@@ -1180,7 +1019,8 @@
         "TEXTBLOB_POLARITY": 0.4375,
         "MENTION": "@Nike",
         "WORD_COUNT": 21,
-        "YM": "201705"
+        "YM": "201705",
+        "AVERAGE_WORD_COUNT": 17.5
       },
       {
         " index": 8382,
@@ -1199,7 +1039,8 @@
         "TEXTBLOB_POLARITY": 0.4428571428571429,
         "MENTION": "@Google",
         "WORD_COUNT": 20,
-        "YM": "201705"
+        "YM": "201705",
+        "AVERAGE_WORD_COUNT": 16.666666666666668
       },
       {
         " index": 16108,
@@ -1218,26 +1059,8 @@
         "TEXTBLOB_POLARITY": 0.125,
         "MENTION": "@Walmart",
         "WORD_COUNT": 20,
-        "YM": "201709"
-      },
-      {
-        " index": 16381,
-        "TWEET": "RT @MarcRennard: This week, @orangebw launches a new international @Visa card, available for its 530.000 #OrangeMoney customers !… ",
-        "STOCK": "Visa",
-        "DATE": "2017-09-30T00:00:00",
-        "LAST_PRICE": 105.24,
-        "1_DAY_RETURN": 0,
-        "2_DAY_RETURN": -0.0062713797035347,
-        "3_DAY_RETURN": -0.0128278221208665,
-        "7_DAY_RETURN": 0.0030406689471684,
-        "PX_VOLUME": 7676288,
-        "VOLATILITY_10D": 16.364,
-        "VOLATILITY_30D": 12.348,
-        "LSTM_POLARITY": 1,
-        "TEXTBLOB_POLARITY": 0.2121212121212121,
-        "MENTION": "@Visa",
-        "WORD_COUNT": 18,
-        "YM": "201709"
+        "YM": "201709",
+        "AVERAGE_WORD_COUNT": 20
       },
       {
         " index": 14536,
@@ -1256,7 +1079,8 @@
         "TEXTBLOB_POLARITY": 0.1,
         "MENTION": "@eBay",
         "WORD_COUNT": 16,
-        "YM": "201709"
+        "YM": "201709",
+        "AVERAGE_WORD_COUNT": 18
       },
       {
         " index": 485,
@@ -1275,7 +1099,8 @@
         "TEXTBLOB_POLARITY": 0.2454545454545454,
         "MENTION": "@eBay",
         "WORD_COUNT": 19,
-        "YM": "201701"
+        "YM": "201701",
+        "AVERAGE_WORD_COUNT": 18
       },
       {
         " index": 6582,
@@ -1294,7 +1119,8 @@
         "TEXTBLOB_POLARITY": 0.25,
         "MENTION": "@eBay",
         "WORD_COUNT": 16,
-        "YM": "201704"
+        "YM": "201704",
+        "AVERAGE_WORD_COUNT": 18
       },
       {
         " index": 6952,
@@ -1313,7 +1139,8 @@
         "TEXTBLOB_POLARITY": 0.2,
         "MENTION": "@McDonalds",
         "WORD_COUNT": 12,
-        "YM": "201704"
+        "YM": "201704",
+        "AVERAGE_WORD_COUNT": 13.333333333333334
       },
       {
         " index": 11616,
@@ -1332,7 +1159,8 @@
         "TEXTBLOB_POLARITY": 0.0333333333333333,
         "MENTION": "@eBay",
         "WORD_COUNT": 20,
-        "YM": "201707"
+        "YM": "201707",
+        "AVERAGE_WORD_COUNT": 18
       },
       {
         " index": 17284,
@@ -1351,7 +1179,8 @@
         "TEXTBLOB_POLARITY": 0.1375,
         "MENTION": "@eBay",
         "WORD_COUNT": 19,
-        "YM": "201710"
+        "YM": "201710",
+        "AVERAGE_WORD_COUNT": 18
       },
       {
         " index": 14778,
@@ -1370,26 +1199,8 @@
         "TEXTBLOB_POLARITY": 0.4,
         "MENTION": "@Apple",
         "WORD_COUNT": 24,
-        "YM": "201709"
-      },
-      {
-        " index": 3469,
-        "TWEET": "@NicoKuhlmann @jpmorgan @markets that's awesome! Great job! Well done! #legaltech ",
-        "STOCK": "JPMorgan",
-        "DATE": "2017-02-28T00:00:00",
-        "LAST_PRICE": 90.62,
-        "1_DAY_RETURN": -0.0020966674023394,
-        "2_DAY_RETURN": -0.0032001765614655,
-        "3_DAY_RETURN": -0.0032001765614655,
-        "7_DAY_RETURN": 0.0043036857205914,
-        "PX_VOLUME": 15183542,
-        "VOLATILITY_10D": 9.627,
-        "VOLATILITY_30D": 15.776,
-        "LSTM_POLARITY": 1,
-        "TEXTBLOB_POLARITY": 1,
-        "MENTION": "@jpmorgan",
-        "WORD_COUNT": 10,
-        "YM": "201702"
+        "YM": "201709",
+        "AVERAGE_WORD_COUNT": 17.571428571428573
       },
       {
         " index": 16234,
@@ -1408,45 +1219,8 @@
         "TEXTBLOB_POLARITY": 0.2142857142857142,
         "MENTION": "@eBay",
         "WORD_COUNT": 15,
-        "YM": "201709"
-      },
-      {
-        " index": 4608,
-        "TWEET": "Honestly if @Microsoft made modern @Android powered sidekick, I'd buy 3 on day one. Why is this not a thing?!?! ",
-        "STOCK": "Microsoft",
-        "DATE": "2017-03-31T00:00:00",
-        "LAST_PRICE": 65.86,
-        "1_DAY_RETURN": -0.0022775584573338,
-        "2_DAY_RETURN": -0.0059216519890677,
-        "3_DAY_RETURN": -0.0086547221378681,
-        "7_DAY_RETURN": -0.0133616762830245,
-        "PX_VOLUME": 21040331,
-        "VOLATILITY_10D": 10.036,
-        "VOLATILITY_30D": 9.78,
-        "LSTM_POLARITY": -1,
-        "TEXTBLOB_POLARITY": 0.4,
-        "MENTION": "@Microsoft",
-        "WORD_COUNT": 20,
-        "YM": "201703"
-      },
-      {
-        " index": 2536,
-        "TWEET": "Live interview on @CNBC Life Hacks now: https://t.co/PPFeISaEhk OR https://t.co/eoIrC46d4W @TelenorGroup @facebook https://t.co/kFCAd6ucAh ",
-        "STOCK": "Facebook",
-        "DATE": "2017-02-28T00:00:00",
-        "LAST_PRICE": 135.54,
-        "1_DAY_RETURN": 0.0064187693669765,
-        "2_DAY_RETURN": -0.000737789582411,
-        "3_DAY_RETURN": -0.000737789582411,
-        "7_DAY_RETURN": -0.0134277703998819,
-        "PX_VOLUME": 16112092,
-        "VOLATILITY_10D": 12.07,
-        "VOLATILITY_30D": 14.601,
-        "LSTM_POLARITY": -1,
-        "TEXTBLOB_POLARITY": 0.1363636363636363,
-        "MENTION": "@facebook",
-        "WORD_COUNT": 13,
-        "YM": "201702"
+        "YM": "201709",
+        "AVERAGE_WORD_COUNT": 18
       },
       {
         " index": 3561,
@@ -1465,7 +1239,8 @@
         "TEXTBLOB_POLARITY": 0.35,
         "MENTION": "@ATT",
         "WORD_COUNT": 18,
-        "YM": "201702"
+        "YM": "201702",
+        "AVERAGE_WORD_COUNT": 18
       },
       {
         " index": 13370,
@@ -1484,7 +1259,8 @@
         "TEXTBLOB_POLARITY": 0.0852272727272727,
         "MENTION": "@Apple",
         "WORD_COUNT": 18,
-        "YM": "201708"
+        "YM": "201708",
+        "AVERAGE_WORD_COUNT": 17.571428571428573
       },
       {
         " index": 16097,
@@ -1503,7 +1279,8 @@
         "TEXTBLOB_POLARITY": 0.41875,
         "MENTION": "@eBay",
         "WORD_COUNT": 23,
-        "YM": "201709"
+        "YM": "201709",
+        "AVERAGE_WORD_COUNT": 18
       },
       {
         " index": 4208,
@@ -1522,7 +1299,8 @@
         "TEXTBLOB_POLARITY": 0.4375,
         "MENTION": "@McDonalds",
         "WORD_COUNT": 17,
-        "YM": "201703"
+        "YM": "201703",
+        "AVERAGE_WORD_COUNT": 13.333333333333334
       },
       {
         " index": 606,
@@ -1541,7 +1319,8 @@
         "TEXTBLOB_POLARITY": 0.4,
         "MENTION": "@Starbucks",
         "WORD_COUNT": 9,
-        "YM": "201701"
+        "YM": "201701",
+        "AVERAGE_WORD_COUNT": 16.166666666666668
       },
       {
         " index": 10513,
@@ -1560,7 +1339,8 @@
         "TEXTBLOB_POLARITY": 0.1168831168831168,
         "MENTION": "@eBay",
         "WORD_COUNT": 15,
-        "YM": "201706"
+        "YM": "201706",
+        "AVERAGE_WORD_COUNT": 18
       },
       {
         " index": 15267,
@@ -1579,7 +1359,8 @@
         "TEXTBLOB_POLARITY": 1,
         "MENTION": "@Starbucks",
         "WORD_COUNT": 7,
-        "YM": "201709"
+        "YM": "201709",
+        "AVERAGE_WORD_COUNT": 16.166666666666668
       },
       {
         " index": 12832,
@@ -1598,7 +1379,8 @@
         "TEXTBLOB_POLARITY": 0.1553571428571428,
         "MENTION": "@amazon",
         "WORD_COUNT": 19,
-        "YM": "201708"
+        "YM": "201708",
+        "AVERAGE_WORD_COUNT": 14.285714285714286
       },
       {
         " index": 22252,
@@ -1617,7 +1399,8 @@
         "TEXTBLOB_POLARITY": 0.8,
         "MENTION": "@Reuters",
         "WORD_COUNT": 14,
-        "YM": "201810"
+        "YM": "201810",
+        "AVERAGE_WORD_COUNT": 16.142857142857142
       },
       {
         " index": 19391,
@@ -1636,7 +1419,8 @@
         "TEXTBLOB_POLARITY": 0.1168831168831168,
         "MENTION": "@eBay",
         "WORD_COUNT": 20,
-        "YM": "201711"
+        "YM": "201711",
+        "AVERAGE_WORD_COUNT": 18
       },
       {
         " index": 8264,
@@ -1655,7 +1439,8 @@
         "TEXTBLOB_POLARITY": 0.375,
         "MENTION": "@eBay",
         "WORD_COUNT": 17,
-        "YM": "201705"
+        "YM": "201705",
+        "AVERAGE_WORD_COUNT": 18
       },
       {
         " index": 11065,
@@ -1674,26 +1459,8 @@
         "TEXTBLOB_POLARITY": 0.625,
         "MENTION": "@TMobile",
         "WORD_COUNT": 19,
-        "YM": "201707"
-      },
-      {
-        " index": 16987,
-        "TWEET": "RT @Diana32163: @latinovictoryus @RalphNortham And for good measure. #BoycottFord @Ford with going along with this propaganda 😡 ",
-        "STOCK": "Ford",
-        "DATE": "2017-10-31T00:00:00",
-        "LAST_PRICE": 12.27,
-        "1_DAY_RETURN": -0.0138549307253463,
-        "2_DAY_RETURN": -0.0171149144254278,
-        "3_DAY_RETURN": -0.0171149144254278,
-        "7_DAY_RETURN": -0.006519967400163,
-        "PX_VOLUME": 42010246,
-        "VOLATILITY_10D": 20.659,
-        "VOLATILITY_30D": 15.913,
-        "LSTM_POLARITY": 1,
-        "TEXTBLOB_POLARITY": 0.7,
-        "MENTION": "@Ford",
-        "WORD_COUNT": 17,
-        "YM": "201710"
+        "YM": "201707",
+        "AVERAGE_WORD_COUNT": 19
       },
       {
         " index": 10637,
@@ -1712,26 +1479,8 @@
         "TEXTBLOB_POLARITY": 0.5,
         "MENTION": "@amazon",
         "WORD_COUNT": 20,
-        "YM": "201706"
-      },
-      {
-        " index": 483,
-        "TWEET": "RT @pepsi: We’re on the right track 👶!  #5days to #PepsiHalftime. Join the ⌛ with a #FanCountdown 📹 and 👀… ",
-        "STOCK": "Pepsi",
-        "DATE": "2017-01-31T00:00:00",
-        "LAST_PRICE": 103.78,
-        "1_DAY_RETURN": -0.0008672191173636,
-        "2_DAY_RETURN": -0.0028907303912121,
-        "3_DAY_RETURN": -0.0028907303912121,
-        "7_DAY_RETURN": 0.0089612642127576,
-        "PX_VOLUME": 3846647,
-        "VOLATILITY_10D": 8.876,
-        "VOLATILITY_30D": 8.55,
-        "LSTM_POLARITY": 1,
-        "TEXTBLOB_POLARITY": 0.3571428571428571,
-        "MENTION": "@pepsi",
-        "WORD_COUNT": 20,
-        "YM": "201701"
+        "YM": "201706",
+        "AVERAGE_WORD_COUNT": 14.285714285714286
       },
       {
         " index": 11502,
@@ -1750,7 +1499,8 @@
         "TEXTBLOB_POLARITY": 0.5666666666666667,
         "MENTION": "@eBay",
         "WORD_COUNT": 19,
-        "YM": "201707"
+        "YM": "201707",
+        "AVERAGE_WORD_COUNT": 18
       },
       {
         " index": 13420,
@@ -1769,26 +1519,8 @@
         "TEXTBLOB_POLARITY": 0.1843434343434343,
         "MENTION": "@Google",
         "WORD_COUNT": 15,
-        "YM": "201708"
-      },
-      {
-        " index": 8457,
-        "TWEET": "I just bought a new @Ford #Mustang convertible! :-D *Snoopy dances* ",
-        "STOCK": "Ford",
-        "DATE": "2017-05-31T00:00:00",
-        "LAST_PRICE": 11.12,
-        "1_DAY_RETURN": -0.0035971223021581,
-        "2_DAY_RETURN": -0.0170863309352517,
-        "3_DAY_RETURN": -0.0170863309352517,
-        "7_DAY_RETURN": -0.0143884892086329,
-        "PX_VOLUME": 36398667,
-        "VOLATILITY_10D": 16.041,
-        "VOLATILITY_30D": 21.235,
-        "LSTM_POLARITY": -1,
-        "TEXTBLOB_POLARITY": 0.1704545454545454,
-        "MENTION": "@Ford",
-        "WORD_COUNT": 11,
-        "YM": "201705"
+        "YM": "201708",
+        "AVERAGE_WORD_COUNT": 16.666666666666668
       },
       {
         " index": 9380,
@@ -1807,26 +1539,8 @@
         "TEXTBLOB_POLARITY": 0.5580357142857143,
         "MENTION": "@netflix",
         "WORD_COUNT": 7,
-        "YM": "201706"
-      },
-      {
-        " index": 21108,
-        "TWEET": "RT @247PromoNigeria: @Shell @IAMJHUD @PixieLott @luansantana @monalithakur03 @yemialadee RT @Shell ---&gt;@kingwaLeak1&lt;------&gt;is A Good Promot… ",
-        "STOCK": "Shell",
-        "DATE": "2017-12-29T00:00:00",
-        "LAST_PRICE": 2480,
-        "1_DAY_RETURN": -0.0076612903225806,
-        "2_DAY_RETURN": -0.0066532258064516,
-        "3_DAY_RETURN": -0.0110887096774193,
-        "7_DAY_RETURN": -0.0110887096774193,
-        "PX_VOLUME": 2663475,
-        "VOLATILITY_10D": 12.651,
-        "VOLATILITY_30D": 17.119,
-        "LSTM_POLARITY": -1,
-        "TEXTBLOB_POLARITY": 0.7,
-        "MENTION": "@Shell",
-        "WORD_COUNT": 14,
-        "YM": "201712"
+        "YM": "201706",
+        "AVERAGE_WORD_COUNT": 14.25
       },
       {
         " index": 16492,
@@ -1845,7 +1559,8 @@
         "TEXTBLOB_POLARITY": 0.78125,
         "MENTION": "@eBay",
         "WORD_COUNT": 17,
-        "YM": "201710"
+        "YM": "201710",
+        "AVERAGE_WORD_COUNT": 18
       },
       {
         " index": 9720,
@@ -1864,7 +1579,8 @@
         "TEXTBLOB_POLARITY": 0.125,
         "MENTION": "@Reuters",
         "WORD_COUNT": 16,
-        "YM": "201706"
+        "YM": "201706",
+        "AVERAGE_WORD_COUNT": 16.142857142857142
       },
       {
         " index": 20792,
@@ -1883,7 +1599,8 @@
         "TEXTBLOB_POLARITY": 0.2753968253968253,
         "MENTION": "@CBS",
         "WORD_COUNT": 24,
-        "YM": "201712"
+        "YM": "201712",
+        "AVERAGE_WORD_COUNT": 24
       },
       {
         " index": 598,
@@ -1902,26 +1619,8 @@
         "TEXTBLOB_POLARITY": 0.65,
         "MENTION": "@Starbucks",
         "WORD_COUNT": 23,
-        "YM": "201701"
-      },
-      {
-        " index": 10303,
-        "TWEET": "RT @ASOS: The sale is REAL right now: https://t.co/2RWnTkOIfw https://t.co/WeHfKlUoQm ",
-        "STOCK": "ASOS",
-        "DATE": "2017-06-30T00:00:00",
-        "LAST_PRICE": 5749,
-        "1_DAY_RETURN": -0.0040006957731779,
-        "2_DAY_RETURN": 0.0144372934423378,
-        "3_DAY_RETURN": 0.0146112367368237,
-        "7_DAY_RETURN": 0.0097408244912158,
-        "PX_VOLUME": 356870,
-        "VOLATILITY_10D": 27.046,
-        "VOLATILITY_30D": 26.299,
-        "LSTM_POLARITY": 1,
-        "TEXTBLOB_POLARITY": 0.4285714285714285,
-        "MENTION": "@ASOS",
-        "WORD_COUNT": 10,
-        "YM": "201706"
+        "YM": "201701",
+        "AVERAGE_WORD_COUNT": 16.166666666666668
       },
       {
         " index": 2545,
@@ -1940,7 +1639,8 @@
         "TEXTBLOB_POLARITY": 0.625,
         "MENTION": "@Tesco",
         "WORD_COUNT": 18,
-        "YM": "201702"
+        "YM": "201702",
+        "AVERAGE_WORD_COUNT": 21
       },
       {
         " index": 5471,
@@ -1959,26 +1659,8 @@
         "TEXTBLOB_POLARITY": 0.5,
         "MENTION": "@Apple",
         "WORD_COUNT": 22,
-        "YM": "201703"
-      },
-      {
-        " index": 13730,
-        "TWEET": "RT @TexasTechFB: The @TTU_EQUIPMENT truck is loaded with water thanks to @CocaCola &amp; on its way to Austin! See you there,… ",
-        "STOCK": "CocaCola",
-        "DATE": "2017-08-31T00:00:00",
-        "LAST_PRICE": 45.55,
-        "1_DAY_RETURN": -0.0035126234906695,
-        "2_DAY_RETURN": -0.0021953896816683,
-        "3_DAY_RETURN": -0.0028540065861689,
-        "7_DAY_RETURN": -0.0030735455543359,
-        "PX_VOLUME": 14264572,
-        "VOLATILITY_10D": 4.034,
-        "VOLATILITY_30D": 7.342,
-        "LSTM_POLARITY": -1,
-        "TEXTBLOB_POLARITY": 0.25,
-        "MENTION": "@CocaCola",
-        "WORD_COUNT": 21,
-        "YM": "201708"
+        "YM": "201703",
+        "AVERAGE_WORD_COUNT": 17.571428571428573
       },
       {
         " index": 5492,
@@ -1997,7 +1679,8 @@
         "TEXTBLOB_POLARITY": 0.0681818181818181,
         "MENTION": "@Apple",
         "WORD_COUNT": 13,
-        "YM": "201703"
+        "YM": "201703",
+        "AVERAGE_WORD_COUNT": 17.571428571428573
       },
       {
         " index": 11672,
@@ -2016,7 +1699,8 @@
         "TEXTBLOB_POLARITY": 0.0666666666666666,
         "MENTION": "@eBay",
         "WORD_COUNT": 19,
-        "YM": "201707"
+        "YM": "201707",
+        "AVERAGE_WORD_COUNT": 18
       },
       {
         " index": 21365,
@@ -2035,7 +1719,8 @@
         "TEXTBLOB_POLARITY": 0.3,
         "MENTION": "@netflix",
         "WORD_COUNT": 10,
-        "YM": "201712"
+        "YM": "201712",
+        "AVERAGE_WORD_COUNT": 14.25
       },
       {
         " index": 10772,
@@ -2054,7 +1739,8 @@
         "TEXTBLOB_POLARITY": 0.16875,
         "MENTION": "@amazon",
         "WORD_COUNT": 18,
-        "YM": "201706"
+        "YM": "201706",
+        "AVERAGE_WORD_COUNT": 14.285714285714286
       },
       {
         " index": 2816,
@@ -2073,7 +1759,8 @@
         "TEXTBLOB_POLARITY": 0.26875,
         "MENTION": "@Tesco",
         "WORD_COUNT": 24,
-        "YM": "201702"
+        "YM": "201702",
+        "AVERAGE_WORD_COUNT": 21
       },
       {
         " index": 18910,
@@ -2092,7 +1779,8 @@
         "TEXTBLOB_POLARITY": 0.1,
         "MENTION": "@amazon",
         "WORD_COUNT": 9,
-        "YM": "201711"
+        "YM": "201711",
+        "AVERAGE_WORD_COUNT": 14.285714285714286
       },
       {
         " index": 18342,
@@ -2111,26 +1799,8 @@
         "TEXTBLOB_POLARITY": 0.16,
         "MENTION": "@eBay",
         "WORD_COUNT": 17,
-        "YM": "201711"
-      },
-      {
-        " index": 897,
-        "TWEET": "RT @Disney: Leave the little town for the great wide somewhere in #BeautyAndTheBeast March 17. Tickets available here:… ",
-        "STOCK": "Disney",
-        "DATE": "2017-01-31T00:00:00",
-        "LAST_PRICE": 110.65,
-        "1_DAY_RETURN": 0.0026208766380478,
-        "2_DAY_RETURN": -0.0122006326253954,
-        "3_DAY_RETURN": -0.0122006326253954,
-        "7_DAY_RETURN": -0.0248531405332128,
-        "PX_VOLUME": 8485838,
-        "VOLATILITY_10D": 12.229,
-        "VOLATILITY_30D": 12.982,
-        "LSTM_POLARITY": 1,
-        "TEXTBLOB_POLARITY": 0.1708333333333333,
-        "MENTION": "@Disney",
-        "WORD_COUNT": 18,
-        "YM": "201701"
+        "YM": "201711",
+        "AVERAGE_WORD_COUNT": 18
       },
       {
         " index": 10530,
@@ -2149,26 +1819,8 @@
         "TEXTBLOB_POLARITY": 0.1363636363636363,
         "MENTION": "@Reuters",
         "WORD_COUNT": 13,
-        "YM": "201706"
-      },
-      {
-        " index": 2256,
-        "TWEET": "RT @Couponmamacita: Disney #pinocchio Blu-Ray Combo Pack Available TODAY! #PinocchioBluRay @Disney check out my #review… ",
-        "STOCK": "Disney",
-        "DATE": "2017-02-01T00:00:00",
-        "LAST_PRICE": 111.3,
-        "1_DAY_RETURN": -0.0058400718778076,
-        "2_DAY_RETURN": -0.0032345013477088,
-        "3_DAY_RETURN": -0.017969451931716,
-        "7_DAY_RETURN": -0.0292902066486971,
-        "PX_VOLUME": 10501334,
-        "VOLATILITY_10D": 10.433,
-        "VOLATILITY_30D": 12.575,
-        "LSTM_POLARITY": 1,
-        "TEXTBLOB_POLARITY": 0.5,
-        "MENTION": "@Disney",
-        "WORD_COUNT": 15,
-        "YM": "201702"
+        "YM": "201706",
+        "AVERAGE_WORD_COUNT": 16.142857142857142
       },
       {
         " index": 9359,
@@ -2187,7 +1839,8 @@
         "TEXTBLOB_POLARITY": 0.0499999999999999,
         "MENTION": "@eBay",
         "WORD_COUNT": 18,
-        "YM": "201706"
+        "YM": "201706",
+        "AVERAGE_WORD_COUNT": 18
       },
       {
         " index": 7905,
@@ -2206,7 +1859,8 @@
         "TEXTBLOB_POLARITY": 0.5,
         "MENTION": "@eBay",
         "WORD_COUNT": 18,
-        "YM": "201705"
+        "YM": "201705",
+        "AVERAGE_WORD_COUNT": 18
       },
       {
         " index": 926,
@@ -2225,26 +1879,8 @@
         "TEXTBLOB_POLARITY": 0.0866666666666666,
         "MENTION": "@eBay",
         "WORD_COUNT": 17,
-        "YM": "201701"
-      },
-      {
-        " index": 819,
-        "TWEET": "RT @neymarjr: Glad to see another champion on team @Gillette. Welcome, @xPekeLoL.      #PursuitofPrecision https://t.co/q4RdjwvJyN ",
-        "STOCK": "Gillette",
-        "DATE": "2017-01-31T00:00:00",
-        "LAST_PRICE": 4217.7,
-        "1_DAY_RETURN": 0.0016596723332622,
-        "2_DAY_RETURN": 0.000960238992816,
-        "3_DAY_RETURN": 0.000960238992816,
-        "7_DAY_RETURN": 0.000853545771392,
-        "PX_VOLUME": 3495,
-        "VOLATILITY_10D": 3.459,
-        "VOLATILITY_30D": 4.545,
-        "LSTM_POLARITY": 1,
-        "TEXTBLOB_POLARITY": 0.5,
-        "MENTION": "@Gillette",
-        "WORD_COUNT": 14,
-        "YM": "201701"
+        "YM": "201701",
+        "AVERAGE_WORD_COUNT": 18
       },
       {
         " index": 13008,
@@ -2263,7 +1899,8 @@
         "TEXTBLOB_POLARITY": 0.3333333333333333,
         "MENTION": "@Adobe",
         "WORD_COUNT": 21,
-        "YM": "201708"
+        "YM": "201708",
+        "AVERAGE_WORD_COUNT": 18
       },
       {
         " index": 21419,
@@ -2282,7 +1919,8 @@
         "TEXTBLOB_POLARITY": 0.4,
         "MENTION": "@amazon",
         "WORD_COUNT": 14,
-        "YM": "201712"
+        "YM": "201712",
+        "AVERAGE_WORD_COUNT": 14.285714285714286
       },
       {
         " index": 1095,
@@ -2301,7 +1939,8 @@
         "TEXTBLOB_POLARITY": 0.2,
         "MENTION": "@Starbucks",
         "WORD_COUNT": 20,
-        "YM": "201701"
+        "YM": "201701",
+        "AVERAGE_WORD_COUNT": 16.166666666666668
       },
       {
         " index": 20638,
@@ -2320,7 +1959,8 @@
         "TEXTBLOB_POLARITY": 0.5,
         "MENTION": "@Reuters",
         "WORD_COUNT": 17,
-        "YM": "201712"
+        "YM": "201712",
+        "AVERAGE_WORD_COUNT": 16.142857142857142
       },
       {
         " index": 20846,
@@ -2339,7 +1979,8 @@
         "TEXTBLOB_POLARITY": 0.2753968253968253,
         "MENTION": "@CBS",
         "WORD_COUNT": 24,
-        "YM": "201712"
+        "YM": "201712",
+        "AVERAGE_WORD_COUNT": 24
       },
       {
         " index": 18996,
@@ -2358,7 +1999,8 @@
         "TEXTBLOB_POLARITY": 0.2857142857142857,
         "MENTION": "@eBay",
         "WORD_COUNT": 17,
-        "YM": "201711"
+        "YM": "201711",
+        "AVERAGE_WORD_COUNT": 18
       },
       {
         " index": 15048,
@@ -2377,7 +2019,8 @@
         "TEXTBLOB_POLARITY": 0.5,
         "MENTION": "@Nike",
         "WORD_COUNT": 14,
-        "YM": "201709"
+        "YM": "201709",
+        "AVERAGE_WORD_COUNT": 17.5
       },
       {
         " index": 7814,
@@ -2396,10 +2039,11 @@
         "TEXTBLOB_POLARITY": 0.0277777777777777,
         "MENTION": "@eBay",
         "WORD_COUNT": 19,
-        "YM": "201705"
+        "YM": "201705",
+        "AVERAGE_WORD_COUNT": 18
       }
     ],
-    "data-f92829f0d6789890fb9a66607c7a2ef1": [
+    "data-0c1c016bd9bd9a50719957d966fe05b9": [
       {
         " index": 5658,
         "TWEET": "Check out Mens CUTTER &amp; BUCK Red Argyle Dry Tec Short Sleeve Casual Polo Shirt Size XXL #PoloRugby https://t.co/RwIDMmycsI via @eBay ",
@@ -2417,7 +2061,8 @@
         "TEXTBLOB_POLARITY": -0.1416666666666667,
         "MENTION": "@eBay",
         "WORD_COUNT": 21,
-        "YM": "201704"
+        "YM": "201704",
+        "AVERAGE_WORD_COUNT": 16.233333333333334
       },
       {
         " index": 21832,
@@ -2436,7 +2081,8 @@
         "TEXTBLOB_POLARITY": -0.1666666666666666,
         "MENTION": "@eBay",
         "WORD_COUNT": 14,
-        "YM": "201712"
+        "YM": "201712",
+        "AVERAGE_WORD_COUNT": 16.233333333333334
       },
       {
         " index": 20400,
@@ -2455,7 +2101,8 @@
         "TEXTBLOB_POLARITY": -0.5,
         "MENTION": "@Walmart",
         "WORD_COUNT": 23,
-        "YM": "201712"
+        "YM": "201712",
+        "AVERAGE_WORD_COUNT": 15.666666666666666
       },
       {
         " index": 14268,
@@ -2474,7 +2121,8 @@
         "TEXTBLOB_POLARITY": -0.2,
         "MENTION": "@Starbucks",
         "WORD_COUNT": 7,
-        "YM": "201709"
+        "YM": "201709",
+        "AVERAGE_WORD_COUNT": 12.5
       },
       {
         " index": 15085,
@@ -2493,7 +2141,8 @@
         "TEXTBLOB_POLARITY": -0.0833333333333333,
         "MENTION": "@eBay",
         "WORD_COUNT": 14,
-        "YM": "201709"
+        "YM": "201709",
+        "AVERAGE_WORD_COUNT": 16.233333333333334
       },
       {
         " index": 4500,
@@ -2512,7 +2161,8 @@
         "TEXTBLOB_POLARITY": -0.2,
         "MENTION": "@McDonalds",
         "WORD_COUNT": 12,
-        "YM": "201703"
+        "YM": "201703",
+        "AVERAGE_WORD_COUNT": 13.823529411764707
       },
       {
         " index": 1990,
@@ -2531,7 +2181,8 @@
         "TEXTBLOB_POLARITY": -0.6,
         "MENTION": "@McDonalds",
         "WORD_COUNT": 10,
-        "YM": "201702"
+        "YM": "201702",
+        "AVERAGE_WORD_COUNT": 13.823529411764707
       },
       {
         " index": 16227,
@@ -2550,7 +2201,8 @@
         "TEXTBLOB_POLARITY": -0.1666666666666666,
         "MENTION": "@eBay",
         "WORD_COUNT": 14,
-        "YM": "201709"
+        "YM": "201709",
+        "AVERAGE_WORD_COUNT": 16.233333333333334
       },
       {
         " index": 11790,
@@ -2569,7 +2221,8 @@
         "TEXTBLOB_POLARITY": -0.1875,
         "MENTION": "@eBay",
         "WORD_COUNT": 16,
-        "YM": "201707"
+        "YM": "201707",
+        "AVERAGE_WORD_COUNT": 16.233333333333334
       },
       {
         " index": 14192,
@@ -2588,7 +2241,8 @@
         "TEXTBLOB_POLARITY": -0.3333333333333333,
         "MENTION": "@Apple",
         "WORD_COUNT": 9,
-        "YM": "201708"
+        "YM": "201708",
+        "AVERAGE_WORD_COUNT": 17.666666666666668
       },
       {
         " index": 4215,
@@ -2607,7 +2261,8 @@
         "TEXTBLOB_POLARITY": -0.1444444444444444,
         "MENTION": "@Reuters",
         "WORD_COUNT": 11,
-        "YM": "201703"
+        "YM": "201703",
+        "AVERAGE_WORD_COUNT": 16.466666666666665
       },
       {
         " index": 21435,
@@ -2626,7 +2281,8 @@
         "TEXTBLOB_POLARITY": -0.25,
         "MENTION": "@Nike",
         "WORD_COUNT": 10,
-        "YM": "201712"
+        "YM": "201712",
+        "AVERAGE_WORD_COUNT": 9.5
       },
       {
         " index": 4102,
@@ -2645,7 +2301,8 @@
         "TEXTBLOB_POLARITY": -0.05,
         "MENTION": "@Reuters",
         "WORD_COUNT": 17,
-        "YM": "201703"
+        "YM": "201703",
+        "AVERAGE_WORD_COUNT": 16.466666666666665
       },
       {
         " index": 11950,
@@ -2664,7 +2321,8 @@
         "TEXTBLOB_POLARITY": -0.2083333333333333,
         "MENTION": "@McDonalds",
         "WORD_COUNT": 25,
-        "YM": "201707"
+        "YM": "201707",
+        "AVERAGE_WORD_COUNT": 13.823529411764707
       },
       {
         " index": 2530,
@@ -2683,7 +2341,8 @@
         "TEXTBLOB_POLARITY": -0.6,
         "MENTION": "@McDonalds",
         "WORD_COUNT": 9,
-        "YM": "201702"
+        "YM": "201702",
+        "AVERAGE_WORD_COUNT": 13.823529411764707
       },
       {
         " index": 11946,
@@ -2702,7 +2361,8 @@
         "TEXTBLOB_POLARITY": -0.1,
         "MENTION": "@netflix",
         "WORD_COUNT": 22,
-        "YM": "201707"
+        "YM": "201707",
+        "AVERAGE_WORD_COUNT": 18.5
       },
       {
         " index": 4326,
@@ -2721,7 +2381,8 @@
         "TEXTBLOB_POLARITY": -0.2,
         "MENTION": "@McDonalds",
         "WORD_COUNT": 12,
-        "YM": "201703"
+        "YM": "201703",
+        "AVERAGE_WORD_COUNT": 13.823529411764707
       },
       {
         " index": 17626,
@@ -2740,7 +2401,8 @@
         "TEXTBLOB_POLARITY": -0.5,
         "MENTION": "@Reuters",
         "WORD_COUNT": 13,
-        "YM": "201710"
+        "YM": "201710",
+        "AVERAGE_WORD_COUNT": 16.466666666666665
       },
       {
         " index": 16410,
@@ -2759,7 +2421,8 @@
         "TEXTBLOB_POLARITY": -0.1756410256410256,
         "MENTION": "@Reuters",
         "WORD_COUNT": 16,
-        "YM": "201710"
+        "YM": "201710",
+        "AVERAGE_WORD_COUNT": 16.466666666666665
       },
       {
         " index": 3004,
@@ -2778,7 +2441,8 @@
         "TEXTBLOB_POLARITY": -0.0555555555555555,
         "MENTION": "@eBay",
         "WORD_COUNT": 18,
-        "YM": "201702"
+        "YM": "201702",
+        "AVERAGE_WORD_COUNT": 16.233333333333334
       },
       {
         " index": 4755,
@@ -2797,7 +2461,8 @@
         "TEXTBLOB_POLARITY": -0.2,
         "MENTION": "@McDonalds",
         "WORD_COUNT": 12,
-        "YM": "201703"
+        "YM": "201703",
+        "AVERAGE_WORD_COUNT": 13.823529411764707
       },
       {
         " index": 7732,
@@ -2816,7 +2481,8 @@
         "TEXTBLOB_POLARITY": -0.1666666666666666,
         "MENTION": "@eBay",
         "WORD_COUNT": 15,
-        "YM": "201705"
+        "YM": "201705",
+        "AVERAGE_WORD_COUNT": 16.233333333333334
       },
       {
         " index": 20467,
@@ -2835,7 +2501,8 @@
         "TEXTBLOB_POLARITY": -0.3125,
         "MENTION": "@Google",
         "WORD_COUNT": 22,
-        "YM": "201712"
+        "YM": "201712",
+        "AVERAGE_WORD_COUNT": 22
       },
       {
         " index": 5788,
@@ -2854,26 +2521,8 @@
         "TEXTBLOB_POLARITY": -0.2555555555555555,
         "MENTION": "@eBay",
         "WORD_COUNT": 16,
-        "YM": "201704"
-      },
-      {
-        " index": 13322,
-        "TWEET": "RT @SenWarren: Congress also can't look the other way. We need the @WellsFargo hearing Dems called for earlier this month. https://t.co/hkg… ",
-        "STOCK": "Wells Fargo",
-        "DATE": "2017-08-31T00:00:00",
-        "LAST_PRICE": 51.07,
-        "1_DAY_RETURN": 0.0056784805169375,
-        "2_DAY_RETURN": 0.0068533385549246,
-        "3_DAY_RETURN": 0.0109653416878794,
-        "7_DAY_RETURN": 0.0213432543567651,
-        "PX_VOLUME": 25231147,
-        "VOLATILITY_10D": 7.733,
-        "VOLATILITY_30D": 14.446,
-        "LSTM_POLARITY": -1,
-        "TEXTBLOB_POLARITY": -0.125,
-        "MENTION": "@WellsFargo",
-        "WORD_COUNT": 21,
-        "YM": "201708"
+        "YM": "201704",
+        "AVERAGE_WORD_COUNT": 16.233333333333334
       },
       {
         " index": 11438,
@@ -2892,7 +2541,8 @@
         "TEXTBLOB_POLARITY": -0.1666666666666666,
         "MENTION": "@eBay",
         "WORD_COUNT": 14,
-        "YM": "201707"
+        "YM": "201707",
+        "AVERAGE_WORD_COUNT": 16.233333333333334
       },
       {
         " index": 7686,
@@ -2911,45 +2561,8 @@
         "TEXTBLOB_POLARITY": -0.775,
         "MENTION": "@McDonalds",
         "WORD_COUNT": 16,
-        "YM": "201705"
-      },
-      {
-        " index": 15436,
-        "TWEET": "Why are @BankofAmerica drive thrus SO DAMN SLOW???? ",
-        "STOCK": "Bank of America",
-        "DATE": "2017-09-29T00:00:00",
-        "LAST_PRICE": 25.34,
-        "1_DAY_RETURN": 0.0043409629044987,
-        "2_DAY_RETURN": 0.0027624309392265,
-        "3_DAY_RETURN": -0.0209155485398579,
-        "7_DAY_RETURN": -0.0126282557221783,
-        "PX_VOLUME": 66232556,
-        "VOLATILITY_10D": 15.979,
-        "VOLATILITY_30D": 20.253,
-        "LSTM_POLARITY": -1,
-        "TEXTBLOB_POLARITY": -0.3,
-        "MENTION": "@BankofAmerica",
-        "WORD_COUNT": 8,
-        "YM": "201709"
-      },
-      {
-        " index": 13563,
-        "TWEET": "@WellsFargo In those towns, there were limited options. And at that time (late 90s, early 00s), it was really important to be near a branch. ",
-        "STOCK": "Wells Fargo",
-        "DATE": "2017-08-31T00:00:00",
-        "LAST_PRICE": 51.07,
-        "1_DAY_RETURN": 0.0056784805169375,
-        "2_DAY_RETURN": 0.0068533385549246,
-        "3_DAY_RETURN": 0.0109653416878794,
-        "7_DAY_RETURN": 0.0213432543567651,
-        "PX_VOLUME": 25231147,
-        "VOLATILITY_10D": 7.733,
-        "VOLATILITY_30D": 14.446,
-        "LSTM_POLARITY": 1,
-        "TEXTBLOB_POLARITY": -0.0714285714285714,
-        "MENTION": "@WellsFargo",
-        "WORD_COUNT": 25,
-        "YM": "201708"
+        "YM": "201705",
+        "AVERAGE_WORD_COUNT": 13.823529411764707
       },
       {
         " index": 21471,
@@ -2968,7 +2581,8 @@
         "TEXTBLOB_POLARITY": -0.1666666666666666,
         "MENTION": "@eBay",
         "WORD_COUNT": 16,
-        "YM": "201712"
+        "YM": "201712",
+        "AVERAGE_WORD_COUNT": 16.233333333333334
       },
       {
         " index": 7667,
@@ -2987,7 +2601,8 @@
         "TEXTBLOB_POLARITY": -0.25,
         "MENTION": "@Reuters",
         "WORD_COUNT": 15,
-        "YM": "201705"
+        "YM": "201705",
+        "AVERAGE_WORD_COUNT": 16.466666666666665
       },
       {
         " index": 11032,
@@ -3006,7 +2621,8 @@
         "TEXTBLOB_POLARITY": -0.5,
         "MENTION": "@McDonalds",
         "WORD_COUNT": 23,
-        "YM": "201707"
+        "YM": "201707",
+        "AVERAGE_WORD_COUNT": 13.823529411764707
       },
       {
         " index": 17772,
@@ -3025,7 +2641,8 @@
         "TEXTBLOB_POLARITY": -0.8,
         "MENTION": "@netflix",
         "WORD_COUNT": 25,
-        "YM": "201710"
+        "YM": "201710",
+        "AVERAGE_WORD_COUNT": 18.5
       },
       {
         " index": 7074,
@@ -3044,7 +2661,8 @@
         "TEXTBLOB_POLARITY": -0.2916666666666667,
         "MENTION": "@eBay",
         "WORD_COUNT": 18,
-        "YM": "201704"
+        "YM": "201704",
+        "AVERAGE_WORD_COUNT": 16.233333333333334
       },
       {
         " index": 3123,
@@ -3063,7 +2681,8 @@
         "TEXTBLOB_POLARITY": -0.1083333333333333,
         "MENTION": "@eBay",
         "WORD_COUNT": 22,
-        "YM": "201702"
+        "YM": "201702",
+        "AVERAGE_WORD_COUNT": 16.233333333333334
       },
       {
         " index": 10075,
@@ -3082,7 +2701,8 @@
         "TEXTBLOB_POLARITY": -0.1,
         "MENTION": "@amazon",
         "WORD_COUNT": 17,
-        "YM": "201706"
+        "YM": "201706",
+        "AVERAGE_WORD_COUNT": 16.833333333333332
       },
       {
         " index": 3896,
@@ -3101,26 +2721,8 @@
         "TEXTBLOB_POLARITY": -0.0833333333333333,
         "MENTION": "@amazon",
         "WORD_COUNT": 11,
-        "YM": "201703"
-      },
-      {
-        " index": 14023,
-        "TWEET": "@HomeDepot That was super frustrating, but I'm done ranting now. Glad I wandered around the store long enough to find what I needed. ",
-        "STOCK": "Home Depot",
-        "DATE": "2017-08-31T00:00:00",
-        "LAST_PRICE": 149.87,
-        "1_DAY_RETURN": 0.0008674184293053,
-        "2_DAY_RETURN": -0.0002001734836858,
-        "3_DAY_RETURN": 0.0101421231734168,
-        "7_DAY_RETURN": -0.0108093681190365,
-        "PX_VOLUME": 6083340,
-        "VOLATILITY_10D": 12.985,
-        "VOLATILITY_30D": 16.918,
-        "LSTM_POLARITY": 1,
-        "TEXTBLOB_POLARITY": -0.0333333333333333,
-        "MENTION": "@HomeDepot",
-        "WORD_COUNT": 23,
-        "YM": "201708"
+        "YM": "201703",
+        "AVERAGE_WORD_COUNT": 16.833333333333332
       },
       {
         " index": 15279,
@@ -3139,7 +2741,8 @@
         "TEXTBLOB_POLARITY": -0.05,
         "MENTION": "@Tesco",
         "WORD_COUNT": 19,
-        "YM": "201709"
+        "YM": "201709",
+        "AVERAGE_WORD_COUNT": 19
       },
       {
         " index": 19671,
@@ -3158,7 +2761,8 @@
         "TEXTBLOB_POLARITY": -0.8,
         "MENTION": "@Walmart",
         "WORD_COUNT": 13,
-        "YM": "201711"
+        "YM": "201711",
+        "AVERAGE_WORD_COUNT": 15.666666666666666
       },
       {
         " index": 2292,
@@ -3177,7 +2781,8 @@
         "TEXTBLOB_POLARITY": -0.6,
         "MENTION": "@McDonalds",
         "WORD_COUNT": 9,
-        "YM": "201702"
+        "YM": "201702",
+        "AVERAGE_WORD_COUNT": 13.823529411764707
       },
       {
         " index": 14590,
@@ -3196,7 +2801,8 @@
         "TEXTBLOB_POLARITY": -0.5,
         "MENTION": "@verizon",
         "WORD_COUNT": 19,
-        "YM": "201709"
+        "YM": "201709",
+        "AVERAGE_WORD_COUNT": 16
       },
       {
         " index": 1620,
@@ -3215,7 +2821,8 @@
         "TEXTBLOB_POLARITY": -0.05,
         "MENTION": "@Reuters",
         "WORD_COUNT": 20,
-        "YM": "201701"
+        "YM": "201701",
+        "AVERAGE_WORD_COUNT": 16.466666666666665
       },
       {
         " index": 12231,
@@ -3234,7 +2841,8 @@
         "TEXTBLOB_POLARITY": -0.5,
         "MENTION": "@McDonalds",
         "WORD_COUNT": 13,
-        "YM": "201707"
+        "YM": "201707",
+        "AVERAGE_WORD_COUNT": 13.823529411764707
       },
       {
         " index": 15328,
@@ -3253,7 +2861,8 @@
         "TEXTBLOB_POLARITY": -0.35,
         "MENTION": "@eBay",
         "WORD_COUNT": 15,
-        "YM": "201709"
+        "YM": "201709",
+        "AVERAGE_WORD_COUNT": 16.233333333333334
       },
       {
         " index": 12341,
@@ -3272,7 +2881,8 @@
         "TEXTBLOB_POLARITY": -0.2083333333333333,
         "MENTION": "@McDonalds",
         "WORD_COUNT": 25,
-        "YM": "201707"
+        "YM": "201707",
+        "AVERAGE_WORD_COUNT": 13.823529411764707
       },
       {
         " index": 14565,
@@ -3291,7 +2901,8 @@
         "TEXTBLOB_POLARITY": -0.3499999999999999,
         "MENTION": "@Reuters",
         "WORD_COUNT": 20,
-        "YM": "201709"
+        "YM": "201709",
+        "AVERAGE_WORD_COUNT": 16.466666666666665
       },
       {
         " index": 2498,
@@ -3310,7 +2921,8 @@
         "TEXTBLOB_POLARITY": -0.6,
         "MENTION": "@McDonalds",
         "WORD_COUNT": 9,
-        "YM": "201702"
+        "YM": "201702",
+        "AVERAGE_WORD_COUNT": 13.823529411764707
       },
       {
         " index": 2683,
@@ -3329,7 +2941,8 @@
         "TEXTBLOB_POLARITY": -0.0833333333333333,
         "MENTION": "@eBay",
         "WORD_COUNT": 17,
-        "YM": "201702"
+        "YM": "201702",
+        "AVERAGE_WORD_COUNT": 16.233333333333334
       },
       {
         " index": 18126,
@@ -3348,7 +2961,8 @@
         "TEXTBLOB_POLARITY": -0.35,
         "MENTION": "@netflix",
         "WORD_COUNT": 6,
-        "YM": "201711"
+        "YM": "201711",
+        "AVERAGE_WORD_COUNT": 18.5
       },
       {
         " index": 9087,
@@ -3367,7 +2981,8 @@
         "TEXTBLOB_POLARITY": -0.4,
         "MENTION": "@ATT",
         "WORD_COUNT": 14,
-        "YM": "201706"
+        "YM": "201706",
+        "AVERAGE_WORD_COUNT": 14.5
       },
       {
         " index": 17540,
@@ -3386,7 +3001,8 @@
         "TEXTBLOB_POLARITY": -0.0151515151515151,
         "MENTION": "@eBay",
         "WORD_COUNT": 17,
-        "YM": "201710"
+        "YM": "201710",
+        "AVERAGE_WORD_COUNT": 16.233333333333334
       },
       {
         " index": 6704,
@@ -3405,7 +3021,8 @@
         "TEXTBLOB_POLARITY": -0.1318181818181818,
         "MENTION": "@amazon",
         "WORD_COUNT": 18,
-        "YM": "201704"
+        "YM": "201704",
+        "AVERAGE_WORD_COUNT": 16.833333333333332
       },
       {
         " index": 9758,
@@ -3424,7 +3041,8 @@
         "TEXTBLOB_POLARITY": -0.9,
         "MENTION": "@Reuters",
         "WORD_COUNT": 14,
-        "YM": "201706"
+        "YM": "201706",
+        "AVERAGE_WORD_COUNT": 16.466666666666665
       },
       {
         " index": 20201,
@@ -3443,7 +3061,8 @@
         "TEXTBLOB_POLARITY": -0.25,
         "MENTION": "@eBay",
         "WORD_COUNT": 15,
-        "YM": "201712"
+        "YM": "201712",
+        "AVERAGE_WORD_COUNT": 16.233333333333334
       },
       {
         " index": 7232,
@@ -3462,7 +3081,8 @@
         "TEXTBLOB_POLARITY": -0.2444444444444445,
         "MENTION": "@CBS",
         "WORD_COUNT": 23,
-        "YM": "201704"
+        "YM": "201704",
+        "AVERAGE_WORD_COUNT": 22.5
       },
       {
         " index": 18683,
@@ -3481,7 +3101,8 @@
         "TEXTBLOB_POLARITY": -0.4,
         "MENTION": "@Walmart",
         "WORD_COUNT": 11,
-        "YM": "201711"
+        "YM": "201711",
+        "AVERAGE_WORD_COUNT": 15.666666666666666
       },
       {
         " index": 8063,
@@ -3500,7 +3121,8 @@
         "TEXTBLOB_POLARITY": -0.9375,
         "MENTION": "@Apple",
         "WORD_COUNT": 16,
-        "YM": "201705"
+        "YM": "201705",
+        "AVERAGE_WORD_COUNT": 17.666666666666668
       },
       {
         " index": 17164,
@@ -3519,26 +3141,8 @@
         "TEXTBLOB_POLARITY": -0.25,
         "MENTION": "@eBay",
         "WORD_COUNT": 15,
-        "YM": "201710"
-      },
-      {
-        " index": 12079,
-        "TWEET": "RT @GoldmanSachs: WATCH: Subsidies for wind &amp; solar may soon be a thing of the past. $GS' Alberto Gandolfi explains.… ",
-        "STOCK": "Goldman Sachs",
-        "DATE": "2017-07-31T00:00:00",
-        "LAST_PRICE": 225.33,
-        "1_DAY_RETURN": -0.0076332490125593,
-        "2_DAY_RETURN": -0.0076332490125593,
-        "3_DAY_RETURN": -0.0076332490125593,
-        "7_DAY_RETURN": -0.0317312386277903,
-        "PX_VOLUME": 1999637,
-        "VOLATILITY_10D": 13.814,
-        "VOLATILITY_30D": 17.298,
-        "LSTM_POLARITY": 1,
-        "TEXTBLOB_POLARITY": -0.25,
-        "MENTION": "@GoldmanSachs",
-        "WORD_COUNT": 20,
-        "YM": "201707"
+        "YM": "201710",
+        "AVERAGE_WORD_COUNT": 16.233333333333334
       },
       {
         " index": 16305,
@@ -3557,7 +3161,8 @@
         "TEXTBLOB_POLARITY": -0.0124999999999999,
         "MENTION": "@Adobe",
         "WORD_COUNT": 21,
-        "YM": "201709"
+        "YM": "201709",
+        "AVERAGE_WORD_COUNT": 21
       },
       {
         " index": 5280,
@@ -3576,7 +3181,8 @@
         "TEXTBLOB_POLARITY": -0.2,
         "MENTION": "@Reuters",
         "WORD_COUNT": 16,
-        "YM": "201703"
+        "YM": "201703",
+        "AVERAGE_WORD_COUNT": 16.466666666666665
       },
       {
         " index": 4189,
@@ -3595,7 +3201,8 @@
         "TEXTBLOB_POLARITY": -0.2,
         "MENTION": "@McDonalds",
         "WORD_COUNT": 12,
-        "YM": "201703"
+        "YM": "201703",
+        "AVERAGE_WORD_COUNT": 13.823529411764707
       },
       {
         " index": 16099,
@@ -3614,7 +3221,8 @@
         "TEXTBLOB_POLARITY": -0.3,
         "MENTION": "@verizon",
         "WORD_COUNT": 13,
-        "YM": "201709"
+        "YM": "201709",
+        "AVERAGE_WORD_COUNT": 16
       },
       {
         " index": 9702,
@@ -3633,7 +3241,8 @@
         "TEXTBLOB_POLARITY": -0.2,
         "MENTION": "@eBay",
         "WORD_COUNT": 14,
-        "YM": "201706"
+        "YM": "201706",
+        "AVERAGE_WORD_COUNT": 16.233333333333334
       },
       {
         " index": 15314,
@@ -3652,7 +3261,8 @@
         "TEXTBLOB_POLARITY": -0.5,
         "MENTION": "@Reuters",
         "WORD_COUNT": 16,
-        "YM": "201709"
+        "YM": "201709",
+        "AVERAGE_WORD_COUNT": 16.466666666666665
       },
       {
         " index": 4099,
@@ -3671,7 +3281,8 @@
         "TEXTBLOB_POLARITY": -0.2333333333333333,
         "MENTION": "@amazon",
         "WORD_COUNT": 18,
-        "YM": "201703"
+        "YM": "201703",
+        "AVERAGE_WORD_COUNT": 16.833333333333332
       },
       {
         " index": 3043,
@@ -3690,7 +3301,8 @@
         "TEXTBLOB_POLARITY": -0.15,
         "MENTION": "@eBay",
         "WORD_COUNT": 19,
-        "YM": "201702"
+        "YM": "201702",
+        "AVERAGE_WORD_COUNT": 16.233333333333334
       },
       {
         " index": 18228,
@@ -3709,7 +3321,8 @@
         "TEXTBLOB_POLARITY": -0.0518518518518518,
         "MENTION": "@netflix",
         "WORD_COUNT": 17,
-        "YM": "201711"
+        "YM": "201711",
+        "AVERAGE_WORD_COUNT": 18.5
       },
       {
         " index": 2335,
@@ -3728,26 +3341,8 @@
         "TEXTBLOB_POLARITY": -0.6,
         "MENTION": "@McDonalds",
         "WORD_COUNT": 9,
-        "YM": "201702"
-      },
-      {
-        " index": 12662,
-        "TWEET": "@ghbilbo @RubinReport @PayPal @SamHarrisOrg Then you're an arrogant idiot. It was a legal issue, not one of free sp… https://t.co/iizh2kTtKZ ",
-        "STOCK": "PayPal",
-        "DATE": "2017-08-01T00:00:00",
-        "LAST_PRICE": 59.34,
-        "1_DAY_RETURN": -0.0133131108864173,
-        "2_DAY_RETURN": -0.0023592854735423,
-        "3_DAY_RETURN": -0.0023592854735423,
-        "7_DAY_RETURN": -0.0182002022244692,
-        "PX_VOLUME": 9079118,
-        "VOLATILITY_10D": 21.106,
-        "VOLATILITY_30D": 26.855,
-        "LSTM_POLARITY": -1,
-        "TEXTBLOB_POLARITY": -0.8,
-        "MENTION": "@PayPal",
-        "WORD_COUNT": 20,
-        "YM": "201708"
+        "YM": "201702",
+        "AVERAGE_WORD_COUNT": 13.823529411764707
       },
       {
         " index": 15345,
@@ -3766,7 +3361,8 @@
         "TEXTBLOB_POLARITY": -0.4166666666666667,
         "MENTION": "@netflix",
         "WORD_COUNT": 23,
-        "YM": "201709"
+        "YM": "201709",
+        "AVERAGE_WORD_COUNT": 18.5
       },
       {
         " index": 15196,
@@ -3785,7 +3381,8 @@
         "TEXTBLOB_POLARITY": -0.5,
         "MENTION": "@Reuters",
         "WORD_COUNT": 18,
-        "YM": "201709"
+        "YM": "201709",
+        "AVERAGE_WORD_COUNT": 16.466666666666665
       },
       {
         " index": 5928,
@@ -3804,7 +3401,8 @@
         "TEXTBLOB_POLARITY": -0.1,
         "MENTION": "@netflix",
         "WORD_COUNT": 18,
-        "YM": "201704"
+        "YM": "201704",
+        "AVERAGE_WORD_COUNT": 18.5
       },
       {
         " index": 3394,
@@ -3823,7 +3421,8 @@
         "TEXTBLOB_POLARITY": -0.234375,
         "MENTION": "@CBS",
         "WORD_COUNT": 22,
-        "YM": "201702"
+        "YM": "201702",
+        "AVERAGE_WORD_COUNT": 22.5
       },
       {
         " index": 12204,
@@ -3842,7 +3441,8 @@
         "TEXTBLOB_POLARITY": -0.1666666666666666,
         "MENTION": "@eBay",
         "WORD_COUNT": 17,
-        "YM": "201707"
+        "YM": "201707",
+        "AVERAGE_WORD_COUNT": 16.233333333333334
       },
       {
         " index": 2368,
@@ -3861,7 +3461,8 @@
         "TEXTBLOB_POLARITY": -0.0666666666666667,
         "MENTION": "@amazon",
         "WORD_COUNT": 16,
-        "YM": "201702"
+        "YM": "201702",
+        "AVERAGE_WORD_COUNT": 16.833333333333332
       },
       {
         " index": 6771,
@@ -3880,7 +3481,8 @@
         "TEXTBLOB_POLARITY": -0.0545454545454545,
         "MENTION": "@eBay",
         "WORD_COUNT": 19,
-        "YM": "201704"
+        "YM": "201704",
+        "AVERAGE_WORD_COUNT": 16.233333333333334
       },
       {
         " index": 9269,
@@ -3899,7 +3501,8 @@
         "TEXTBLOB_POLARITY": -0.125,
         "MENTION": "@eBay",
         "WORD_COUNT": 17,
-        "YM": "201706"
+        "YM": "201706",
+        "AVERAGE_WORD_COUNT": 16.233333333333334
       },
       {
         " index": 288,
@@ -3918,7 +3521,8 @@
         "TEXTBLOB_POLARITY": -0.5,
         "MENTION": "@Apple",
         "WORD_COUNT": 28,
-        "YM": "201701"
+        "YM": "201701",
+        "AVERAGE_WORD_COUNT": 17.666666666666668
       },
       {
         " index": 22206,
@@ -3937,7 +3541,8 @@
         "TEXTBLOB_POLARITY": -1,
         "MENTION": "@McDonalds",
         "WORD_COUNT": 18,
-        "YM": "201712"
+        "YM": "201712",
+        "AVERAGE_WORD_COUNT": 13.823529411764707
       },
       {
         " index": 15900,
@@ -3956,7 +3561,8 @@
         "TEXTBLOB_POLARITY": -0.4,
         "MENTION": "@TMobile",
         "WORD_COUNT": 19,
-        "YM": "201709"
+        "YM": "201709",
+        "AVERAGE_WORD_COUNT": 19
       },
       {
         " index": 10151,
@@ -3975,7 +3581,8 @@
         "TEXTBLOB_POLARITY": -0.9,
         "MENTION": "@Reuters",
         "WORD_COUNT": 15,
-        "YM": "201706"
+        "YM": "201706",
+        "AVERAGE_WORD_COUNT": 16.466666666666665
       },
       {
         " index": 4121,
@@ -3994,7 +3601,8 @@
         "TEXTBLOB_POLARITY": -0.2307692307692308,
         "MENTION": "@Nike",
         "WORD_COUNT": 9,
-        "YM": "201703"
+        "YM": "201703",
+        "AVERAGE_WORD_COUNT": 9.5
       },
       {
         " index": 1977,
@@ -4013,7 +3621,8 @@
         "TEXTBLOB_POLARITY": -0.6,
         "MENTION": "@McDonalds",
         "WORD_COUNT": 9,
-        "YM": "201702"
+        "YM": "201702",
+        "AVERAGE_WORD_COUNT": 13.823529411764707
       },
       {
         " index": 15017,
@@ -4032,7 +3641,8 @@
         "TEXTBLOB_POLARITY": -0.05,
         "MENTION": "@eBay",
         "WORD_COUNT": 13,
-        "YM": "201709"
+        "YM": "201709",
+        "AVERAGE_WORD_COUNT": 16.233333333333334
       },
       {
         " index": 15751,
@@ -4051,7 +3661,8 @@
         "TEXTBLOB_POLARITY": -0.2,
         "MENTION": "@eBay",
         "WORD_COUNT": 14,
-        "YM": "201709"
+        "YM": "201709",
+        "AVERAGE_WORD_COUNT": 16.233333333333334
       },
       {
         " index": 22004,
@@ -4070,7 +3681,8 @@
         "TEXTBLOB_POLARITY": -0.2,
         "MENTION": "@amazon",
         "WORD_COUNT": 21,
-        "YM": "201712"
+        "YM": "201712",
+        "AVERAGE_WORD_COUNT": 16.833333333333332
       },
       {
         " index": 15439,
@@ -4089,7 +3701,8 @@
         "TEXTBLOB_POLARITY": -0.0583333333333333,
         "MENTION": "@Reuters",
         "WORD_COUNT": 14,
-        "YM": "201709"
+        "YM": "201709",
+        "AVERAGE_WORD_COUNT": 16.466666666666665
       },
       {
         " index": 18165,
@@ -4108,7 +3721,8 @@
         "TEXTBLOB_POLARITY": -0.0291666666666666,
         "MENTION": "@eBay",
         "WORD_COUNT": 16,
-        "YM": "201711"
+        "YM": "201711",
+        "AVERAGE_WORD_COUNT": 16.233333333333334
       },
       {
         " index": 8380,
@@ -4127,7 +3741,8 @@
         "TEXTBLOB_POLARITY": -0.4375,
         "MENTION": "@Starbucks",
         "WORD_COUNT": 18,
-        "YM": "201705"
+        "YM": "201705",
+        "AVERAGE_WORD_COUNT": 12.5
       },
       {
         " index": 4214,
@@ -4146,7 +3761,8 @@
         "TEXTBLOB_POLARITY": -0.2,
         "MENTION": "@McDonalds",
         "WORD_COUNT": 12,
-        "YM": "201703"
+        "YM": "201703",
+        "AVERAGE_WORD_COUNT": 13.823529411764707
       },
       {
         " index": 9377,
@@ -4165,7 +3781,8 @@
         "TEXTBLOB_POLARITY": -0.25,
         "MENTION": "@eBay",
         "WORD_COUNT": 12,
-        "YM": "201706"
+        "YM": "201706",
+        "AVERAGE_WORD_COUNT": 16.233333333333334
       },
       {
         " index": 6482,
@@ -4184,7 +3801,8 @@
         "TEXTBLOB_POLARITY": -0.4,
         "MENTION": "@eBay",
         "WORD_COUNT": 18,
-        "YM": "201704"
+        "YM": "201704",
+        "AVERAGE_WORD_COUNT": 16.233333333333334
       },
       {
         " index": 21998,
@@ -4203,7 +3821,8 @@
         "TEXTBLOB_POLARITY": -0.0151515151515151,
         "MENTION": "@eBay",
         "WORD_COUNT": 19,
-        "YM": "201712"
+        "YM": "201712",
+        "AVERAGE_WORD_COUNT": 16.233333333333334
       },
       {
         " index": 5082,
@@ -4222,7 +3841,8 @@
         "TEXTBLOB_POLARITY": -0.5833333333333334,
         "MENTION": "@ATT",
         "WORD_COUNT": 15,
-        "YM": "201703"
+        "YM": "201703",
+        "AVERAGE_WORD_COUNT": 14.5
       },
       {
         " index": 20500,
@@ -4241,7 +3861,8 @@
         "TEXTBLOB_POLARITY": -0.4,
         "MENTION": "@Reuters",
         "WORD_COUNT": 24,
-        "YM": "201712"
+        "YM": "201712",
+        "AVERAGE_WORD_COUNT": 16.466666666666665
       },
       {
         " index": 22287,
@@ -4260,7 +3881,8 @@
         "TEXTBLOB_POLARITY": -0.2307692307692308,
         "MENTION": "@eBay",
         "WORD_COUNT": 18,
-        "YM": "201810"
+        "YM": "201810",
+        "AVERAGE_WORD_COUNT": 16.233333333333334
       },
       {
         " index": 20040,
@@ -4279,7 +3901,8 @@
         "TEXTBLOB_POLARITY": -0.2,
         "MENTION": "@eBay",
         "WORD_COUNT": 14,
-        "YM": "201712"
+        "YM": "201712",
+        "AVERAGE_WORD_COUNT": 16.233333333333334
       },
       {
         " index": 696,
@@ -4298,7 +3921,8 @@
         "TEXTBLOB_POLARITY": -0.125,
         "MENTION": "@Reuters",
         "WORD_COUNT": 18,
-        "YM": "201701"
+        "YM": "201701",
+        "AVERAGE_WORD_COUNT": 16.466666666666665
       }
     ]
   }

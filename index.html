@@ -12,13 +12,13 @@
 -->
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
 
     <title>
         Analyzing the Impact of Social Media Sentiment on Stock - W209
@@ -26,7 +26,7 @@
     </title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
 
     <!-- Custom fonts for this template -->
     <link
@@ -41,7 +41,7 @@
     />
 
     <!-- Custom styles for this template -->
-    <link href="css/creative.min.css" rel="stylesheet" />
+    <link href="css/creative.min.css" rel="stylesheet"/>
 </head>
 
 <body id="page-top">
@@ -130,10 +130,10 @@
                         Stock</strong
                     >
                 </h1>
-                <p><br /></p>
+                <p><br/></p>
                 <p></p>
-                <hr class="light" />
-                <p><br /></p>
+                <hr class="light"/>
+                <p><br/></p>
                 <p></p>
             </div>
             <div class="col-lg-8 mx-auto">
@@ -149,7 +149,7 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading">Audience, Data & Topics</h2>
-                <hr class="my-4" />
+                <hr class="my-4"/>
             </div>
         </div>
     </div>
@@ -197,7 +197,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h3 class="mb-3"><br /><br /></h3>
+                <h3 class="mb-3"><br/><br/></h3>
                 <i
                         class="fas fa-4x fa-tasks text-primary mb-3 sr-icon-4"
                 ></i>
@@ -303,26 +303,33 @@
                 <h2 class="section-heading text-white">
                     First, let's explore the impact of news sentiment on future stock returns
                 </h2>
-                <hr class="light my-4" />
+                <hr class="light my-4"/>
                 <ul class="list-unstyled text-left">
                     <li>
-                        This chart provides a comprehensive analysis of the relationship between social media sentiment and future stock returns. It assists investors in understanding how varying levels of sentiment influence stock returns over different time horizons.
+                        This chart provides a comprehensive analysis of the relationship between social media sentiment
+                        and future stock returns. It assists investors in understanding how varying levels of sentiment
+                        influence stock returns over different time horizons.
                     </li>
                     <li class="mt-3">
-                        <strong>Left Section</strong> visualizes the return trajectory across different sentiment quantiles, covering various periods: 1-day, 2-day, 3-day, and 7-day returns. Tweet sentiments are split into four quartiles, with -2/2 representing strong negative and positive sentiment, and -1/1 representing moderate scores.
+                        <strong>Left Section</strong> visualizes the return trajectory across different sentiment
+                        quantiles, covering various periods: 1-day, 2-day, 3-day, and 7-day returns. Tweet sentiments
+                        are split into four quartiles, with -2/2 representing strong negative and positive sentiment,
+                        and -1/1 representing moderate scores.
                     </li>
                     <li class="mt-3">
-                        <strong>Right Section</strong> illustrates the correlation between sentiment polarity and future stock returns for different periods. Each scatter plot includes a regression line to show the trend. The color and size of the dots represent the correlation strength.
+                        <strong>Right Section</strong> illustrates the correlation between sentiment polarity and future
+                        stock returns for different periods. Each scatter plot includes a regression line to show the
+                        trend. The color and size of the dots represent the correlation strength.
                     </li>
                 </ul>
-                <hr class="light my-4" />
+                <hr class="light my-4"/>
             </div>
         </div>
     </div>
 </section>
 
 <div
-        id="chartContainer1"
+        id="chartContainer0"
         ,
         style="display: flex; justify-content: center; align-items: center;"
 ></div>
@@ -334,6 +341,20 @@
         .then((result) => console.log(result))
         .catch(console.warn);
 </script> -->
+<script type="text/javascript">
+    const spec0 = "h0.json";
+    vegaEmbed("#chartContainer0", spec0)
+        .then((result) => {
+            console.log("resized");
+        })
+        .catch(console.warn);
+</script>
+
+<div
+        id="chartContainer1"
+        ,
+        style="display: flex; justify-content: center; align-items: center;"
+></div>
 
 <script type="text/javascript">
     const spec1 = "h1.json";
@@ -353,7 +374,7 @@
                     Does the length of tweets impact future stock
                     returns?
                 </h2>
-                <hr class="light my-4" />
+                <hr class="light my-4"/>
                 <p class="text-faded mb-4">
                     This chart presents an analysis of the relationship
                     between word count and stock returns over different
@@ -378,7 +399,7 @@
                     disclosures and how it relates to short-term stock
                     price movements.
                 </p>
-                <hr class="light my-4" />
+                <hr class="light my-4"/>
             </div>
         </div>
     </div>
@@ -414,7 +435,7 @@
                     How does the volume of tweets correlate with stock
                     volatility?
                 </h2>
-                <hr class="light my-4" />
+                <hr class="light my-4"/>
                 <ul class="list-unstyled text-left">
                     <li>
                         The first two scatter plots illustrates the
@@ -423,19 +444,19 @@
                         while the y-axis shows the correlation between
                         tweet volume and stock volatility.
                     </li>
-                    <br />
+                    <br/>
                     <li>
                         The second two histograms analyze the
                         distribution of stocks across correlation bins
                     </li>
-                    <br />
+                    <br/>
                     <li>
                         The last two bar charts shows the top 10 stocks
                         with highest volatility by 10 days and 30 days.
                     </li>
-                    <br />
+                    <br/>
                 </ul>
-                <hr class="light my-4" />
+                <hr class="light my-4"/>
             </div>
         </div>
     </div>
@@ -471,40 +492,40 @@
                     Let's explore the common used words in the tweet
                     which reflect the positive/negative sentiments.
                 </h2>
-                <hr class="light my-4" />
+                <hr class="light my-4"/>
                 <ul class="list-unstyled text-left">
                     <li>
                         This chart provides a bundle of words
                         responsible for setting up the tone for the
                         sentiments.
                     </li>
-                    <br />
+                    <br/>
                     <li>
                         <strong>Top Left Section</strong> In this
                         chart(Green) we can see a cloud of words which
                         are used in positive sentiments tweets.
                     </li>
-                    <br />
+                    <br/>
                     <li>
                         <strong>Bottom Left Section</strong> In this
                         chart(Red) we can see a cloud of words which are
                         used in negative sentiment tweets.
                     </li>
-                    <br />
+                    <br/>
                     <li>
                         <strong>Top Middle Section</strong> In this
                         chart(Light Green) we can see a TOP 5 words with
                         highest frequency used in positive sentiments
                         tweets.
                     </li>
-                    <br />
+                    <br/>
                     <li>
                         <strong>Bottom Middle Section</strong> In this
                         chart(Light Red) we can see a TOP 5 words with
                         highest frequency used in negative sentiments
                         tweets.
                     </li>
-                    <br />
+                    <br/>
                     <li>
                         <strong>Right Section</strong> In this chart we
                         can see the superimposed chart which has TOP 5
@@ -514,10 +535,10 @@
                         overlapping words used in both positve &
                         negative tweets.
                     </li>
-                    <br />
+                    <br/>
                 </ul>
                 <p class="text-faded mb-4"></p>
-                <hr class="light my-4" />
+                <hr class="light my-4"/>
             </div>
         </div>
     </div>
@@ -562,7 +583,7 @@
                 <i
                         class="fas fa-envelope text-primary fa-3x mb-3 sr-contact-2"
                 ></i>
-                <p><br /></p>
+                <p><br/></p>
             </div>
         </div>
         <div class="row">
@@ -571,37 +592,37 @@
                 <h5>Nick Cai</h5>
                 <p>
                     Graduate Student, UC Berkeley Master of Information
-                    & Data Science<br />
+                    & Data Science<br/>
                     <a href="mailto:nickchy@berkeley.edu"
                     >nickchy@berkeley.edu</a
-                    ><br />
+                    ><br/>
                 </p>
 
                 <h5>Divya Menghani</h5>
                 <p>
                     Graduate Student, UC Berkeley Master of Information
-                    & Data Science<br />
+                    & Data Science<br/>
                     <a href="mailto:divyamenghani@berkeley.edu"
                     >divyamenghani@berkeley.edu</a
-                    ><br />
+                    ><br/>
                 </p>
 
                 <h5>Tenghong Zhang</h5>
                 <p>
                     Graduate Student, UC Berkeley Master of Information
-                    & Data Science<br />
+                    & Data Science<br/>
                     <a href="mailto:tenghongzhang@berkeley.edu"
                     >tenghongzhang@berkeley.edu</a
-                    ><br />
+                    ><br/>
                 </p>
 
                 <h5>Annie Pang</h5>
                 <p>
                     Graduate Student, UC Berkeley Master of Information
-                    & Data Science<br />
+                    & Data Science<br/>
                     <a href="mailto:anniepang@berkeley.edu"
                     >anniepang@berkeley.edu</a
-                    ><br />
+                    ><br/>
                 </p>
             </div>
         </div>
