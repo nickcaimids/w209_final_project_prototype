@@ -296,7 +296,7 @@
 <!--    </div>-->
 <!--</section>-->
 
-<section class="bg-dark text-white" id="sentiment-ret">
+<section class="bg-primary"  id="sentiment-ret">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 mx-auto text-center">
@@ -304,7 +304,7 @@
                     First, let's explore the impact of news sentiment on future stock returns
                 </h2>
                 <hr class="light my-4"/>
-                <ul class="list-unstyled text-left">
+                <ul class="list-unstyled text-left text-white">
                     <li>
                         This chart provides a comprehensive analysis of the relationship between social media sentiment
                         and future stock returns. It assists investors in understanding how varying levels of sentiment
@@ -390,7 +390,7 @@
 
 
 <!-- price & Tweet Length-->
-<section class="bg-dark text-white" id="tweet-word-count-analysis">
+<section class="bg-primary"  id="tweet-word-count-analysis">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 mx-auto text-center">
@@ -398,7 +398,7 @@
                     Second, let’s see the relationship between tweet word count and future stock returns
                 </h2>
                 <hr class="light my-4"/>
-                <ul class="list-unstyled text-left">
+                <ul class="list-unstyled text-left text-white">
                     <li>
                         Use this chart to see how the word count of tweets with positive and negative sentiment correlates with future stock returns. By examining these relationships, you can gain insights into the tweets and their potential impact on stock price movements.
                     </li>
@@ -442,19 +442,9 @@
         .catch(console.warn);
 </script>
 
-<div id="chartContainer3" style="display: flex; justify-content: center; align-items: center;"></div>
-<script type="text/javascript">
-    const spec3 = "h3.json";
-    vegaEmbed("#chartContainer3", spec3)
-        .then((result) => {
-            console.log("resized");
-        })
-        .catch(console.warn);
-</script>
-
 
 <!-- Volume-Volatility-->
-<section class="bg-dark" id="tweet-volume">
+<section class="bg-primary"  id="tweet-volume">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 mx-auto text-white text-center">
@@ -463,7 +453,7 @@
                     volatility?
                 </h2>
                 <hr class="light my-4"/>
-                <ul class="list-unstyled text-left">
+                <ul class="list-unstyled text-left text-white">
                     <li>
                         Next, we'll explore the correlation between tweet volume and stock volatility.
                         Use the left chart to view stock volatility rankings and click on individual stocks
@@ -506,11 +496,11 @@
         </div>
     </div>
 </section>
-<div
-        id="chartContainer3"
-        ,
-        style="display: flex; justify-content: center; align-items: center;"
-></div>
+<!--<div-->
+<!--        id="chartContainer3"-->
+<!--        ,-->
+<!--        style="display: flex; justify-content: center; align-items: center;"-->
+<!--&gt;</div>-->
 <!--
 <script type="text/javascript">
     const spec3 = "h3.json";
@@ -519,14 +509,25 @@
         .catch(console.warn);
 </script> -->
 
+<!--<script type="text/javascript">-->
+<!--    const spec3 = "h3.json";-->
+<!--    vegaEmbed("#chartContainer3", spec3)-->
+<!--        .then((result) => {-->
+<!--            Console.log("resized");-->
+<!--        })-->
+<!--        .catch(console.warn);-->
+<!--</script>-->
+
+<div id="chartContainer3" style="display: flex; justify-content: center; align-items: center;"></div>
 <script type="text/javascript">
     const spec3 = "h3.json";
     vegaEmbed("#chartContainer3", spec3)
         .then((result) => {
-            Console.log("resized");
+            console.log("resized");
         })
         .catch(console.warn);
 </script>
+
 
 <!-- word cloud -->
 <section class="bg-primary" id="word-cloud">
@@ -613,7 +614,7 @@
         .catch(console.warn);
 </script>
 <!-- Viz-End section -->
-<section class="bg-dark text-white">
+<section class="bg-primary text-white">
     <div class="container text-center">
         <h2 class="mb-4">Thank You!</h2>
     </div>
