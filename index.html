@@ -387,57 +387,47 @@
 </script>
 
 <!-- price & Tweet Length-->
-<section class="bg-primary" id="tweet-length">
+<section class="bg-primary text-white" id="tweet-length">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 mx-auto text-white text-center">
-                <h2 class="section-heading">
-                    Does the length of tweets impact future stock
-                    returns?
-                </h2>
-                <hr class="light my-4"/>
+            <div class="col-lg-12 mx-auto text-left">
+                <h3>Second, let’s see the relationship between tweet word count and future stock returns</h3>
                 <p class="text-faded mb-4">
-                    This chart presents an analysis of the relationship
-                    between word count and stock returns over different
-                    time horizons, both for stocks with positive
-                    sentiment (first part) and negative sentiment
-                    (second part).
+                    Use this chart to see how the word count of tweets with positive and negative sentiment correlates with future stock returns. By examining these relationships, you can gain insights into the tweets and its potential impact on stock price movements.
+                </p>
+                <h4>How to Use the Chart</h4>
+                <p class="text-faded mb-4">
+                    <strong>Stock Filter:</strong> Use the dropdown menu to select specific stocks you want to analyze. This allows you to focus on individual stocks and see how tweet word counts relate to their future returns.
                 </p>
                 <p class="text-faded mb-4">
-                    The charts visualize the distribution of data points
-                    showing the word count and corresponding 1-day,
-                    2-day, 3-day, and 7-day stock returns. The overlaid
-                    regression lines provide insight into the general
-                    trend between word count and returns.
+                    <strong>Data Points:</strong> Each point on the scatterplot represents the average word count of tweets for a particular stock on a given day and the corresponding future return.
                 </p>
                 <p class="text-faded mb-4">
-                    By comparing the two sets of charts, we can observe
-                    how the relationship between word count and returns
-                    differs for stocks with positive versus negative
-                    sentiment. This analysis could provide useful
-                    insights for investors or researchers interested in
-                    understanding the informational content of corporate
-                    disclosures and how it relates to short-term stock
-                    price movements.
+                    <strong>Regression Lines:</strong> The blue lines indicate the trend of the data points, showing the general relationship between tweet word count and future returns.
                 </p>
-                <hr class="light my-4"/>
+                <h4>Understanding the Chart</h4>
+                <p class="text-faded mb-4">
+                    <strong>Positive Sentiment vs. Future Returns:</strong> The left column of charts shows the relationship between tweet word counts with positive sentiment and future returns over different time frames (1-day, 2-day, 3-day, and 7-day).
+                </p>
+                <p class="text-faded mb-4">
+                    <strong>Negative Sentiment vs. Future Returns:</strong> The right column of charts displays the same relationship but for tweets with negative sentiment.
+                </p>
+                <h4>Key Insights</h4>
+                <p class="text-faded mb-4">
+                    <strong>Trend Analysis:</strong> By comparing the charts, you can observe how the sentiment of tweets (positive or negative) and their word counts influence future stock returns.
+                </p>
+                <p class="text-faded mb-4">
+                    <strong>Time Frame Comparison:</strong> Analyze how the impact of tweet word count varies over different durations. This can help in understanding short-term versus longer-term effects.
+                </p>
+                <p class="text-faded mb-4">
+                    <strong>Sentiment Impact:</strong> See how positive and negative sentiments differ in their influence on future returns, providing a comprehensive view of market sentiment and stock performance.
+                </p>
             </div>
         </div>
     </div>
 </section>
 
-<div
-        id="chartContainer2"
-        ,
-        style="display: flex; justify-content: center; align-items: center;"
-></div>
-<!--         <script type="text/javascript">
-    const spec2 = "h2.json";
-    vegaEmbed("#h2", spec2)
-        .then((result) => console.log(result))
-        .catch(console.warn);
-</script> -->
-
+<div id="chartContainer2" style="display: flex; justify-content: center; align-items: center;"></div>
 <script type="text/javascript">
     const spec2 = "h2.json";
     vegaEmbed("#chartContainer2", spec2)
