@@ -1,19 +1,23 @@
 {
   "config": {
-    "view": {"continuousWidth": 300, "continuousHeight": 300},
+    "view": {"continuousWidth": 500, "continuousHeight": 400},
     "axis": {"labelFontSize": 12, "titleFontSize": 14},
     "legend": {"labelFontSize": 10, "symbolSize": 80, "titleFontSize": 12},
     "title": {"anchor": "middle", "fontSize": 20}
   },
   "vconcat": [
-    {"mark": {"type": "text"}, "encoding": {}, "height": 50, "name": "view_1"},
     {
       "hconcat": [
         {
           "mark": {"type": "line"},
           "encoding": {
             "color": {"field": "STOCK", "legend": null, "type": "nominal"},
-            "x": {"field": "DATE", "title": "Date", "type": "temporal"},
+            "x": {
+              "axis": {"format": "%Y-%m"},
+              "field": "DATE",
+              "title": "Date",
+              "type": "temporal"
+            },
             "y": {
               "field": "LAST_PRICE",
               "title": "Closing Price ($)",
@@ -22,13 +26,18 @@
           },
           "title": "Daily Closing Price",
           "transform": [{"filter": {"param": "Select", "empty": false}}],
-          "width": 600
+          "width": 700
         },
         {
           "mark": {"type": "line"},
           "encoding": {
             "color": {"field": "STOCK", "legend": null, "type": "nominal"},
-            "x": {"field": "DATE", "title": "Date", "type": "temporal"},
+            "x": {
+              "axis": {"format": "%Y-%m"},
+              "field": "DATE",
+              "title": "Date",
+              "type": "temporal"
+            },
             "y": {
               "aggregate": "mean",
               "field": "TEXTBLOB_POLARITY",
@@ -38,11 +47,12 @@
           },
           "title": "Average Sentiment Over Time",
           "transform": [{"filter": {"param": "Select", "empty": false}}],
-          "width": 600
+          "width": 700
         }
       ],
       "resolve": {"scale": {"y": "independent"}}
-    }
+    },
+    {"mark": {"type": "text"}, "encoding": {}, "height": 50, "name": "view_5"}
   ],
   "data": {"name": "data-4242365c4627525d526fe6fdf25ebb3d"},
   "params": [
@@ -154,7 +164,7 @@
         ],
         "name": "Company"
       },
-      "views": ["view_1"]
+      "views": ["view_5"]
     }
   ],
   "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
